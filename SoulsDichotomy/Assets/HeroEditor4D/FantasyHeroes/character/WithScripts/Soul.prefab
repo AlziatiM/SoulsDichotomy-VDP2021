@@ -12465,7 +12465,7 @@ GameObject:
   - component: {fileID: 2783129918589004383}
   m_Layer: 0
   m_Name: Soul
-  m_TagString: Untagged
+  m_TagString: Soul
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12478,7 +12478,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2625678259107034229}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8627684706850878557}
@@ -12499,12 +12499,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff98a216ce394594d9cf6ad7f66d68a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 1, y: -1, z: 0}
+  radiusNotToChase: 3
   Character: {fileID: 2730951275497411943}
   InitDirection: 1
   MovementSpeed: 5
-  activeInputSoul: 32
-  _moving: 0
 --- !u!114 &2730951275497411943
 MonoBehaviour:
   m_ObjectHideFlags: 0

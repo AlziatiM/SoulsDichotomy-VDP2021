@@ -1689,7 +1689,7 @@ GameObject:
   - component: {fileID: 1626835019028038371}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2004,7 +2004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1024
   skinWidth: 0.015
   distanceBetweenRays: 0.15
   boxCollider: {fileID: 0}

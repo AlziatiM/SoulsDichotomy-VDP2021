@@ -10,13 +10,26 @@ public class PlayerInput : MonoBehaviour
 	private PlayerVelocity playerVelocity;
 	public bool InitDirection;
 
+	//manage different character input
+	private KeyCode activeInputPlayer;
+	private bool canMove;
+
 	private CharacterState currState;
 	private bool isJumping;
 	private bool _moving;
-	void Start()
+
+	private void Awake()
 	{
+		canMove = true;
 		isJumping = false;
 		playerVelocity = GetComponent<PlayerVelocity>();
+		
+	}
+
+	void Start()
+	{
+		GameManager.changeCharacter += SwitchCharacter;
+		activeInputPlayer = GameManager.instance.GetSwitchCharacterInput();
 		Character.AnimationManager.SetState(CharacterState.Idle);
 		currState = CharacterState.Idle;
 		if (InitDirection)
@@ -26,15 +39,22 @@ public class PlayerInput : MonoBehaviour
 	}
 	void Update()
 	{
+		if (!canMove)
+		{
+			return;
+		}
 		SetDirection();
-
 		Move();
+	}
 
+	private void SwitchCharacter()
+    {
+		canMove = !canMove;
+		StopCharacter();
 	}
 
 	private void Move()
-	{
-
+    {
 		var direction = Vector2.zero;
 
 		if (Input.GetKey(KeyCode.LeftArrow))
@@ -47,34 +67,33 @@ public class PlayerInput : MonoBehaviour
 			direction += Vector2.right;
 		}
 		playerVelocity.SetDirectionalInput(direction);
-		
+
 		if (Input.GetKeyDown(KeyCode.UpArrow))
 		{
 			ChangeAnimation(CharacterState.Jump);
 			isJumping = true;
 			playerVelocity.OnJumpInputDown();
-			
+
 		}
 		if (Input.GetKeyUp(KeyCode.UpArrow))
 		{
 			playerVelocity.OnJumpInputUp();
-			
+
 		}
 		if (Input.GetKey(KeyCode.DownArrow))
 		{
 			playerVelocity.OnFallInputDown();
 		}
 
-        if (isJumping)
-        {
+		if (isJumping)
+		{
 			return;
-        }
+		}
 		if (direction == Vector2.zero)
 		{
 			if (_moving)
 			{
-				ChangeAnimation(CharacterState.Idle);
-				_moving = false;
+				StopCharacter();
 			}
 		}
 		else
@@ -83,6 +102,14 @@ public class PlayerInput : MonoBehaviour
 			_moving = true;
 		}
 	}
+
+	private void StopCharacter()
+    {
+		playerVelocity.SetDirectionalInput(Vector2.zero);
+		ChangeAnimation(CharacterState.Idle);
+		_moving = false;
+	}
+
 
 	private void SetDirection()
 	{
@@ -115,8 +142,4 @@ public class PlayerInput : MonoBehaviour
 		}
 	}
 
-	public bool GetMoving()
-	{
-		return _moving;
-	}
 }

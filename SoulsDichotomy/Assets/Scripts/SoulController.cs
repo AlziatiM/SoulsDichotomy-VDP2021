@@ -5,35 +5,41 @@ using UnityEngine;
 
 public class SoulController : MonoBehaviour
 {
-
+    //reference for player
     private GameObject _player;
+    [Header("Chase player stats")]
     public Vector3 offset;
+    public float radiusNotToChase;
+
+    [Header("Movement")]
     public Character4D Character;
     public bool InitDirection;
     public int MovementSpeed;
-    public KeyCode activeInputSoul; //dovrebbe essere salvato nel gm
     private bool moveFromInput;
-    public bool _moving;
+    private bool _moving;
+
+    private KeyCode activeInputSoul;
+
+    private void Awake()
+    {
+        _player = GameObject.FindWithTag("Player");
+        
+        moveFromInput = false;
+    }
 
     public void Start()
     {
+        GameManager.changeCharacter += SwitchCharacter;
+        activeInputSoul = GameManager.instance.GetSwitchCharacterInput();
         Character.AnimationManager.SetState(CharacterState.Idle);
-        moveFromInput = false;
         if (InitDirection)
         {
             Character.SetDirection(Vector2.right);
         }
-
-        _player = GameObject.FindWithTag("Player");
     }
 
     public void Update()
     {
-        if (Input.GetKey(activeInputSoul))
-        {
-            moveFromInput = !moveFromInput;
-            
-        }
         if (moveFromInput)
         {
             SetDirection();
@@ -43,32 +49,39 @@ public class SoulController : MonoBehaviour
         {
             Vector2 distance = _player.transform.position - transform.position;
             Vector2 direction = (_player.transform.position - transform.position - offset).normalized;
-
-            if (_moving == true)
+            if (distance.x > 0)
             {
-                if (Mathf.Abs(direction.x) < 0.2f)
-                {
-                    Move(Vector2.zero);
-                }
-                else
-                {
-                    Move(direction);
-                }
-
+                FaceRightWay(Vector2.right);
             }
             else
             {
-                if (Mathf.Abs(distance.x) > 5f)
+                FaceRightWay(Vector2.left);
+            }
+            if (_moving == true)
+            {
+                if (Mathf.Abs(distance.x) - offset.x < 0.15f)
+                {
+                    Move(Vector2.zero);
+                }
+                else{
+                    Move(direction);
+                }
+                
+            }
+            else
+            {
+                if (Mathf.Abs(distance.x) > radiusNotToChase)
                 {
                     Move(direction);
                 }
             }
-
-            
         }
     }
 
-    
+    private void SwitchCharacter()
+    {
+        moveFromInput = !moveFromInput;
+    }
 
     private void SetDirection()
     {
@@ -84,6 +97,11 @@ public class SoulController : MonoBehaviour
         }
         else return;
 
+        Character.SetDirection(direction);
+    }
+
+    private void FaceRightWay(Vector2 direction)
+    {
         Character.SetDirection(direction);
     }
 
