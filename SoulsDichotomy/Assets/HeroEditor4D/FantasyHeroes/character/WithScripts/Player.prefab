@@ -1683,8 +1683,6 @@ GameObject:
   - component: {fileID: 1659027640193616881}
   - component: {fileID: 1712092882980939117}
   - component: {fileID: 1476138657786961103}
-  - component: {fileID: 1892448174411559170}
-  - component: {fileID: 1626835019028038372}
   - component: {fileID: 1626835019028038368}
   - component: {fileID: 1626835019028038369}
   - component: {fileID: 1626835019028038370}
@@ -1966,37 +1964,6 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 200
---- !u!70 &1892448174411559170
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1626835019028038373}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1}
-  m_Size: {x: 2, y: 2.5}
-  m_Direction: 0
---- !u!114 &1626835019028038372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1626835019028038373}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25868e9adbb55514bab7bd9755b7c690, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Character: {fileID: 1658921242930127863}
-  InitDirection: 0
-  MovementSpeed: 5
 --- !u!61 &1626835019028038368
 BoxCollider2D:
   m_ObjectHideFlags: 0
