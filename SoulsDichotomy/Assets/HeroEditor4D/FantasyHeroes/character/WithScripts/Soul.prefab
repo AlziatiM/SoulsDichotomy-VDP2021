@@ -12499,10 +12499,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff98a216ce394594d9cf6ad7f66d68a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0, z: 0}
   Character: {fileID: 2730951275497411943}
   InitDirection: 1
   MovementSpeed: 5
   activeInputSoul: 32
+  _moving: 0
 --- !u!114 &2730951275497411943
 MonoBehaviour:
   m_ObjectHideFlags: 0

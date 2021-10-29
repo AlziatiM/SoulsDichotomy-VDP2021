@@ -5,12 +5,15 @@ using UnityEngine;
 
 public class SoulController : MonoBehaviour
 {
+
+    private GameObject _player;
+    public Vector3 offset;
     public Character4D Character;
     public bool InitDirection;
     public int MovementSpeed;
     public KeyCode activeInputSoul; //dovrebbe essere salvato nel gm
     private bool moveFromInput;
-    private bool _moving;
+    public bool _moving;
 
     public void Start()
     {
@@ -20,6 +23,8 @@ public class SoulController : MonoBehaviour
         {
             Character.SetDirection(Vector2.right);
         }
+
+        _player = GameObject.FindWithTag("Player");
     }
 
     public void Update()
@@ -27,15 +32,39 @@ public class SoulController : MonoBehaviour
         if (Input.GetKey(activeInputSoul))
         {
             moveFromInput = !moveFromInput;
+            
         }
         if (moveFromInput)
         {
             SetDirection();
-            Move();
+            MoveFromInput();
         }
         else
         {
-            //chase the player
+            Vector2 distance = _player.transform.position - transform.position;
+            Vector2 direction = (_player.transform.position - transform.position - offset).normalized;
+
+            if (_moving == true)
+            {
+                if (Mathf.Abs(direction.x) < 0.2f)
+                {
+                    Move(Vector2.zero);
+                }
+                else
+                {
+                    Move(direction);
+                }
+
+            }
+            else
+            {
+                if (Mathf.Abs(distance.x) > 5f)
+                {
+                    Move(direction);
+                }
+            }
+
+            
         }
     }
 
@@ -58,7 +87,7 @@ public class SoulController : MonoBehaviour
         Character.SetDirection(direction);
     }
 
-    private void Move()
+    private void MoveFromInput()
     {
         if (MovementSpeed == 0) return;
 
@@ -83,6 +112,11 @@ public class SoulController : MonoBehaviour
         {
             direction += Vector2.down;
         }
+        Move(direction);
+    }
+
+    private void Move(Vector2 direction)
+    {
 
         if (direction == Vector2.zero)
         {

@@ -24,7 +24,6 @@ public class PlayerInput : MonoBehaviour
 			Character.SetDirection(Vector2.left);
 		}
 	}
-
 	void Update()
 	{
 		SetDirection();
@@ -114,5 +113,10 @@ public class PlayerInput : MonoBehaviour
 		{
 			ChangeAnimation(CharacterState.Idle);
 		}
+	}
+
+	public bool GetMoving()
+	{
+		return _moving;
 	}
 }
