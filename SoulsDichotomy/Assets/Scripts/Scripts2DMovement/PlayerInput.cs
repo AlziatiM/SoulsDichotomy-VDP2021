@@ -18,6 +18,8 @@ public class PlayerInput : MonoBehaviour
 	private bool isJumping;
 	private bool _moving;
 
+	public Health playerHealth;
+
 	private void Awake()
 	{
 		canMove = true;
