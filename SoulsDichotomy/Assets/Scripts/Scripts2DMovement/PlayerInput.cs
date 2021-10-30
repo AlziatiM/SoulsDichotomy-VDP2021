@@ -5,13 +5,17 @@ using HeroEditor4D.Common.Enums;
 [RequireComponent(typeof(PlayerVelocity))]
 public class PlayerInput : MonoBehaviour
 {
+ 
+	[Header("Movements References")]
 	public Character4D Character;
-
 	private PlayerVelocity playerVelocity;
 	public bool InitDirection;
 
+	[Header("Soul Objects")]
+	public SpriteRenderer areaMovement;
+
 	//manage different character input
-	private KeyCode activeInputPlayer;
+
 	private bool canMove;
 
 	private CharacterState currState;
@@ -22,6 +26,8 @@ public class PlayerInput : MonoBehaviour
 
 	private void Awake()
 	{
+		ShowAreaSoul(false);
+		playerHealth.SetUpHealh();
 		canMove = true;
 		isJumping = false;
 		playerVelocity = GetComponent<PlayerVelocity>();
@@ -31,7 +37,7 @@ public class PlayerInput : MonoBehaviour
 	void Start()
 	{
 		GameManager.changeCharacter += SwitchCharacter;
-		activeInputPlayer = GameManager.instance.GetSwitchCharacterInput();
+
 		Character.AnimationManager.SetState(CharacterState.Idle);
 		currState = CharacterState.Idle;
 		if (InitDirection)
@@ -53,6 +59,7 @@ public class PlayerInput : MonoBehaviour
     {
 		canMove = !canMove;
 		StopCharacter();
+		ShowAreaSoul(!canMove);
 	}
 
 	private void Move()
@@ -112,7 +119,6 @@ public class PlayerInput : MonoBehaviour
 		_moving = false;
 	}
 
-
 	private void SetDirection()
 	{
 		Vector2 direction;
@@ -143,5 +149,10 @@ public class PlayerInput : MonoBehaviour
 			ChangeAnimation(CharacterState.Idle);
 		}
 	}
+
+	private void ShowAreaSoul(bool show)
+    {
+		areaMovement.enabled = show;
+    }
 
 }

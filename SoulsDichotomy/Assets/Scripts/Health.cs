@@ -16,12 +16,19 @@ public class Health
     public UnityEvent onDamage;
     public UnityEvent onDeath;
 
-    void AddHp(int value)
+    public void SetUpHealh()
     {
+        currentHealth = maxHealth;
+    }
+
+    public void AddHp(int value)
+    {
+        if (isFullHp())
+            return;
         currentHealth = math.min(maxHealth, currentHealth + value);
         onHeal.Invoke();
     }
-    void SubtractHp(int value)
+    public void SubtractHp(int value)
     {
         currentHealth -= value;
         onDamage.Invoke();
@@ -31,10 +38,14 @@ public class Health
         } 
     }
 
-    void Die()
+    public void Die()
     {
         onDeath.Invoke();
     }
     
+    public bool isFullHp()
+    {
+        return currentHealth == maxHealth;
+    }
     
 }

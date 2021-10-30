@@ -7,6 +7,18 @@ public class SoulController : MonoBehaviour
 {
     //reference for player
     private GameObject _player;
+    [Header("SoulStat")]
+    public Health soulHealth;
+    [Range(0, 100)]
+    public int healthDecreasePerSec;
+    [Range(0, 100)]
+    public int healtIncreasePerSec;
+
+
+    [Header("Effect")]
+    public GameObject damageEffect;
+    public GameObject healEffect;
+
     [Header("Chase player stats")]
     public Vector3 offset;
     public float radiusNotToChase;
@@ -18,19 +30,16 @@ public class SoulController : MonoBehaviour
     private bool moveFromInput;
     private bool _moving;
 
-    private KeyCode activeInputSoul;
-
     private void Awake()
     {
         _player = GameObject.FindWithTag("Player");
-        
+        soulHealth.SetUpHealh();
         moveFromInput = false;
     }
 
     public void Start()
     {
         GameManager.changeCharacter += SwitchCharacter;
-        activeInputSoul = GameManager.instance.GetSwitchCharacterInput();
         Character.AnimationManager.SetState(CharacterState.Idle);
         if (InitDirection)
         {
@@ -66,7 +75,6 @@ public class SoulController : MonoBehaviour
                 else{
                     Move(direction);
                 }
-                
             }
             else
             {
@@ -151,4 +159,47 @@ public class SoulController : MonoBehaviour
             _moving = true;
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "AreaSoul")
+        {
+            CancelInvoke();
+            InvokeRepeating("Damage", 0.5f, 1f);
+        }
+    }
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "AreaSoul")
+        {
+            CancelInvoke();
+            InvokeRepeating("Heal", 0.5f, 1f);
+        }
+    }
+
+    private void Heal()
+    {
+        soulHealth.AddHp(healtIncreasePerSec);
+        if (soulHealth.isFullHp())
+        {
+            CancelInvoke();
+        }
+    }
+
+    private void Damage()
+    {
+        soulHealth.SubtractHp(healthDecreasePerSec);
+    }
+
+    public void HealExtras()
+    {
+        Destroy(Instantiate(healEffect, transform.position, Quaternion.identity), 1f);
+    }
+
+    public void DamageExtras()
+    {
+        Destroy(Instantiate(damageEffect, transform.position, Quaternion.identity), 1f);
+    }
+
 }

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Soul
+  - AreaSoul
   layers:
   - Default
   - TransparentFX
