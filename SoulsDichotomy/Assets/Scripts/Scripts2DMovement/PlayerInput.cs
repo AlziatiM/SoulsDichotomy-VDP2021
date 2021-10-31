@@ -3,7 +3,7 @@ using Assets.HeroEditor4D.Common.CharacterScripts;
 using HeroEditor4D.Common.Enums;
 
 [RequireComponent(typeof(PlayerVelocity))]
-public class PlayerInput : MonoBehaviour
+public class PlayerInput : MonoBehaviour, IHittable
 {
  
 	[Header("Movements References")]
@@ -153,6 +153,11 @@ public class PlayerInput : MonoBehaviour
 	private void ShowAreaSoul(bool show)
     {
 		areaMovement.enabled = show;
+    }
+
+	public void Hit(int amount)
+    {
+		playerHealth.SubtractHp(amount);
     }
 
 }

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoulController : MonoBehaviour
+public class SoulController : MonoBehaviour, IHittable
 {
     //reference for player
     private GameObject _player;
@@ -189,7 +189,7 @@ public class SoulController : MonoBehaviour
 
     private void Damage()
     {
-        soulHealth.SubtractHp(healthDecreasePerSec);
+        Hit(healthDecreasePerSec);
     }
 
     public void HealExtras()
@@ -200,6 +200,11 @@ public class SoulController : MonoBehaviour
     public void DamageExtras()
     {
         Destroy(Instantiate(damageEffect, transform.position, Quaternion.identity), 1f);
+    }
+
+    public void Hit(int amount)
+    {
+        soulHealth.SubtractHp(amount);
     }
 
 }
