@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="37998f5d-d7db-4e9c-a5b0-6eb1848c24ae" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulsDichotomy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulsDichotomy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Characters/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Characters/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Characters/Soul.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Characters/Soul.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/SoulController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/SoulController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectDamagetor/Damage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectDamagetor/Damage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts2DMovement/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts2DMovement/PlayerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroEditor4D/FantasyHeroes/characterOld/WithScriptsOld/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HeroEditor4D/FantasyHeroes/characterOld/WithScriptsOld/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroEditor4D/FantasyHeroes/characterOld/WithScriptsOld/Soul.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HeroEditor4D/FantasyHeroes/characterOld/WithScriptsOld/Soul.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +61,7 @@
       <workItem from="1635498238279" duration="15000" />
       <workItem from="1635500331014" duration="712000" />
       <workItem from="1635501077596" duration="3059000" />
-      <workItem from="1635675406593" duration="10591000" />
+      <workItem from="1635675406593" duration="11904000" />
     </task>
     <servers />
   </component>
