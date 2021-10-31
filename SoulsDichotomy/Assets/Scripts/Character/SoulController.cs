@@ -33,7 +33,7 @@ public class SoulController : MonoBehaviour, IHittable
     private void Awake()
     {
         _player = GameObject.FindWithTag("Player");
-        soulHealth.SetUpHealh();
+        soulHealth.SetUpHealth();
         moveFromInput = false;
     }
 
@@ -68,7 +68,7 @@ public class SoulController : MonoBehaviour, IHittable
             }
             if (_moving == true)
             {
-                if (Mathf.Abs(distance.x) - offset.x < 0.15f)
+                if (Mathf.Abs(distance.x) - offset.x < 0.15f || Mathf.Abs(distance.y) - offset.y < 0.15f)
                 {
                     Move(Vector2.zero);
                 }
@@ -78,7 +78,7 @@ public class SoulController : MonoBehaviour, IHittable
             }
             else
             {
-                if (Mathf.Abs(distance.x) > radiusNotToChase)
+                if (Mathf.Abs(distance.x) > radiusNotToChase || Mathf.Abs(distance.y) > radiusNotToChase)
                 {
                     Move(direction);
                 }

@@ -27,7 +27,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 	private void Awake()
 	{
 		ShowAreaSoul(false);
-		playerHealth.SetUpHealh();
+		playerHealth.SetUpHealth();
 		canMove = true;
 		isJumping = false;
 		playerVelocity = GetComponent<PlayerVelocity>();

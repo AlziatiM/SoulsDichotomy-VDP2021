@@ -16,7 +16,7 @@ public class Health
     public UnityEvent onDamage;
     public UnityEvent onDeath;
 
-    public void SetUpHealh()
+    public void SetUpHealth()
     {
         currentHealth = maxHealth;
     }
