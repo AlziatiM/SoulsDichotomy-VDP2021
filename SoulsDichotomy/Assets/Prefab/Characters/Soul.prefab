@@ -6988,7 +6988,7 @@ MonoBehaviour:
   healthDecreasePerSec: 10
   healtIncreasePerSec: 20
   damageEffect: {fileID: 8278689422809156236, guid: 9d07ccd129c93b340adafc35420c56fd, type: 3}
-  healEffect: {fileID: 685000463596060269, guid: aa61e5b98fc65db438e2a4030fa7f260, type: 3}
+  healEffect: {fileID: 8278689422809156236, guid: aa61e5b98fc65db438e2a4030fa7f260, type: 3}
   offset: {x: 1, y: -1, z: 0}
   radiusNotToChase: 3
   Character: {fileID: 2259454853821088036}
