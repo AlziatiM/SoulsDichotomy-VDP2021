@@ -68,7 +68,7 @@ public class SoulController : MonoBehaviour, IHittable
             }
             if (_moving == true)
             {
-                if (Mathf.Abs(distance.x) - offset.x < 0.15f || Mathf.Abs(distance.y) - offset.y < 0.15f)
+                if (Mathf.Abs(distance.x) /*+ (-offset.x) <0.15f && Mathf.Abs(distance.y) + (-offset.y) < 0.15f */- offset.x < 0.15f || Mathf.Abs(distance.y) - offset.y < 0.15f)
                 {
                     Move(Vector2.zero);
                 }
@@ -194,12 +194,12 @@ public class SoulController : MonoBehaviour, IHittable
 
     public void HealExtras()
     {
-        Destroy(Instantiate(healEffect, transform.position, Quaternion.identity), 1f);
+        Destroy(Instantiate(healEffect, transform.position, Quaternion.identity, this.gameObject.transform), 1f);
     }
 
     public void DamageExtras()
     {
-        Destroy(Instantiate(damageEffect, transform.position, Quaternion.identity), 1f);
+        Destroy(Instantiate(damageEffect, transform.position, Quaternion.identity, this.gameObject.transform), 1f);
     }
 
     public void Hit(int amount)
