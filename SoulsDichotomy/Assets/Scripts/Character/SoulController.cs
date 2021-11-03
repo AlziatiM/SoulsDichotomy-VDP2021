@@ -16,8 +16,7 @@ public class SoulController : MonoBehaviour, IHittable
 
 
     [Header("Effect")]
-    public GameObject damageEffect;
-    public GameObject healEffect;
+    public ParticlesPlayer particles;
 
     [Header("Chase player stats")]
     public Vector3 offset;
@@ -30,11 +29,17 @@ public class SoulController : MonoBehaviour, IHittable
     private bool moveFromInput;
     private bool _moving;
 
+
+    //references
+    private Transform _transform;
+
+
     private void Awake()
     {
         _player = GameObject.FindWithTag("Player");
         soulHealth.SetUpHealth();
         moveFromInput = false;
+        _transform = transform;
     }
 
     public void Start()
@@ -43,7 +48,7 @@ public class SoulController : MonoBehaviour, IHittable
         Character.AnimationManager.SetState(CharacterState.Idle);
         if (InitDirection)
         {
-            Character.SetDirection(Vector2.right);
+            Character.SetDirection(Vector2.left);
         }
     }
 
@@ -56,19 +61,22 @@ public class SoulController : MonoBehaviour, IHittable
         }
         else
         {
-            Vector2 distance = _player.transform.position - transform.position;
-            Vector2 direction = (_player.transform.position - transform.position - offset).normalized;
+            Vector2 distance = _player.transform.position - _transform.position;
+            Vector2 pointToReach = distance - (Vector2) offset;
+            Vector2 direction = (pointToReach).normalized;
             if (distance.x > 0)
             {
                 FaceRightWay(Vector2.right);
+                offset.x = 1;
             }
             else
             {
                 FaceRightWay(Vector2.left);
+                offset.x = -1;
             }
             if (_moving == true)
             {
-                if (Mathf.Abs(distance.x) /*+ (-offset.x) <0.15f && Mathf.Abs(distance.y) + (-offset.y) < 0.15f */- offset.x < 0.15f || Mathf.Abs(distance.y) - offset.y < 0.15f)
+                if(Mathf.Abs(pointToReach.x)<0.15f && Mathf.Abs(pointToReach.y)<0.15f)
                 {
                     Move(Vector2.zero);
                 }
@@ -187,6 +195,7 @@ public class SoulController : MonoBehaviour, IHittable
         }
     }
 
+    //called from invokerepeated
     private void Damage()
     {
         Hit(healthDecreasePerSec);
@@ -194,12 +203,13 @@ public class SoulController : MonoBehaviour, IHittable
 
     public void HealExtras()
     {
-        Destroy(Instantiate(healEffect, transform.position, Quaternion.identity, this.gameObject.transform), 1f);
+        particles.HealEffect(_transform);
     }
 
     public void DamageExtras()
     {
-        Destroy(Instantiate(damageEffect, transform.position, Quaternion.identity, this.gameObject.transform), 1f);
+        particles.DamageEffect(_transform);
+        Character.AnimationManager.Hit();
     }
 
     public void Hit(int amount)

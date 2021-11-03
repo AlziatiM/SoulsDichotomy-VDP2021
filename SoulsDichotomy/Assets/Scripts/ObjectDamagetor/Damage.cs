@@ -8,9 +8,18 @@ public class Damage : MonoBehaviour
     public bool damageOverTime;
     public float timeBetwDmg = 0.5f;
 
+    private void OnValidate()
+    {
+        damage = Mathf.Clamp(damage, 0, 100);
+
+        if (damageOverTime)
+        {
+            timeBetwDmg = Mathf.Clamp(timeBetwDmg, 0.01f, float.MaxValue);
+        }
+    }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
-
         IHittable hit = collision.GetComponent<IHittable>();
         if (hit != null)
         {

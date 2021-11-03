@@ -24,6 +24,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 
 	public Health playerHealth;
 
+	private IInteract interactObj;
 	private void Awake()
 	{
 		ShowAreaSoul(false);
@@ -31,7 +32,6 @@ public class PlayerInput : MonoBehaviour, IHittable
 		canMove = true;
 		isJumping = false;
 		playerVelocity = GetComponent<PlayerVelocity>();
-		
 	}
 
 	void Start()
@@ -45,6 +45,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 			Character.SetDirection(Vector2.left);
 		}
 	}
+
 	void Update()
 	{
 		if (!canMove)
@@ -53,6 +54,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 		}
 		SetDirection();
 		Move();
+		Interaction();
 	}
 
 	private void SwitchCharacter()
@@ -64,9 +66,9 @@ public class PlayerInput : MonoBehaviour, IHittable
 
 	private void Move()
     {
-		var direction = Vector2.zero;
+        var direction = Vector2.zero;
 
-		if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
 		{
 			direction += Vector2.left;
 		}
@@ -119,6 +121,14 @@ public class PlayerInput : MonoBehaviour, IHittable
 		_moving = false;
 	}
 
+	private void Interaction()
+    {
+        if (interactObj!=null && Input.GetKeyDown(KeyCode.E))
+        {
+			interactObj.Interact();
+        }
+    }
+
 	private void SetDirection()
 	{
 		Vector2 direction;
@@ -159,5 +169,23 @@ public class PlayerInput : MonoBehaviour, IHittable
     {
 		playerHealth.SubtractHp(amount);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+		IInteract interact = collision.gameObject.GetComponent<IInteract>();
+        if (interact != null)
+        {
+			interactObj = interact;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+		IInteract interact = collision.gameObject.GetComponent<IInteract>();
+		if (interact != null)
+		{
+			interactObj = null;
+		}
+	}
 
 }

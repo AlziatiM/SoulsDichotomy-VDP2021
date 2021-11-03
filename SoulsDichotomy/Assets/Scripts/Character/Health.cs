@@ -1,4 +1,3 @@
-
 using System;
 using Unity.Mathematics;
 using UnityEditor;
@@ -8,9 +7,11 @@ using UnityEngine.Events;
 [Serializable]
 public class Health 
 {
-    public int maxHealth;
+    [SerializeField]
+    private int maxHealth;
     
-    public int currentHealth;
+    [SerializeField]
+    private int currentHealth;
     
     public UnityEvent onHeal;
     public UnityEvent onDamage;
