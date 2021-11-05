@@ -169,6 +169,10 @@ public class PlayerInput : MonoBehaviour, IHittable
     {
 		playerHealth.SubtractHp(amount);
     }
+	public void Heal(int amount)
+	{
+		playerHealth.AddHp(amount);
+	}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
