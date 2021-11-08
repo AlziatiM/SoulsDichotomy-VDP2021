@@ -4697,8 +4697,8 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3838318379822696181}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1266026739
+  m_SortingLayer: 2
   m_SortingOrder: 200
 --- !u!61 &3838318379822696176
 BoxCollider2D:
@@ -4740,7 +4740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1536
   skinWidth: 0.015
   distanceBetweenRays: 0.15
   boxCollider: {fileID: 0}
@@ -4773,9 +4773,9 @@ MonoBehaviour:
   accelerationTimeAirborne: 0.2
   accelerationTimeGrounded: 0.1
   forceFallSpeed: 20
-  wallJump: {x: 15, y: 15}
-  wallJumpClimb: {x: 5, y: 15}
-  wallLeapOff: {x: 15, y: 5}
+  wallJump: {x: 0, y: 0}
+  wallJumpClimb: {x: 0, y: 0}
+  wallLeapOff: {x: 0, y: 0}
   wallSlideSpeedMax: 3
   wallStickTime: 0.25
 --- !u!1 &3948015609975071427

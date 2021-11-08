@@ -17,7 +17,7 @@ TagManager:
   - 
   - Player
   - 
-  - 
+  - DoorAndGate
   - Floor
   - 
   - 
@@ -43,4 +43,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Tiles
+    uniqueID: 3964977729
+    locked: 0
+  - name: Character
+    uniqueID: 3028940557
     locked: 0
