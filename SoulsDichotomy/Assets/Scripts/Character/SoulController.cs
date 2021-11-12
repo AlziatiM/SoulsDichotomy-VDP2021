@@ -28,6 +28,7 @@ public class SoulController : MonoBehaviour, IHittable
     public int MovementSpeed;
     private bool moveFromInput;
     private bool _moving;
+    private bool isInRange;
 
 
     //references
@@ -40,6 +41,7 @@ public class SoulController : MonoBehaviour, IHittable
         soulHealth.SetUpHealth();
         moveFromInput = false;
         _transform = transform;
+        isInRange = true;
     }
 
     public void Start()
@@ -97,6 +99,11 @@ public class SoulController : MonoBehaviour, IHittable
     private void SwitchCharacter()
     {
         moveFromInput = !moveFromInput;
+        CancelInvoke();
+        if (isInRange)
+        {
+            StartInvokeHeal();
+        }
     }
 
     private void SetDirection()
@@ -176,6 +183,7 @@ public class SoulController : MonoBehaviour, IHittable
                 return;
             CancelInvoke();
             InvokeRepeating("Damage", 0.5f, 1f);
+            isInRange = false;
         }
     }
     
@@ -184,8 +192,14 @@ public class SoulController : MonoBehaviour, IHittable
         if (collision.tag == "AreaSoul")
         {
             CancelInvoke();
-            InvokeRepeating("Heal", 0.5f, 1f);
+            StartInvokeHeal();
+            isInRange = true;
         }
+    }
+
+    private void StartInvokeHeal()
+    {
+        InvokeRepeating("Heal", 0.5f, 1f);
     }
 
     private void Heal()

@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class HealthUp : PickUp
 {
+    [Header("Particualr Attributes for HealthUp")]
     [SerializeField] private int amountHeal;
-    public override void Apply(Collider2D collision)
+    public override void ApplyPlayer()
     {
-        if (collision.CompareTag("Player"))
-        {
-          collision.GetComponent<PlayerInput>().Heal(amountHeal);
-                
-        }
+        player.GetComponent<PlayerInput>().Heal(amountHeal);  
+    }
+    public override void ApplySoul()
+    {
+        player.GetComponent<PlayerInput>().Heal(amountHeal);
+    }
+    public override void RemovePlayer()
+    {
+        throw new System.NotImplementedException();
+    }
+    public override void RemoveSoul()
+    {
+        throw new System.NotImplementedException();
     }
 }
