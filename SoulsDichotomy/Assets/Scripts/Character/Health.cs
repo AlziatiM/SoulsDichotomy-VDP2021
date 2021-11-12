@@ -49,4 +49,9 @@ public class Health
         return currentHealth == maxHealth;
     }
     
+    public void AddMaxHealth(int amount)
+    {
+        maxHealth += amount;
+    }
+
 }

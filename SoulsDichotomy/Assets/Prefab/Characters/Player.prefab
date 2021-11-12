@@ -4372,7 +4372,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3843799073921704139}
-  - component: {fileID: 4646172816415518061}
   - component: {fileID: 3838318379822696179}
   - component: {fileID: 3806232155718772711}
   - component: {fileID: 3806007522635559985}
@@ -4381,6 +4380,7 @@ GameObject:
   - component: {fileID: 3752990018025021821}
   - component: {fileID: 4011462241355782367}
   - component: {fileID: 3838318379822696176}
+  - component: {fileID: 4646172816415518061}
   - component: {fileID: 3838318379822696177}
   - component: {fileID: 3838318379822696178}
   m_Layer: 7
@@ -4408,18 +4408,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4646172816415518061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3838318379822696181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34ac2fa4cd64c4e48956a820ac17d7cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3838318379822696179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4434,19 +4422,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 3806232155718772711}
   InitDirection: 1
+  panelSoulMovement: {fileID: 5830352252371051947}
   areaMovement: {fileID: 5830352252371051951}
   playerHealth:
     maxHealth: 100
     currentHealth: 0
     onHeal:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 3838318379822696179}
+          m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+          m_MethodName: HealExtra
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     onDamage:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 3838318379822696179}
+          m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+          m_MethodName: DamageExtra
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     onDeath:
       m_PersistentCalls:
         m_Calls: []
+  particles:
+    damageEffect: {fileID: 8278689422809156236, guid: 9d07ccd129c93b340adafc35420c56fd, type: 3}
+    healEffect: {fileID: 8278689422809156236, guid: aa61e5b98fc65db438e2a4030fa7f260, type: 3}
 --- !u!114 &3806232155718772711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4726,6 +4742,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.45, y: 1.6685247}
   m_EdgeRadius: 0
+--- !u!114 &4646172816415518061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3838318379822696181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ac2fa4cd64c4e48956a820ac17d7cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3838318379822696177
 MonoBehaviour:
   m_ObjectHideFlags: 0

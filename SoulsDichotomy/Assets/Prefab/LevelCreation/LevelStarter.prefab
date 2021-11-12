@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 3022259299030147086, guid: 722d28c1c2798334393bd3f857c3e85f, type: 3}
+  skillManager: {fileID: 807789989648588978, guid: 5e6f160e51e61a546a56ba02305b6241, type: 3}
   player: {fileID: 3838318379822696181, guid: d868a02f5e73f2f4795a1d2a9d8b699f, type: 3}
   soul: {fileID: 2219487330374246454, guid: 31ae128421de52a43b45201f947f4a1e, type: 3}
   startPoint: {fileID: 4736799984618063553}

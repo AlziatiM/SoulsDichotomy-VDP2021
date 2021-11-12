@@ -5,13 +5,14 @@ using HeroEditor4D.Common.Enums;
 [RequireComponent(typeof(PlayerVelocity))]
 public class PlayerInput : MonoBehaviour, IHittable
 {
- 
+
 	[Header("Movements References")]
 	public Character4D Character;
 	private PlayerVelocity playerVelocity;
 	public bool InitDirection;
 
 	[Header("Soul Objects")]
+	public GameObject panelSoulMovement;
 	public SpriteRenderer areaMovement;
 
 	//manage different character input
@@ -22,7 +23,12 @@ public class PlayerInput : MonoBehaviour, IHittable
 	private bool isJumping;
 	private bool _moving;
 
+	[Header("Healt Attributes")]
 	public Health playerHealth;
+	[SerializeField] private ParticlesPlayer particles;
+
+
+	private Transform _transf;
 
 	private IInteract interactObj;
 	private void Awake()
@@ -32,6 +38,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 		canMove = true;
 		isJumping = false;
 		playerVelocity = GetComponent<PlayerVelocity>();
+		_transf = this.gameObject.GetComponent<Transform>();
 	}
 
 	void Start()
@@ -191,5 +198,16 @@ public class PlayerInput : MonoBehaviour, IHittable
 			interactObj = null;
 		}
 	}
+
+	public void HealExtra()
+    {
+		particles.HealEffect(_transf);
+		Character.AnimationManager.Hit();
+    }
+
+	public void DamageExtra()
+    {
+		particles.DamageEffect(_transf);
+    }
 
 }

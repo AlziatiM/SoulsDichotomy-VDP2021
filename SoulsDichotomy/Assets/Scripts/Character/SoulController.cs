@@ -172,6 +172,8 @@ public class SoulController : MonoBehaviour, IHittable
     {
         if (collision.tag == "AreaSoul")
         {
+            if (!moveFromInput)
+                return;
             CancelInvoke();
             InvokeRepeating("Damage", 0.5f, 1f);
         }
@@ -188,11 +190,12 @@ public class SoulController : MonoBehaviour, IHittable
 
     private void Heal()
     {
-        soulHealth.AddHp(healtIncreasePerSec);
         if (soulHealth.isFullHp())
         {
             CancelInvoke();
+            return;
         }
+        soulHealth.AddHp(healtIncreasePerSec);
     }
 
     //called from invokerepeated
