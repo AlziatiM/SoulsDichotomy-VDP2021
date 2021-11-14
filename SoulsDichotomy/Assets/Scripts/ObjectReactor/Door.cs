@@ -54,8 +54,8 @@ public class Door : MonoBehaviour, IReact
         boxCollider.enabled = false;
         for (int i=1; i< aminationSprite.Length; i++)
         {
-            yield return new WaitForSeconds(0.5f);
             spriteRenderer.sprite = aminationSprite[i];
+            yield return new WaitForSeconds(0.5f);
         }
 
     }
@@ -65,8 +65,8 @@ public class Door : MonoBehaviour, IReact
         boxCollider.enabled = true;
         for (int i = aminationSprite.Length-2; i >=0; i--)
         {
-            yield return new WaitForSeconds(0.5f);
             spriteRenderer.sprite = aminationSprite[i];
+            yield return new WaitForSeconds(0.5f);
         }
     }
 }

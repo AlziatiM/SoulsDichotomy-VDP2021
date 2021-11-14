@@ -6,8 +6,8 @@ using UnityEngine.Events;
 public class StandardActivator : MonoBehaviour, IInteract
 {
     [Header("Look")]
-    [SerializeField] private Sprite nonActiveSprite;
-    [SerializeField] private Sprite activeSprite;
+    [SerializeField] protected Sprite nonActiveSprite;
+    [SerializeField] protected Sprite activeSprite;
 
     [Header("ActionToDo")]
     [SerializeField]
@@ -15,7 +15,7 @@ public class StandardActivator : MonoBehaviour, IInteract
     private List<IReact> reactScripts = new List<IReact>();
 
     [Header("StartInfo")]
-    [SerializeField] private bool doIStartActive;
+    [SerializeField] protected bool amIActive;
 
     private void OnValidate()
     {
@@ -26,7 +26,6 @@ public class StandardActivator : MonoBehaviour, IInteract
                 IReact reactScript = go.GetComponent<IReact>();
                 if (reactScript == null)
                 {
-                    Debug.LogError("No react foud on objHasToReac in: " + go.name);
                     objHasToReac = null;
                     reactScripts.Clear();
                 }
@@ -39,20 +38,44 @@ public class StandardActivator : MonoBehaviour, IInteract
         }
     }
 
-    private bool amIActive;
-    private SpriteRenderer spriteRenderer;
+    protected SpriteRenderer spriteRenderer;
     private void Awake()
     {
+        SetUpActivator();
+    }
+
+    protected void SetUpActivator()
+    {
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
-        amIActive = doIStartActive;
+        if (amIActive)
+        {
+            spriteRenderer.sprite = activeSprite;
+        }
+        else
+        {
+            spriteRenderer.sprite = nonActiveSprite;
+        }
     }
 
     public void Interact()
-    {
+    {   
+        Switch();
         amIActive = !amIActive;
         foreach (IReact r in reactScripts)
         {
             r.React();
+        }
+    }
+
+    public virtual void Switch()
+    {
+        if(amIActive)
+        {
+            spriteRenderer.sprite = nonActiveSprite;
+        }
+        else
+        {
+            spriteRenderer.sprite = activeSprite;
         }
     }
 

@@ -32,8 +32,8 @@ public class Timer : MonoBehaviour
 
     public void StartTimer()
     {
+        timeCount = time;
         timerStarted = true;
-        timeCount= time;
     }
 
     public float GetTime()
