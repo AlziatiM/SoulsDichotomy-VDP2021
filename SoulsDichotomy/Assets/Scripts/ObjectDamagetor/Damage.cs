@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
+    [SerializeField] protected bool CanDamagePlayer;
+    [SerializeField] protected bool CanDamageSoul;
     public int damage;
     public bool damageOverTime;
     public float timeBetwDmg = 0.5f;
@@ -23,18 +25,30 @@ public class Damage : MonoBehaviour
         IHittable hit = collision.GetComponent<IHittable>();
         if (hit != null)
         {
-            if (damageOverTime)
+            if (CanDamagePlayer == true && collision.CompareTag("Player"))
             {
-                IEnumerator myFunc = ApplyHit(hit);
-                StartCoroutine(myFunc);
+                ApplyDamage(hit);
             }
-            else
+
+            if (CanDamageSoul == true && collision.CompareTag("Soul"))
             {
-                hit.Hit(damage);
+                ApplyDamage(hit);
             }
         }
     }
 
+    public void ApplyDamage(IHittable hit)
+    {
+        if (damageOverTime)
+            {
+                IEnumerator myFunc = ApplyHit(hit);
+                StartCoroutine(myFunc);
+            }
+        else
+        {
+            hit.Hit(damage);
+        }
+    }
     public void OnTriggerExit2D(Collider2D collision)
     {
         IHittable hit = collision.GetComponent<IHittable>();
