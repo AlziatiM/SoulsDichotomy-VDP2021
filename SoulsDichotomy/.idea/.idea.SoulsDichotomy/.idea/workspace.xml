@@ -2,20 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37998f5d-d7db-4e9c-a5b0-6eb1848c24ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/DamageBrush/Fire.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/DamageBrush/Fire.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/Reactable Brush/GateBrush.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/Reactable Brush/GateBrush.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Damagetor/Fire.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Damagetor/Fire.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulsDichotomy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulsDichotomy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Brush/Reactable Brush/DoorBrush.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Brush/Reactable Brush/DoorBrush.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Damagetor/ButtonSpike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Damagetor/ButtonSpike.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Damagetor/LeftSpike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Damagetor/LeftSpike.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Damagetor/RightSpike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Damagetor/RightSpike.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Damagetor/TopSpike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Damagetor/TopSpike.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Tilemaps/Last tile map png.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Tilemaps/Last tile map png.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/PickUp/Heal.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/PickUp/Heal.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Skill.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Skill/MaxAmountHp.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Skill/MaxAmountHp.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Skill/SO.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Skill/SO/MaxAmountHp.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Skill/SO/MaxAmountHp.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Skill/Skill.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Skill/Skill.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Skill/SkillManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Skill/SkillManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Brush/DamageBrush/Fire.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Brush/DamageBrush/Fire.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/MaxAmountHp.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/MaxAmountHp.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/SO.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/SO/MaxAmountHp.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/SO/MaxAmountHp.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/Skill.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/Skill.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/SkillManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/SkillManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
