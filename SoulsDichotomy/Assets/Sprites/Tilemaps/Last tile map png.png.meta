@@ -197,6 +197,9 @@ TextureImporter:
   - first:
       213: 4979582550254291186
     second: Last tile map png_100
+  - first:
+      213: 1801126882940475060
+    second: Last tile map png_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1414,12 +1417,12 @@ TextureImporter:
       name: fire1
       rect:
         serializedVersion: 2
-        x: 471
+        x: 476
         y: 238
-        width: 238
+        width: 476
         height: 238
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1595,6 +1598,27 @@ TextureImporter:
       bones: []
       spriteID: 2f804ad42f70b1540800000000000000
       internalID: 4979582550254291186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Last tile map png_7
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 355
+        width: 91
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6d2157b53eef810800000000000000
+      internalID: 1801126882940475060
       vertices: []
       indices: 
       edges: []
