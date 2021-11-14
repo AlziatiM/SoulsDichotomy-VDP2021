@@ -172,7 +172,7 @@ TextureImporter:
     second: Last tile map png_80
   - first:
       213: 6270047213041316494
-    second: Last tile map png_81
+    second: fire1
   - first:
       213: 2995123303603429636
     second: torch1
@@ -1411,12 +1411,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Last tile map png_81
+      name: fire1
       rect:
         serializedVersion: 2
-        x: 476
+        x: 471
         y: 238
-        width: 476
+        width: 238
         height: 238
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

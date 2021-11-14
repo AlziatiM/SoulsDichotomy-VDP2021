@@ -2,45 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37998f5d-d7db-4e9c-a5b0-6eb1848c24ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/DamageBrush.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/DamageBrush/ButtonSpike.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/DamageBrush/ButtonSpike.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/DamageBrush/LeftSpike.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/DamageBrush/LeftSpike.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/DamageBrush/RightSpike.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/DamageBrush/RightSpike.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/DamageBrush/TopSpike.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/DamageBrush/TopSpike.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/Enviromental Brush.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/Enviromental Brush/Skull.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/Enviromental Brush/Skull.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/Interactable Brush.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/Reactable Brush.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/Reactable Brush/DoorBrush.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/Reactable Brush/DoorBrush.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectDamagetor/DamagePlayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectDamagetor/DamagePlayer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectDamagetor/DamageSoul.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectDamagetor/DamageSoul.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Brush/DamageBrush/Fire.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Brush/DamageBrush/Fire.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Brush/Reactable Brush/GateBrush.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Brush/Reactable Brush/GateBrush.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Damagetor/Fire.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Damagetor/Fire.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulsDichotomy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulsDichotomy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Brush/EnviromentBrush.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Brush/EnviromentBrush/Skull.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Brush/EnviromentBrush/Skull.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Brush/PrefabBrush.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Brush/PrefabBrush/DoorBrush.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Brush/PrefabBrush/DoorBrush.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Characters/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Characters/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Characters/Soul.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Characters/Soul.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Doors.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Doors/Gate.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Doors/Gate.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Effects/DamageEffect.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Effects/DamageEffect.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectDamagetor/Damage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectDamagetor/Damage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectDamagetor/Lava.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectDamagetor/Lava.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectInteractor/StandardActivator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectInteractor/StandardActivator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileMaps/Palette/RuledTiles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMaps/Palette/RuledTiles.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Brush/Reactable Brush/DoorBrush.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Brush/Reactable Brush/DoorBrush.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Damagetor/ButtonSpike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Damagetor/ButtonSpike.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Damagetor/LeftSpike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Damagetor/LeftSpike.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Damagetor/RightSpike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Damagetor/RightSpike.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Damagetor/TopSpike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Damagetor/TopSpike.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Tilemaps/Last tile map png.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Tilemaps/Last tile map png.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +83,7 @@
       <workItem from="1635675406593" duration="11904000" />
       <workItem from="1636103186271" duration="2375000" />
       <workItem from="1636105630746" duration="3274000" />
-      <workItem from="1636890036122" duration="1772000" />
+      <workItem from="1636890036122" duration="2960000" />
     </task>
     <servers />
   </component>

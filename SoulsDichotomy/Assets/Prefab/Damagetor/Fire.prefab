@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: -4613141918235877209}
   - component: {fileID: 2807879846153145666}
   - component: {fileID: -7872522637697713180}
-  - component: {fileID: 118298851943566181}
+  - component: {fileID: -7269635633766195218}
   m_Layer: 0
-  m_Name: RightSpike
+  m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,18 +68,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.37708965, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.0000976}
+    oldSize: {x: 2, y: 1.0000976}
     newSize: {x: 1, y: 1.0000976}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2458207, y: 1}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &-7872522637697713180
 SpriteRenderer:
@@ -121,7 +121,7 @@ SpriteRenderer:
   m_SortingLayerID: -329989567
   m_SortingLayer: 1
   m_SortingOrder: 6
-  m_Sprite: {fileID: 5846034174592983189, guid: e741818b4f51bfe47b36192637867f12, type: 3}
+  m_Sprite: {fileID: 6270047213041316494, guid: e741818b4f51bfe47b36192637867f12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -132,7 +132,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &118298851943566181
+--- !u!114 &-7269635633766195218
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
