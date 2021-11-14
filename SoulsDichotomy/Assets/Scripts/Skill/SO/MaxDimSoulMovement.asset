@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MaxDimSoulMovement
   m_EditorClassIdentifier: 
   isUnlock: 0
-  levelUnlock: 0
-  affectPlayer: 0
+  levelUnlock: 2
+  affectPlayer: 1
   affectSoul: 0
-  newScale: {x: 0, y: 0, z: 0}
+  newScale: {x: 8, y: 6, z: 1}
