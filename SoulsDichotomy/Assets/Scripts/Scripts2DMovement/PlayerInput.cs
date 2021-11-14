@@ -210,4 +210,9 @@ public class PlayerInput : MonoBehaviour, IHittable
 		particles.DamageEffect(_transf);
     }
 
+	public void SetScaleToSoulPanel(Vector3 newScale)
+    {
+		panelSoulMovement.transform.localScale = newScale;
+    }
+
 }
