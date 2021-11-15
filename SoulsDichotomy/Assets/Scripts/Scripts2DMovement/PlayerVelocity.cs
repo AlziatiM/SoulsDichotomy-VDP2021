@@ -60,6 +60,12 @@ public class PlayerVelocity : MonoBehaviour
 		set { wallLeapOff = value; }
 	}
 
+	public float MoveSpeed
+	{
+		get { return moveSpeed; }
+		set { moveSpeed = value; }
+	}
+	
 	void Start()
 	{
 		playerMovement = GetComponent<Movement>();
