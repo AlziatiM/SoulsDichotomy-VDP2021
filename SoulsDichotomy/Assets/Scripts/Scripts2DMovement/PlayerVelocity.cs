@@ -18,9 +18,9 @@ public class PlayerVelocity : MonoBehaviour
 	[SerializeField] private float accelerationTimeGrounded = .1f;
 	[SerializeField] private float forceFallSpeed = 20;
 
-	[SerializeField] private Vector2 wallJump;
-	[SerializeField] private Vector2 wallJumpClimb;
-	[SerializeField] private Vector2 wallLeapOff;
+	[SerializeField] public Vector2 wallJump;
+	[SerializeField] public Vector2 wallJumpClimb;
+	[SerializeField] public Vector2 wallLeapOff;
 
 	[SerializeField] private float wallSlideSpeedMax = 3;
 	[SerializeField] private float wallStickTime = .25f;
