@@ -18,9 +18,9 @@ public class PlayerVelocity : MonoBehaviour
 	[SerializeField] private float accelerationTimeGrounded = .1f;
 	[SerializeField] private float forceFallSpeed = 20;
 
-	[SerializeField] public Vector2 wallJump;
-	[SerializeField] public Vector2 wallJumpClimb;
-	[SerializeField] public Vector2 wallLeapOff;
+	[SerializeField] private Vector2 wallJump;
+	[SerializeField] private Vector2 wallJumpClimb;
+	[SerializeField] private Vector2 wallLeapOff;
 
 	[SerializeField] private float wallSlideSpeedMax = 3;
 	[SerializeField] private float wallStickTime = .25f;
@@ -40,6 +40,25 @@ public class PlayerVelocity : MonoBehaviour
 	private int wallDirX;
 
 	private PlayerInput playerInput;
+
+	//add to pickup purposed
+	public Vector2 WallJump
+    {
+		get { return wallJump; }
+		set { wallJump = value; }
+	}
+
+	public Vector2 WallJumpClimb
+	{
+		get { return wallJumpClimb; }
+		set { wallJumpClimb = value; }
+	}
+
+	public Vector2 WallLeapOff
+	{
+		get { return wallLeapOff; }
+		set { wallLeapOff = value; }
+	}
 
 	void Start()
 	{

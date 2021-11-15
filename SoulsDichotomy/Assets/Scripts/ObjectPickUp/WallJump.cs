@@ -4,12 +4,26 @@ using UnityEngine;
 
 public class WallJump : PickUp
 {
-    
+    [Header("Wall jump attributes")]
+    [SerializeField] private Vector2 wallJump;
+    [SerializeField] private Vector2 wallJumpClimb;
+    [SerializeField] private Vector2 wallLeapOff;
+
+    private Vector2 wallJumpToRestore;
+    private Vector2 wallJumpClimbToRestore;
+    private Vector2 wallLeapOffToRestore;
     public override void ApplyPlayer()
     {
-        player.GetComponent<PlayerVelocity>().wallJump = new Vector2(15,15);
-        player.GetComponent<PlayerVelocity>().wallJumpClimb = new Vector2(5,15);
-        player.GetComponent<PlayerVelocity>().wallLeapOff = new Vector2(15,5);
+        PlayerVelocity pv = player.GetComponent<PlayerVelocity>();
+
+        wallJumpToRestore = pv.WallJump;
+        pv.WallJump = wallJump;
+        
+        wallJumpClimbToRestore = pv.WallJumpClimb;
+        pv.WallJumpClimb = wallJumpClimb;
+        
+        wallLeapOffToRestore = pv.WallLeapOff;
+        pv.WallLeapOff = wallLeapOff;
 
     }
     public override void ApplySoul()
@@ -18,9 +32,9 @@ public class WallJump : PickUp
     }
     public override void RemovePlayer()
     {
-        player.GetComponent<PlayerVelocity>().wallJump = new Vector2(0,0);
-        player.GetComponent<PlayerVelocity>().wallJumpClimb = new Vector2(0,0);
-        player.GetComponent<PlayerVelocity>().wallLeapOff = new Vector2(0,0);
+        player.GetComponent<PlayerVelocity>().WallJump = wallJumpToRestore;
+        player.GetComponent<PlayerVelocity>().WallJumpClimb = wallJumpClimbToRestore;
+        player.GetComponent<PlayerVelocity>().WallLeapOff = wallLeapOffToRestore;
     }
     public override void RemoveSoul()
     {
