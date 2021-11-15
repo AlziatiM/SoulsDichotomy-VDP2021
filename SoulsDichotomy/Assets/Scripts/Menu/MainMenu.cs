@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MainMenu : Menu
 {
+
+    [SerializeField] private GameObject levelManager;
+
     public static MainMenu instance;
     public void Awake()
     {
@@ -16,6 +19,11 @@ public class MainMenu : Menu
             Destroy(this.gameObject);
         }
         Close();
+    }
+
+    public void Play()
+    {
+        Instantiate(levelManager, Vector3.zero, Quaternion.identity);
     }
 
     public void OpenSettings()

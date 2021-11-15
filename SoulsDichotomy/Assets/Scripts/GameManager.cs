@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour, IReact
 {
     
     [Header("Inputs")]
@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     public delegate void OnChangeCharacter();
     public static OnChangeCharacter changeCharacter;
-    
+
     //caching
     private CinemachineVirtualCamera _vc;
     private Transform playerTransf;
@@ -35,8 +35,13 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        playerTransf = GameObject.FindWithTag("Player").GetComponent<Transform>();
-        soulTransf = GameObject.FindWithTag("Soul").GetComponent<Transform>();
+        GameObject player = GameObject.FindWithTag("Player");
+        GameObject soul = GameObject.FindWithTag("Soul");
+        SkillManager.instance.SetUpCharacters(player.GetComponent<PlayerInput>(), soul.GetComponent<SoulController>());
+        DontDestroyOnLoad(player);
+        DontDestroyOnLoad(soul);
+        playerTransf = player.GetComponent<Transform>();
+        soulTransf = soul.GetComponent<Transform>();
         _vc =CinemachineCore.Instance.GetActiveBrain(0).ActiveVirtualCamera.VirtualCameraGameObject.GetComponent<CinemachineVirtualCamera>();;
         _vc.Follow = playerTransf;
         changeCharacter += SwitchCamera;
@@ -67,5 +72,16 @@ public class GameManager : MonoBehaviour
     public KeyCode GetSwitchCharacterInput()
     {
         return switchCharacterInput;
+    }
+
+    public void React()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SetTransforOfCharacter(Vector3 newPos)
+    {
+        playerTransf.position = newPos;
+        soulTransf.position = newPos;
     }
 }

@@ -1103,6 +1103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 426303315}
+  levelManager: {fileID: 1225493553851662696, guid: 76ae9fcc2b80d7942a2d2eeee3569523, type: 3}
 --- !u!4 &1171307689
 Transform:
   m_ObjectHideFlags: 0
@@ -2195,10 +2196,22 @@ PrefabInstance:
     - target: {fileID: 4122239485819010884, guid: 86ce9c2d522fe8a48a50eb3b196a0515, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1171307687}
+      objectReference: {fileID: 1171307688}
     - target: {fileID: 4122239485819010884, guid: 86ce9c2d522fe8a48a50eb3b196a0515, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122239485819010884, guid: 86ce9c2d522fe8a48a50eb3b196a0515, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122239485819010884, guid: 86ce9c2d522fe8a48a50eb3b196a0515, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122239485819010884, guid: 86ce9c2d522fe8a48a50eb3b196a0515, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4172092233276257424, guid: 86ce9c2d522fe8a48a50eb3b196a0515, type: 3}
       propertyPath: m_text

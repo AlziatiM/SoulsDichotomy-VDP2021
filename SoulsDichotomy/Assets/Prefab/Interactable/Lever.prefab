@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1390905745740670237}
   - component: {fileID: 1390905745740670239}
   - component: {fileID: 1390905745740670236}
-  - component: {fileID: 1390905745740670238}
+  - component: {fileID: 5369961559766158189}
   m_Layer: 0
   m_Name: Lever
   m_TagString: Untagged
@@ -132,7 +132,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1390905745740670238
+--- !u!114 &5369961559766158189
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,14 +141,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1390905745740670233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d96f03ebc04b44b4f9cf4d76bbd79848, type: 3}
+  m_Script: {fileID: 11500000, guid: 24242e562e6e3d44e886c89992c6ae02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nonActiveSprite: {fileID: -2372938531549053325, guid: a30f854f1819f124e903c35ac5bfe03d, type: 3}
   activeSprite: {fileID: 5259896095111878365, guid: a30f854f1819f124e903c35ac5bfe03d, type: 3}
   objHasToReac: []
   amIActive: 0
-  levelAnimation:
+  animationFrame:
   - {fileID: -1089659241226972634, guid: a30f854f1819f124e903c35ac5bfe03d, type: 3}
   - {fileID: -3975624549204834352, guid: a30f854f1819f124e903c35ac5bfe03d, type: 3}
   - {fileID: -258920163012198913, guid: a30f854f1819f124e903c35ac5bfe03d, type: 3}

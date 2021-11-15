@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(BoxCollider2D))]
 public class StandardActivator : MonoBehaviour, IInteract
 {
     [Header("Look")]
@@ -19,6 +21,8 @@ public class StandardActivator : MonoBehaviour, IInteract
 
     private void OnValidate()
     {
+        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+        gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
         if (objHasToReac != null)
         {
             foreach (GameObject go in objHasToReac)

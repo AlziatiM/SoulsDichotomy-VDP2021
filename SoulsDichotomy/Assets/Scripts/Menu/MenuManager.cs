@@ -7,6 +7,7 @@ public class MenuManager : MonoBehaviour
     private Stack<Menu> stackMenus;
 
     public static MenuManager instance;
+
     public void Awake()
     {
         if (instance == null)
@@ -24,18 +25,12 @@ public class MenuManager : MonoBehaviour
     void Start()
     {
         Open(MainMenu.instance);
-        print("im " + MainMenu.instance.name);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     public void Open(Menu menu)
     {
-        print("im opening" + menu.name);
         if (stackMenus.Count != 0) 
         {
             stackMenus.Peek().Close();

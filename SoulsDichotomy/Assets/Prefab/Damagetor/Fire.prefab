@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9faf80cf23aa1a4ba2c373670dc4131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CanDamagePlayer: 0
+  CanDamagePlayer: 1
   CanDamageSoul: 0
   damage: 5
   damageOverTime: 1
