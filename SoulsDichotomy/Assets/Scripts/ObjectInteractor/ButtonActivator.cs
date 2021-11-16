@@ -25,6 +25,7 @@ public class ButtonActivator : StandardActivator
             spriteRenderer.sprite = activeSprite;
             timer.StartTimer();
         }
+        ReactAll();
     }
 
     

@@ -62,15 +62,22 @@ public class StandardActivator : MonoBehaviour, IInteract
     }
 
     public void Interact()
-    {   
+    {
         Switch();
         amIActive = !amIActive;
+    }
+
+    protected void ReactAll()
+    {
         foreach (IReact r in reactScripts)
         {
             r.React();
         }
     }
 
+    /// <summary>
+    /// the switch have to manage also the ManageAll when needed
+    /// </summary>
     public virtual void Switch()
     {
         if(amIActive)
@@ -81,6 +88,7 @@ public class StandardActivator : MonoBehaviour, IInteract
         {
             spriteRenderer.sprite = activeSprite;
         }
+        ReactAll();
     }
 
 }

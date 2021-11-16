@@ -28,6 +28,7 @@ public class StandardActivatorWithAnimation : StandardActivator
             yield return new WaitForSeconds(timeFrame);
         }
         spriteRenderer.sprite = nonActiveSprite;
+        ReactAll();
     }
 
     private IEnumerator CloseAnim()
@@ -38,5 +39,6 @@ public class StandardActivatorWithAnimation : StandardActivator
             yield return new WaitForSeconds(timeFrame);
         }
         spriteRenderer.sprite = activeSprite;
+        ReactAll();
     }
 }
