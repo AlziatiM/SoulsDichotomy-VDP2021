@@ -22,7 +22,7 @@ public class PlayerVelocity : MonoBehaviour
 	[SerializeField] private Vector2 wallJumpClimb;
 	[SerializeField] private Vector2 wallLeapOff;
 
-	[SerializeField] private float wallSlideSpeedMax = 3;
+	[SerializeField] private float wallSlideSpeedMax = 5;
 	[SerializeField] private float wallStickTime = .25f;
 
 	private float timeToWallUnstick;
@@ -65,7 +65,19 @@ public class PlayerVelocity : MonoBehaviour
 		get { return moveSpeed; }
 		set { moveSpeed = value; }
 	}
+
+	public float MaxJumpHeight
+	{
+		get { return maxJumpHeight; }
+		set { maxJumpHeight = value; }
+	}
 	
+	public float MinJumpHeight
+	{
+		get { return minJumpHeight; }
+		set { minJumpHeight = value; }
+	}
+
 	void Start()
 	{
 		playerMovement = GetComponent<Movement>();
