@@ -45,5 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - Level0
-  - SampleScene
+  - Level1
+  - Level2
+  - Level3
   mainMenu: IndexPage
