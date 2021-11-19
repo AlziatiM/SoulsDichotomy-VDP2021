@@ -2,41 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37998f5d-d7db-4e9c-a5b0-6eb1848c24ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/PickUp/JumpHighBrush.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/PickUp/JumpHighBrush.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/PickUp/SizeDownBrush.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/PickUp/SizeDownBrush.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/PickUp/WallJumpBrush 1.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brush/PickUp/WallJumpBrush 1.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/PickUp/JumpHigh.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/PickUp/JumpHigh.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/PickUp/SizeDown.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/PickUp/SizeDown.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectPickUp/SizeDown.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectPickUp/SizeDown.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectPickUp/jumpHigh.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectPickUp/jumpHigh.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/PickUp/AmanitaMushroom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/PickUp/AmanitaMushroom.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/PickUp/BlackMushroom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/PickUp/BlackMushroom.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/PickUp/InsectWings.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/PickUp/InsectWings.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LevelSample.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LevelSample.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulsDichotomy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulsDichotomy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Brush/PickUp/WallJumpBrush.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Brush/PickUp/WallJumpBrush.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HeroEditor4D/FantasyHeroes/Sprites/Equipment/Supplies/Basic/Food/AmanitaMushroom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HeroEditor4D/FantasyHeroes/Sprites/Equipment/Supplies/Basic/Food/AmanitaMushroom.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HeroEditor4D/FantasyHeroes/Sprites/Equipment/Supplies/Basic/Food/BlackMushroom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HeroEditor4D/FantasyHeroes/Sprites/Equipment/Supplies/Basic/Food/BlackMushroom.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HeroEditor4D/FantasyHeroes/Sprites/Equipment/Supplies/Basic/Material/InsectWings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HeroEditor4D/FantasyHeroes/Sprites/Equipment/Supplies/Basic/Material/InsectWings.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Interactable/ButtonTall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Interactable/ButtonTall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Interactable/ButtonTiny.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Interactable/ButtonTiny.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Interactable/Lever.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Interactable/Lever.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/LevelCreation/ExitLevel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/LevelCreation/ExitLevel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts2DMovement/PlayerVelocity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts2DMovement/PlayerVelocity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileMaps/Palette/RuledTiles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileMaps/Palette/RuledTiles.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +81,8 @@
       <workItem from="1636105630746" duration="3274000" />
       <workItem from="1636890036122" duration="2960000" />
       <workItem from="1637263698532" duration="6340000" />
+      <workItem from="1637317821699" duration="594000" />
+      <workItem from="1637327636140" duration="1439000" />
     </task>
     <servers />
   </component>
