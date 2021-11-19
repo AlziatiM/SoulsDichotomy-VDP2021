@@ -78,6 +78,14 @@ public class PlayerVelocity : MonoBehaviour
 		set { minJumpHeight = value; }
 	}
 
+
+	public void updateJumpHeight()
+	{
+		gravity = -(2 * maxJumpHeight) / Mathf.Pow(timeToJumpApex, 2);
+		maxJumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
+		minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(gravity) * minJumpHeight);
+	}
+	
 	void Start()
 	{
 		playerMovement = GetComponent<Movement>();

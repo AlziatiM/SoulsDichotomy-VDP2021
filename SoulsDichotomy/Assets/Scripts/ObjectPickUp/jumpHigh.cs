@@ -10,15 +10,17 @@ public class JumpHigh : PickUp
     
     private float maxJumpHeightToRestore;
     private float minJumpHeightToRestore;
+    
     public override void ApplyPlayer()
     {
+        
         PlayerVelocity pv = player.GetComponent<PlayerVelocity>();
-
         maxJumpHeightToRestore = pv.MaxJumpHeight;
         pv.MaxJumpHeight = maxJumpHeight;
         
         minJumpHeightToRestore = pv.MinJumpHeight;
         pv.MinJumpHeight = minJumpHeight;
+        pv.updateJumpHeight();
 
     }
     public override void ApplySoul()
@@ -27,8 +29,10 @@ public class JumpHigh : PickUp
     }
     public override void RemovePlayer()
     {
-        player.GetComponent<PlayerVelocity>().MaxJumpHeight = maxJumpHeightToRestore;
-        player.GetComponent<PlayerVelocity>().MinJumpHeight = minJumpHeightToRestore;
+        PlayerVelocity pv = player.GetComponent<PlayerVelocity>();
+        pv.MaxJumpHeight = maxJumpHeightToRestore;
+        pv.MinJumpHeight = minJumpHeightToRestore;
+        pv.updateJumpHeight();
     }
     public override void RemoveSoul()
     {
