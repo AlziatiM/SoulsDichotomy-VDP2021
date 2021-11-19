@@ -31,6 +31,10 @@ public class SoulController : MonoBehaviour, IHittable
     private bool isInRange;
 
 
+    //soul interaction
+    private IInteract interactObj;
+
+    
     //references
     private Transform _transform;
 
@@ -60,6 +64,7 @@ public class SoulController : MonoBehaviour, IHittable
         {
             SetDirection();
             MoveFromInput();
+            Interaction();
         }
         else
         {
@@ -94,6 +99,7 @@ public class SoulController : MonoBehaviour, IHittable
                 }
             }
         }
+        
     }
 
     private void SwitchCharacter()
@@ -195,6 +201,13 @@ public class SoulController : MonoBehaviour, IHittable
             StartInvokeHeal();
             isInRange = true;
         }
+        
+        //soul interaction
+        IInteract interact = collision.gameObject.GetComponent<IInteract>();
+        if (interact != null)
+        {
+            interactObj = interact;
+        }
     }
 
     private void StartInvokeHeal()
@@ -234,4 +247,21 @@ public class SoulController : MonoBehaviour, IHittable
         soulHealth.SubtractHp(amount);
     }
 
+    
+    
+    //soul interaction
+    
+    private void Interaction()
+    {
+        if (interactObj!=null && Input.GetKeyDown(KeyCode.E))
+        {
+            interactObj.Interact();
+        }
+    }
+    
+
+    
+    
+    
+    
 }
