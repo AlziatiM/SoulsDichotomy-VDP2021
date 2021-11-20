@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JumpHigh : PickUp
 {
-    [Header("Wall jump attributes")]
+    [Header("Jump attributes")]
     [SerializeField] private float maxJumpHeight;
     [SerializeField] private float minJumpHeight;
     

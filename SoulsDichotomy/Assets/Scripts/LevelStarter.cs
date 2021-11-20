@@ -20,6 +20,7 @@ public class LevelStarter : MonoBehaviour
         {
             Instantiate(player, enterLevel.position, Quaternion.identity);
             Instantiate(soul, enterLevel.position, Quaternion.identity);
+            DontDestroyOnLoad(Instantiate(cameraFollow, Vector3.zero, Quaternion.identity));
         }
         else
         {
@@ -27,7 +28,7 @@ public class LevelStarter : MonoBehaviour
         }
         Instantiate(gameManager, Vector3.zero, Quaternion.identity);
         Instantiate(skillManager, Vector3.zero, Quaternion.identity);
-        Instantiate(cameraFollow, Vector3.zero, Quaternion.identity);
+        
     }
 
 }
