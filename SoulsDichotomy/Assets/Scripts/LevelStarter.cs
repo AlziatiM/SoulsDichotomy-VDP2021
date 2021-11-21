@@ -12,7 +12,10 @@ public class LevelStarter : MonoBehaviour
     public GameObject player;
     public GameObject soul;
     public GameObject cameraFollow;
-    
+
+    [Header("Menu only available in game")]
+    public GameObject skillMenu;
+
     private void Awake()
     {
         Transform enterLevel = GameObject.FindGameObjectWithTag("EnterLevel").transform;
@@ -21,6 +24,7 @@ public class LevelStarter : MonoBehaviour
             Instantiate(player, enterLevel.position, Quaternion.identity);
             Instantiate(soul, enterLevel.position, Quaternion.identity);
             DontDestroyOnLoad(Instantiate(cameraFollow, Vector3.zero, Quaternion.identity));
+            Instantiate(skillMenu, Vector3.zero, Quaternion.identity);
         }
         else
         {

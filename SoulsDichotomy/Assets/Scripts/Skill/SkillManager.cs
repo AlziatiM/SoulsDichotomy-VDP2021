@@ -29,7 +29,7 @@ public class SkillManager : MonoBehaviour
         {
             if (s.GetLeveUnlock() == levelToLoad)
             {
-                s.AttachSkill(player, soul);
+                UnlockSkill(s);
             }
         }
     }
@@ -40,7 +40,7 @@ public class SkillManager : MonoBehaviour
         {
             if (s.GetLeveUnlock() <= levelToLoad)
             {
-                s.AttachSkill(player, soul);
+                UnlockSkill(s);
             }
         }
     }
@@ -50,4 +50,17 @@ public class SkillManager : MonoBehaviour
         player = pi;
         soul = sc;
     }
+
+    public Skill[] GetSkills()
+    {
+        return skillTree;
+    }
+
+    private void UnlockSkill(Skill s)
+    {
+        s.AttachSkill(player, soul);
+        s.SetIsUnlock(true);
+        SkillMenu.instance.UnlockSkill(s.name);
+    }
+
 }

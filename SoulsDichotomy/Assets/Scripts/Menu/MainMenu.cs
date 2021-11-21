@@ -23,7 +23,9 @@ public class MainMenu : Menu
 
     public void Play()
     {
+        Close();
         Instantiate(levelManager, Vector3.zero, Quaternion.identity);
+        
     }
 
     public void OpenSettings()

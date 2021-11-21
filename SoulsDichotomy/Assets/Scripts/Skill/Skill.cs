@@ -5,6 +5,11 @@ using System;
 
 public class Skill : ScriptableObject
 {
+    public string nameS;
+    public string description;
+    public Sprite imageActive;
+    public Sprite imageNotActive;
+
     [SerializeField] protected bool isUnlock;
     [SerializeField] protected int levelUnlock;
     [SerializeField] protected bool affectPlayer;
@@ -17,6 +22,11 @@ public class Skill : ScriptableObject
     public bool IsUnlock()
     {
         return isUnlock;
+    }
+
+    public void SetIsUnlock(bool value)
+    {
+        isUnlock = value;
     }
 
     public int GetLeveUnlock()

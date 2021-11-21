@@ -47,3 +47,4 @@ MonoBehaviour:
   soul: {fileID: 0}
   skillTree:
   - {fileID: 11400000, guid: ea20dbfc8d8421645aa74b1b9f02284c, type: 2}
+  - {fileID: 11400000, guid: cf074a10d0d812245b4c1e3718e5fd33, type: 2}

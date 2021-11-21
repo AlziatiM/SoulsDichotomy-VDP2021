@@ -34,15 +34,28 @@ public class LevelManager : MonoBehaviour
     public void NextLevel()
     {
         currLevel++;
-        SceneManager.LoadScene(levels[currLevel]);
+        if (currLevel == levels.Length) 
+        {
+            BackToMainMenu();
+        }
+        LoadScene(currLevel);
+        
     }
 
     public void LoadLevel(int index)
     {
         currLevel = index;
-        SceneManager.LoadScene(levels[index]);
+        LoadScene(index);
+        
     }
-   
+
+    private void LoadScene(int index)
+    {
+        SceneManager.LoadScene(levels[index]);
+        SkillManager.instance.NewLevelToLoad(currLevel+1);
+    }
+
+
     public void BackToMainMenu()
     {
         SceneManager.LoadScene(mainMenu);

@@ -53,8 +53,11 @@ public class GameManager : MonoBehaviour, IReact
         if (Input.GetKeyDown(switchCharacterInput))
         {
             changeCharacter();
-            
-        }   
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            MenuManager.instance.Open(SkillMenu.instance);
+        }
     }
 
     void SwitchCamera()
