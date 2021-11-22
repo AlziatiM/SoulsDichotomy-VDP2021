@@ -28,7 +28,8 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         currLevel = 0;
-        LoadLevel(currLevel);
+        
+        SceneManager.LoadScene(levels[currLevel]);
     }
 
     public void NextLevel()
@@ -38,18 +39,18 @@ public class LevelManager : MonoBehaviour
         {
             BackToMainMenu();
         }
-        LoadScene(currLevel);
+        LoadNewLevel(currLevel);
         
     }
 
     public void LoadLevel(int index)
     {
         currLevel = index;
-        LoadScene(index);
+        LoadNewLevel(index);
         
     }
 
-    private void LoadScene(int index)
+    private void LoadNewLevel(int index)
     {
         SceneManager.LoadScene(levels[index]);
         SkillManager.instance.NewLevelToLoad(currLevel+1);

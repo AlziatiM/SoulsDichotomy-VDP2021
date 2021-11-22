@@ -43,6 +43,7 @@ public class MenuManager : MonoBehaviour
     {
         stackMenus.Peek().Close();
         stackMenus.Pop();
-        stackMenus.Peek().Open();
+        if(stackMenus.Count!=0)
+            stackMenus.Peek().Open();
     }
 }

@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameS: Space ghost
   description: The soul gain more area to move in
-  imageActive: {fileID: 21300000, guid: 9e109e30dedd4db4799d99dad8daa2d0, type: 3}
+  imageActive: {fileID: 21300000, guid: c0899d08e2cdbcc41bcdacf0ed1f657c, type: 3}
   imageNotActive: {fileID: 21300000, guid: 6b53d246984a8e644b09505b188f325e, type: 3}
   isUnlock: 0
-  levelUnlock: 3
+  levelUnlock: 20
   affectPlayer: 1
   affectSoul: 0
   newScale: {x: 8, y: 6, z: 1}

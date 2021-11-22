@@ -48,7 +48,7 @@ public class SkillMenu : Menu
             snSk.SetDescription(s.description);
             snSk.SetName(s.name);
             snSk.SetActiveSprite(s.imageActive);
-            img.sprite = s.imageActive;
+            img.sprite = s.imageNotActive;
             btn.interactable = false;
             btn.onClick.AddListener(snSk.Show);
             go.transform.SetParent(container.transform);
