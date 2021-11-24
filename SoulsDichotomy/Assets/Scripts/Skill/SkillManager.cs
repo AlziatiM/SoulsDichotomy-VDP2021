@@ -23,7 +23,7 @@ public class SkillManager : MonoBehaviour
         }
     }
 
-    public void NewLevelToLoad(int levelToLoad)
+    public void NextLevelToLoad(int levelToLoad)
     {
         foreach (Skill s in skillTree)
         {
@@ -61,6 +61,11 @@ public class SkillManager : MonoBehaviour
         s.AttachSkill(player, soul);
         s.SetIsUnlock(true);
         SkillMenu.instance.UnlockSkill(s.name);
+    }
+
+    internal bool AmIReady()
+    {
+        return player != null && soul != null;
     }
 
 }

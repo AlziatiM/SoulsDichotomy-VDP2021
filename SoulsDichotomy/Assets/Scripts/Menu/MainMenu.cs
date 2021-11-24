@@ -23,9 +23,8 @@ public class MainMenu : Menu
 
     public void Play()
     {
-        Close();
+        MenuManager.instance.Back();
         Instantiate(levelManager, Vector3.zero, Quaternion.identity);
-        
     }
 
     public void OpenSettings()

@@ -29,36 +29,54 @@ public class LevelManager : MonoBehaviour
     {
         currLevel = 0;
         
-        SceneManager.LoadScene(levels[currLevel]);
+        LoadLevel(currLevel);
     }
 
     public void NextLevel()
     {
         currLevel++;
-        if (currLevel == levels.Length) 
+        if (levels.Length==currLevel)
         {
-            BackToMainMenu();
+            GameOver();
         }
-        LoadNewLevel(currLevel);
-        
+        else 
+        {
+            LoadNewLevel(currLevel);
+            SkillManager.instance.NextLevelToLoad(currLevel + 1);
+        }
     }
 
     public void LoadLevel(int index)
     {
         currLevel = index;
         LoadNewLevel(index);
+        StartCoroutine("WaitSkillManager");
         
+    }
+
+    private IEnumerator WaitSkillManager()
+    {
+        yield return new WaitUntil(() => GameManager.instance != null);
+        yield return new WaitUntil(()=> SkillManager.instance.AmIReady());
+        SkillManager.instance.LoadLevelFromScratch(currLevel);
     }
 
     private void LoadNewLevel(int index)
     {
         SceneManager.LoadScene(levels[index]);
-        SkillManager.instance.NewLevelToLoad(currLevel+1);
     }
 
 
     public void BackToMainMenu()
     {
         SceneManager.LoadScene(mainMenu);
+        MenuManager.instance.LoadMainScene();
+        
+
+    }
+
+    private void GameOver()
+    {
+        MenuManager.instance.GameOver();
     }
 }

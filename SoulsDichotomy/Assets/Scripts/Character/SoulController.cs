@@ -191,6 +191,12 @@ public class SoulController : MonoBehaviour, IHittable
             InvokeRepeating("Damage", 0.5f, 1f);
             isInRange = false;
         }
+
+        IInteract interact = collision.gameObject.GetComponent<IInteract>();
+        if (interact != null)
+        {
+            interactObj = null;
+        }
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -209,6 +215,8 @@ public class SoulController : MonoBehaviour, IHittable
             interactObj = interact;
         }
     }
+
+
 
     private void StartInvokeHeal()
     {

@@ -8,6 +8,9 @@ public class MenuManager : MonoBehaviour
 
     public static MenuManager instance;
 
+    public delegate void OnGameOver();
+    public static OnGameOver gameOver;
+
     public void Awake()
     {
         if (instance == null)
@@ -27,7 +30,18 @@ public class MenuManager : MonoBehaviour
         Open(MainMenu.instance);
     }
 
+    public void LoadMainScene()
+    {
+        gameOver();
+        stackMenus.Clear();
+        print("dai worka");
+        Open(MainMenu.instance);
+    }
 
+    public void GameOver()
+    {
+        Open(GameOverMenu.instance);
+    }
 
     public void Open(Menu menu)
     {

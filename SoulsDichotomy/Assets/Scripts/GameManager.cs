@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour, IReact
+public class GameManager : MonoBehaviour
 {
     
     [Header("Inputs")]
@@ -35,6 +35,13 @@ public class GameManager : MonoBehaviour, IReact
 
     private void Start()
     {
+        StartCoroutine("StartWithDelay");   
+    }
+
+    private IEnumerator StartWithDelay()
+    {
+        yield return new WaitUntil(() => GameObject.FindWithTag("Player") != null);
+        yield return new WaitUntil(() => GameObject.FindWithTag("Soul") != null);
         GameObject player = GameObject.FindWithTag("Player");
         GameObject soul = GameObject.FindWithTag("Soul");
         SkillManager.instance.SetUpCharacters(player.GetComponent<PlayerInput>(), soul.GetComponent<SoulController>());
@@ -42,9 +49,10 @@ public class GameManager : MonoBehaviour, IReact
         DontDestroyOnLoad(soul);
         playerTransf = player.GetComponent<Transform>();
         soulTransf = soul.GetComponent<Transform>();
-        _vc =CinemachineCore.Instance.GetActiveBrain(0).ActiveVirtualCamera.VirtualCameraGameObject.GetComponent<CinemachineVirtualCamera>();;
+        _vc = CinemachineCore.Instance.GetActiveBrain(0).ActiveVirtualCamera.VirtualCameraGameObject.GetComponent<CinemachineVirtualCamera>();
         _vc.Follow = playerTransf;
         changeCharacter += SwitchCamera;
+        MenuManager.gameOver += DestroyAllBeforLoadMainScene;
     }
 
     // Update is called once per frame
@@ -77,14 +85,22 @@ public class GameManager : MonoBehaviour, IReact
         return switchCharacterInput;
     }
 
-    public void React()
-    {
-        throw new NotImplementedException();
-    }
 
     public void SetTransforOfCharacter(Vector3 newPos)
     {
         playerTransf.position = newPos;
         soulTransf.position = newPos;
+    }
+
+    private void DestroyAllBeforLoadMainScene()
+    {
+        Destroy(playerTransf.gameObject);
+        Destroy(soulTransf.gameObject);
+        Destroy(SkillManager.instance.gameObject);
+        Destroy(SkillMenu.instance.gameObject);
+        //da problemi
+        //Destroy(CinemachineCore.Instance.GetActiveBrain(0).ActiveVirtualCamera.VirtualCameraGameObject);
+        Destroy(LevelManager.instance.gameObject);
+        Destroy(this.gameObject);
     }
 }
