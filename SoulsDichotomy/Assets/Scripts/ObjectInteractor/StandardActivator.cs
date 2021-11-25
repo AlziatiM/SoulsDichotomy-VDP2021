@@ -11,6 +11,11 @@ public class StandardActivator : MonoBehaviour, IInteract
     [SerializeField] protected Sprite nonActiveSprite;
     [SerializeField] protected Sprite activeSprite;
 
+    [Header("Who can interact with:")]
+    [SerializeField] protected bool canPlayerInteract;
+    [SerializeField] protected bool canSoulInteract;
+
+
     [Header("ActionToDo")]
     [SerializeField]
     private GameObject[] objHasToReac;
@@ -61,7 +66,7 @@ public class StandardActivator : MonoBehaviour, IInteract
         }
     }
 
-    public void Interact()
+    private void StartInteraction()
     {
         Switch();
         amIActive = !amIActive;
@@ -91,4 +96,18 @@ public class StandardActivator : MonoBehaviour, IInteract
         ReactAll();
     }
 
+    public void Interact()
+    {
+        StartInteraction();
+    }
+
+    public bool CanPlayerInteract()
+    {
+        return canPlayerInteract;
+    }
+
+    public bool CanSoulInteract()
+    {
+        return canSoulInteract;
+    }
 }

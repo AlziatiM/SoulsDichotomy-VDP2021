@@ -212,7 +212,8 @@ public class SoulController : MonoBehaviour, IHittable
         IInteract interact = collision.gameObject.GetComponent<IInteract>();
         if (interact != null)
         {
-            interactObj = interact;
+            if(interact.CanSoulInteract())
+                interactObj = interact;
         }
     }
 
@@ -266,10 +267,13 @@ public class SoulController : MonoBehaviour, IHittable
             interactObj.Interact();
         }
     }
-    
 
-    
-    
-    
-    
+
+    private void OnDestroy()
+    {
+        GameManager.changeCharacter -= SwitchCharacter;
+    }
+
+
+
 }

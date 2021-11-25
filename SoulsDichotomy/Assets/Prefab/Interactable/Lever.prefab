@@ -146,6 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonActiveSprite: {fileID: -2372938531549053325, guid: a30f854f1819f124e903c35ac5bfe03d, type: 3}
   activeSprite: {fileID: 5259896095111878365, guid: a30f854f1819f124e903c35ac5bfe03d, type: 3}
+  canPlayerInteract: 1
+  canSoulInteract: 1
   objHasToReac: []
   amIActive: 0
   animationFrame:

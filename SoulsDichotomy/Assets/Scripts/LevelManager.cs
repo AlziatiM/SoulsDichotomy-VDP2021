@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField]private string[] levels;
     [SerializeField]private string mainMenu;
     private int currLevel;
-
+    public int CurrentLevel { get { return currLevel; } }
     public static LevelManager instance;
 
     public void Awake()
@@ -71,12 +71,16 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene(mainMenu);
         MenuManager.instance.LoadMainScene();
-        
-
     }
 
     private void GameOver()
     {
         MenuManager.instance.GameOver();
     }
+
+    public void TryAgainLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
 }

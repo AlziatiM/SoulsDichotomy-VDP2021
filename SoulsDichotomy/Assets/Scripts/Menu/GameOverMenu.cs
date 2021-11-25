@@ -20,7 +20,8 @@ public class GameOverMenu : Menu
 
     public void TryAgain()
     {
-
+        MenuManager.instance.Back();
+        LevelManager.instance.TryAgainLevel();
     }
 
     public void MainMenu()

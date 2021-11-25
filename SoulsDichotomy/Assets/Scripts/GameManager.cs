@@ -103,4 +103,9 @@ public class GameManager : MonoBehaviour
         Destroy(LevelManager.instance.gameObject);
         Destroy(this.gameObject);
     }
+
+    private void OnDestroy()
+    {
+        MenuManager.gameOver -= DestroyAllBeforLoadMainScene;
+    }
 }

@@ -159,6 +159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonActiveSprite: {fileID: -7341407202210888751, guid: 1671960b24a31ac44acea86c39522a0a, type: 3}
   activeSprite: {fileID: -4935834299494285922, guid: 1671960b24a31ac44acea86c39522a0a, type: 3}
+  canPlayerInteract: 1
+  canSoulInteract: 0
   objHasToReac:
   - {fileID: 790277277670029084}
   amIActive: 0

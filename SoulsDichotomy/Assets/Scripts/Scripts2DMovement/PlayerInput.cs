@@ -186,7 +186,13 @@ public class PlayerInput : MonoBehaviour, IHittable
 		IInteract interact = collision.gameObject.GetComponent<IInteract>();
         if (interact != null)
         {
-			interactObj = interact;
+            if (interact.CanPlayerInteract())
+            {
+				print("xd");
+				interactObj = interact;
+
+			}
+				
         }
     }
 
@@ -215,4 +221,8 @@ public class PlayerInput : MonoBehaviour, IHittable
 		panelSoulMovement.transform.localScale = newScale;
     }
 
+    private void OnDestroy()
+    {
+		GameManager.changeCharacter -= SwitchCharacter;
+	}
 }
