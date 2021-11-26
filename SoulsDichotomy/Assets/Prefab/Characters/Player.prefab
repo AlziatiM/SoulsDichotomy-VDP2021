@@ -4459,7 +4459,19 @@ MonoBehaviour:
           m_CallState: 2
     onDeath:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 3838318379822696179}
+          m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+          m_MethodName: DeathExtra
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   particles:
     damageEffect: {fileID: 8278689422809156236, guid: 9d07ccd129c93b340adafc35420c56fd, type: 3}
     healEffect: {fileID: 8278689422809156236, guid: aa61e5b98fc65db438e2a4030fa7f260, type: 3}

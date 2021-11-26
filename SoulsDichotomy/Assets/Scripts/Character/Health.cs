@@ -31,12 +31,17 @@ public class Health
     }
     public void SubtractHp(int value)
     {
-        currentHealth -= value;
-        onDamage.Invoke();
-        if (currentHealth <= 0)
+        
+        if (currentHealth > 0)
         {
-            Die();
-        } 
+            onDamage.Invoke();
+            currentHealth -= value;
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
+        }
+         
     }
 
     public void Die()

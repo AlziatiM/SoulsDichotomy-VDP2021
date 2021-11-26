@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public delegate void OnChangeCharacter();
     public static OnChangeCharacter changeCharacter;
 
+
     //caching
     private CinemachineVirtualCamera _vc;
     private Transform playerTransf;
@@ -104,8 +105,19 @@ public class GameManager : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    
     private void OnDestroy()
     {
         MenuManager.gameOver -= DestroyAllBeforLoadMainScene;
+    }
+
+    public void SummonDeath()
+    {
+        playerTransf.gameObject.GetComponent<PlayerVelocity>().enabled = false;
+        LevelManager.instance.GameOver();
+    }
+    public void TryAgainSetup()
+    {
+        playerTransf.gameObject.GetComponent<PlayerInput>().ResetPlayer();
     }
 }

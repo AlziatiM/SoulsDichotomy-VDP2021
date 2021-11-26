@@ -22,6 +22,7 @@ public class GameOverMenu : Menu
     {
         MenuManager.instance.Back();
         LevelManager.instance.TryAgainLevel();
+        GameManager.instance.TryAgainSetup();
     }
 
     public void MainMenu()

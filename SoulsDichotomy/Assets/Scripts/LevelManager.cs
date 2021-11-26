@@ -73,7 +73,7 @@ public class LevelManager : MonoBehaviour
         MenuManager.instance.LoadMainScene();
     }
 
-    private void GameOver()
+    internal void GameOver()
     {
         MenuManager.instance.GameOver();
     }

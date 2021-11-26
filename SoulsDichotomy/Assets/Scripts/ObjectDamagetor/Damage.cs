@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    [SerializeField] protected bool CanDamagePlayer;
-    [SerializeField] protected bool CanDamageSoul;
+    protected bool CanDamagePlayer;
+    protected bool CanDamageSoul;
     public int damage;
     public bool damageOverTime;
     public float timeBetwDmg = 0.5f;

@@ -47,6 +47,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 
 		Character.AnimationManager.SetState(CharacterState.Idle);
 		currState = CharacterState.Idle;
+
 		if (InitDirection)
 		{
 			Character.SetDirection(Vector2.left);
@@ -125,6 +126,7 @@ public class PlayerInput : MonoBehaviour, IHittable
     {
 		playerVelocity.SetDirectionalInput(Vector2.zero);
 		ChangeAnimation(CharacterState.Idle);
+
 		_moving = false;
 	}
 
@@ -164,6 +166,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 		if (!_moving)
 		{
 			ChangeAnimation(CharacterState.Idle);
+
 		}
 	}
 
@@ -188,7 +191,6 @@ public class PlayerInput : MonoBehaviour, IHittable
         {
             if (interact.CanPlayerInteract())
             {
-				print("xd");
 				interactObj = interact;
 
 			}
@@ -216,6 +218,15 @@ public class PlayerInput : MonoBehaviour, IHittable
 		particles.DamageEffect(_transf);
     }
 
+	public void DeathExtra()
+	{
+		//Character.AnimationManager.Die();
+		Character.AnimationManager.SetState(CharacterState.Death);
+		currState = CharacterState.Death;
+		canMove = false;
+		GameManager.instance.SummonDeath();
+
+	}
 	public void SetScaleToSoulPanel(Vector3 newScale)
     {
 		panelSoulMovement.transform.localScale = newScale;
@@ -225,4 +236,10 @@ public class PlayerInput : MonoBehaviour, IHittable
     {
 		GameManager.changeCharacter -= SwitchCharacter;
 	}
+
+    public void ResetPlayer()
+    {
+	    playerVelocity.enabled = true;
+	    canMove = true;
+    }
 }

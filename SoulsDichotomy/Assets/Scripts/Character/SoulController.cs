@@ -251,6 +251,13 @@ public class SoulController : MonoBehaviour, IHittable
         Character.AnimationManager.Hit();
     }
 
+    public void DeathExtra()
+    {
+        Character.AnimationManager.Die();
+        GameManager.instance.SummonDeath();
+
+    }
+    
     public void Hit(int amount)
     {
         soulHealth.SubtractHp(amount);
