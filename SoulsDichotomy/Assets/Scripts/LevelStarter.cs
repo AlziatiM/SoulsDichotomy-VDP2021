@@ -17,6 +17,7 @@ public class LevelStarter : MonoBehaviour
     [Header("Menu only available in game")]
     public GameObject skillMenu;
     public GameObject gameOverMenu;
+    public GameObject UIPanel;
     private void Awake()
     {
         Transform enterLevel = GameObject.FindGameObjectWithTag("EnterLevel").transform;
@@ -24,6 +25,8 @@ public class LevelStarter : MonoBehaviour
         
         Instantiate(skillManager, Vector3.zero, Quaternion.identity);
         Instantiate(gameOverMenu, Vector3.zero, Quaternion.identity);
+        Instantiate(UIPanel, Vector3.zero, Quaternion.identity);
+
         if (GameManager.instance == null)
         {
             Instantiate(skillMenu, Vector3.zero, Quaternion.identity);
@@ -42,6 +45,7 @@ public class LevelStarter : MonoBehaviour
         }
         Instantiate(eventSystem, Vector3.zero, Quaternion.identity);
         Instantiate(gameManager, Vector3.zero, Quaternion.identity);
+        
 
 
     }

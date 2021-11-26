@@ -243,12 +243,15 @@ public class SoulController : MonoBehaviour, IHittable
     public void HealExtras()
     {
         particles.HealEffect(_transform);
+        UIManager.instance.SliderSoul(soulHealth.Percentage());
     }
 
     public void DamageExtras()
     {
         particles.DamageEffect(_transform);
         Character.AnimationManager.Hit();
+        UIManager.instance.SliderSoul(soulHealth.Percentage());
+
     }
 
     public void DeathExtra()
@@ -282,5 +285,10 @@ public class SoulController : MonoBehaviour, IHittable
     }
 
 
+    public void ResetSoul()
+    {
+        soulHealth.SetUpHealth();
+        //todo remove active pickup
 
+    }
 }

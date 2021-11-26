@@ -59,4 +59,9 @@ public class Health
         maxHealth += amount;
     }
 
+    public float Percentage()
+    {
+        return (float)currentHealth / (float)maxHealth;
+    }
+
 }

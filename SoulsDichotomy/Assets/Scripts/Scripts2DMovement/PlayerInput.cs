@@ -211,11 +211,14 @@ public class PlayerInput : MonoBehaviour, IHittable
     {
 		particles.HealEffect(_transf);
 		Character.AnimationManager.Hit();
+		UIManager.instance.SliderPlayer(playerHealth.Percentage());
+
     }
 
 	public void DamageExtra()
     {
 		particles.DamageEffect(_transf);
+		UIManager.instance.SliderPlayer(playerHealth.Percentage());
     }
 
 	public void DeathExtra()
@@ -239,7 +242,9 @@ public class PlayerInput : MonoBehaviour, IHittable
 
     public void ResetPlayer()
     {
+	    playerHealth.SetUpHealth();
 	    playerVelocity.enabled = true;
 	    canMove = true;
+	    //todo remove active pickup
     }
 }

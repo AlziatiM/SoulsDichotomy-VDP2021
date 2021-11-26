@@ -119,5 +119,7 @@ public class GameManager : MonoBehaviour
     public void TryAgainSetup()
     {
         playerTransf.gameObject.GetComponent<PlayerInput>().ResetPlayer();
+        soulTransf.gameObject.GetComponent<SoulController>().ResetSoul();
+
     }
 }
