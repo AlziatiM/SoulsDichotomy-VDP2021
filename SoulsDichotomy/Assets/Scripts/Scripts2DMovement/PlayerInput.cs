@@ -150,6 +150,14 @@ public class PlayerInput : MonoBehaviour, IHittable
 		{
 			direction = Vector2.right;
 		}
+		else if (Input.GetKeyUp(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow))
+        {
+			direction = Vector2.right;
+		}
+		else if (Input.GetKeyUp(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow))
+        {
+			direction = Vector2.left;
+		}
 		else return;
 
 		Character.SetDirection(direction);

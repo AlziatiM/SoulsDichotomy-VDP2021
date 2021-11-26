@@ -110,6 +110,10 @@ public class SoulController : MonoBehaviour, IHittable
         {
             StartInvokeHeal();
         }
+        else if(moveFromInput)
+        {
+            StartInvokeDamage();
+        }
     }
 
     private void SetDirection()
@@ -188,7 +192,7 @@ public class SoulController : MonoBehaviour, IHittable
             if (!moveFromInput)
                 return;
             CancelInvoke();
-            InvokeRepeating("Damage", 0.5f, 1f);
+            StartInvokeDamage();
             isInRange = false;
         }
 
@@ -218,6 +222,10 @@ public class SoulController : MonoBehaviour, IHittable
     }
 
 
+    private void StartInvokeDamage()
+    {
+        InvokeRepeating("Damage", 0.5f, 1f);
+    }
 
     private void StartInvokeHeal()
     {
