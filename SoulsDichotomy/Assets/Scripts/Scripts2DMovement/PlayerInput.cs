@@ -236,8 +236,8 @@ public class PlayerInput : MonoBehaviour, IHittable
 		currState = CharacterState.Death;
 		canMove = false;
 		GameManager.instance.SomeoneDie();
-
 	}
+
 	public void SetScaleToSoulPanel(Vector3 newScale)
     {
 		panelSoulMovement.transform.localScale = newScale;
@@ -253,6 +253,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 	    playerHealth.SetUpHealth();
 	    playerVelocity.enabled = true;
 	    canMove = true;
+		ShowAreaSoul(false);
 	    //todo remove active pickup
     }
 }

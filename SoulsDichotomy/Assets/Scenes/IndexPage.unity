@@ -344,6 +344,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4172092233276257424, guid: 86ce9c2d522fe8a48a50eb3b196a0515, type: 3}
+      propertyPath: m_text
+      value: Back
+      objectReference: {fileID: 0}
     - target: {fileID: 6329562982248948644, guid: 86ce9c2d522fe8a48a50eb3b196a0515, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -625,7 +629,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Some setting
 
-'
+    We still have no setting to set up.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -37,7 +37,9 @@ public class LevelManager : MonoBehaviour
         currLevel++;
         if (levels.Length==currLevel)
         {
+            GameOverMenu.instance.EndGame();
             GameOver();
+            currLevel = 0;
         }
         else 
         {
@@ -61,6 +63,10 @@ public class LevelManager : MonoBehaviour
         SkillManager.instance.LoadLevelFromScratch(currLevel);
     }
 
+    /// <summary>
+    /// only load the scene from the scenemanager
+    /// </summary>
+    /// <param name="index">index of level to load</param>
     private void LoadNewLevel(int index)
     {
         SceneManager.LoadScene(levels[index]);
@@ -80,7 +86,8 @@ public class LevelManager : MonoBehaviour
 
     public void TryAgainLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        LoadNewLevel(currLevel);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }

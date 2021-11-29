@@ -34,7 +34,6 @@ public class MenuManager : MonoBehaviour
     {
         gameOver();
         stackMenus.Clear();
-        print("dai worka");
         Open(MainMenu.instance);
     }
 
