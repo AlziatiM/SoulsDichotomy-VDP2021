@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jumpHigh : PickUp
+public class JumpHigh : PickUp
 {
     [Header("Jump attributes")]
     [SerializeField] private float maxJumpHeight;
