@@ -108,10 +108,12 @@ public class SoulController : MonoBehaviour, IHittable
         CancelInvoke();
         if (isInRange)
         {
+            print("in range quindi curo");
             StartInvokeHeal();
         }
         else if(moveFromInput)
         {
+            print("non in range ma controllato");
             StartInvokeDamage();
         }
     }
@@ -189,11 +191,12 @@ public class SoulController : MonoBehaviour, IHittable
     {
         if (collision.tag == "AreaSoul")
         {
+            isInRange = false;
             if (!moveFromInput)
                 return;
             CancelInvoke();
             StartInvokeDamage();
-            isInRange = false;
+            
         }
 
         IInteract interact = collision.gameObject.GetComponent<IInteract>();
