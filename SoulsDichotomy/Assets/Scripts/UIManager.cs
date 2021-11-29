@@ -7,15 +7,15 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
-
+    [Header("Health bars")]
     [SerializeField] private Image iconCharacter;
     [SerializeField] private Sprite playerIco;
     [SerializeField] private Sprite soulIco;
+    [SerializeField] private Slider playerHealth;
+    [SerializeField] private Slider soulHealth;
 
-    [SerializeField]
-    private Slider playerHealth;
-    [SerializeField]
-    private Slider soulHealth;
+    [Header("PickUps")]
+    [SerializeField] private Transform panelPickUp;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +63,16 @@ public class UIManager : MonoBehaviour
             iconCharacter.sprite = playerIco;
         }
     }
+
+
+    //methods for pickUps
+
+    internal void NewPickUp(GameObject go, float time)
+    {
+        GameObject obj= Instantiate(go, Vector3.zero, Quaternion.identity, panelPickUp);
+        obj.GetComponent<PickUpUIElement>().StartScale(time);
+    }
+
 
     private void OnDestroy()
     {

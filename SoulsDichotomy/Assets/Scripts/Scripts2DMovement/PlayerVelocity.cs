@@ -205,6 +205,8 @@ public class PlayerVelocity : MonoBehaviour
 	{
 		if (wallContact)
 		{
+			print("jumpwithcontact");
+
 			// Standard wall jump
 			if (directionalInput.x == 0)
 			{
@@ -226,6 +228,7 @@ public class PlayerVelocity : MonoBehaviour
 		}
 		if (playerMovement.collisionDirection.below)
 		{
+
 			if (playerMovement.slidingDownMaxSlope)
 			{
 				// Jumping away from max slope dir
