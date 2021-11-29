@@ -7,7 +7,11 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
-    
+
+    [SerializeField] private Image iconCharacter;
+    [SerializeField] private Sprite playerIco;
+    [SerializeField] private Sprite soulIco;
+
     [SerializeField]
     private Slider playerHealth;
     [SerializeField]
@@ -15,7 +19,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameManager.changeCharacter += SwitchIcon;
     }
 
     private void Awake()
@@ -47,10 +51,21 @@ public class UIManager : MonoBehaviour
     {
         soulHealth.value = value;
     }
-    
-    // Update is called once per frame
-    void Update()
+
+    private void SwitchIcon()
     {
-        
+        if (iconCharacter.sprite == playerIco)
+        {
+            iconCharacter.sprite = soulIco;
+        }
+        else
+        {
+            iconCharacter.sprite = playerIco;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.changeCharacter -= SwitchIcon;
     }
 }

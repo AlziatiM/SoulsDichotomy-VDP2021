@@ -99,6 +99,7 @@ public class GameManager : MonoBehaviour
         Destroy(soulTransf.gameObject);
         Destroy(SkillManager.instance.gameObject);
         Destroy(SkillMenu.instance.gameObject);
+        Destroy(UIManager.instance.gameObject);
         //da problemi
         //Destroy(CinemachineCore.Instance.GetActiveBrain(0).ActiveVirtualCamera.VirtualCameraGameObject);
         Destroy(LevelManager.instance.gameObject);
@@ -111,7 +112,7 @@ public class GameManager : MonoBehaviour
         MenuManager.gameOver -= DestroyAllBeforLoadMainScene;
     }
 
-    public void SummonDeath()
+    public void SomeoneDie()
     {
         playerTransf.gameObject.GetComponent<PlayerVelocity>().enabled = false;
         LevelManager.instance.GameOver();

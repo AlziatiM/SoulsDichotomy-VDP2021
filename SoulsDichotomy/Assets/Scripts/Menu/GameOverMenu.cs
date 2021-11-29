@@ -21,6 +21,7 @@ public class GameOverMenu : Menu
     public void TryAgain()
     {
         MenuManager.instance.Back();
+        UIManager.instance.SetUpSlider();
         LevelManager.instance.TryAgainLevel();
         GameManager.instance.TryAgainSetup();
     }

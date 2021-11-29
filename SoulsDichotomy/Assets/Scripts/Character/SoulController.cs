@@ -265,7 +265,7 @@ public class SoulController : MonoBehaviour, IHittable
     public void DeathExtra()
     {
         Character.AnimationManager.Die();
-        GameManager.instance.SummonDeath();
+        GameManager.instance.SomeoneDie();
 
     }
     

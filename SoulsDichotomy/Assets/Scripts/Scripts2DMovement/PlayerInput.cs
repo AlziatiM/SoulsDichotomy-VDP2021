@@ -235,7 +235,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 		Character.AnimationManager.SetState(CharacterState.Death);
 		currState = CharacterState.Death;
 		canMove = false;
-		GameManager.instance.SummonDeath();
+		GameManager.instance.SomeoneDie();
 
 	}
 	public void SetScaleToSoulPanel(Vector3 newScale)
