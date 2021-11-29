@@ -34,7 +34,6 @@ public class Health
         
         if (currentHealth > 0)
         {
-            
             currentHealth -= value;
             onDamage.Invoke();
             if (currentHealth <= 0)
