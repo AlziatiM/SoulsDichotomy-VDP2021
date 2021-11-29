@@ -108,12 +108,10 @@ public class SoulController : MonoBehaviour, IHittable
         CancelInvoke();
         if (isInRange)
         {
-            print("in range quindi curo");
             StartInvokeHeal();
         }
         else if(moveFromInput)
         {
-            print("non in range ma controllato");
             StartInvokeDamage();
         }
     }
@@ -299,6 +297,8 @@ public class SoulController : MonoBehaviour, IHittable
     public void ResetSoul()
     {
         soulHealth.SetUpHealth();
+        Character.AnimationManager.SetState(CharacterState.Idle);
+        moveFromInput = false;
         //todo remove active pickup
 
     }

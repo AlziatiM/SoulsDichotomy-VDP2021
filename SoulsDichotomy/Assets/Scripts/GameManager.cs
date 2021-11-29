@@ -115,7 +115,8 @@ public class GameManager : MonoBehaviour
     public void SomeoneDie()
     {
         playerTransf.gameObject.GetComponent<PlayerVelocity>().enabled = false;
-        LevelManager.instance.GameOver();
+        GameOverMenu.instance.LevelFailed();
+        MenuManager.instance.GameOver();
     }
     public void TryAgainSetup()
     {

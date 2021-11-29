@@ -344,6 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 8101553101184863190}
+  titleMenu: {fileID: 8101553102413606171}
 --- !u!1001 &8101553101191780014
 PrefabInstance:
   m_ObjectHideFlags: 0
