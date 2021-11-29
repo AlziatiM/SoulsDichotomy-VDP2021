@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44015475fef8d4e41958201923df720b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iconPickUp: {fileID: 3654067745276760399, guid: 3b22d2839732e3c40a00290289cc166d, type: 3}
   canPlayerPick: 1
   canSoulPick: 1
   affectPlayer: 1

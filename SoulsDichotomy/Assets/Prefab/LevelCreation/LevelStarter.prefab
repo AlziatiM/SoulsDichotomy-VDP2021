@@ -51,4 +51,4 @@ MonoBehaviour:
   eventSystem: {fileID: 1927222454012640030, guid: fb8226bf441db5f4abc2974a31bfe52a, type: 3}
   skillMenu: {fileID: 4627705638342676632, guid: dfa51e0d6dcc5054db42008cf6d16cf0, type: 3}
   gameOverMenu: {fileID: 8101553102666416332, guid: 83133166fb1e6814f92b7ff0793d2191, type: 3}
-  UIPanel: {fileID: 3994898117015521656, guid: 5508df6282a9be14f8af325439fb0ea4, type: 3}
+  UIPanel: {fileID: 5680616450891147290, guid: 5508df6282a9be14f8af325439fb0ea4, type: 3}

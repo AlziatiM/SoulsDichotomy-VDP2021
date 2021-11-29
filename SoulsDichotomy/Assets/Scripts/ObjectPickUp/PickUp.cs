@@ -9,6 +9,8 @@ public abstract class PickUp : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
+    [Header("Prefab to instantiate when picked")]
+    [SerializeField] GameObject iconPickUp;
 
     [Header("Who can pick up?")]
     [SerializeField] private bool canPlayerPick;
@@ -31,6 +33,10 @@ public abstract class PickUp : MonoBehaviour
         if ( hasTimer && timer.GetTime() <= 0)
         {
             Debug.LogWarning("You are using a timer on " + gameObject.name + " but has an invalid time to count!");
+        }
+        if(hasTimer && iconPickUp == null)
+        {
+            Debug.LogWarning("You can't have a pick up based over time witout a prefab to instantiate!");
         }
     }
 
@@ -75,6 +81,8 @@ public abstract class PickUp : MonoBehaviour
         {
             ApplySoul();
         }
+        if(hasTimer)
+            UIManager.instance.NewPickUp(iconPickUp, timer.GetTime());
     }
 
     private void RemoveAffect()
