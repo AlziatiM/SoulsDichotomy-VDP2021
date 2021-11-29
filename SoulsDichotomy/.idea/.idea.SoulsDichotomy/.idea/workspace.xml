@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37998f5d-d7db-4e9c-a5b0-6eb1848c24ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LevelSample.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LevelSample.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level6.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level6.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulsDichotomy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulsDichotomy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Characters/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Characters/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Characters/Soul.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Characters/Soul.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Interactable/ButtonTall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Interactable/ButtonTall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Interactable/ButtonTiny.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Interactable/ButtonTiny.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Interactable/Lever.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Interactable/Lever.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/LevelCreation/ExitLevel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/LevelCreation/ExitLevel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/PickUp/JumpHigh.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/PickUp/JumpHigh.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectPickUp/jumpHigh.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectPickUp/jumpHigh.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
@@ -22,7 +33,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectPickUp/PickUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectPickUp/HealthUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectPickUp/SizeDown.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectPickUp/JumpHigh.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectPickUp/jumpHigh.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad3eaa0878d94cbe8e45f9c494d7164713bc00/38/199c7b50/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectDamagetor/DamagePlayer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -83,6 +94,8 @@
       <workItem from="1637263698532" duration="6340000" />
       <workItem from="1637317821699" duration="594000" />
       <workItem from="1637327636140" duration="1439000" />
+      <workItem from="1638182654392" duration="308000" />
+      <workItem from="1638183301195" duration="4000" />
     </task>
     <servers />
   </component>
