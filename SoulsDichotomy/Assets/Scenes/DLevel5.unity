@@ -254,6 +254,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -383,6 +387,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -698,6 +710,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -755,6 +771,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -812,6 +832,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -931,6 +955,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -988,6 +1020,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -1060,6 +1096,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -1385,6 +1425,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -1745,6 +1789,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -1802,6 +1854,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -1983,6 +2043,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -2097,6 +2161,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -2355,6 +2427,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -2412,6 +2492,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -2479,6 +2567,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -2608,6 +2704,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -2727,6 +2831,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -3032,6 +3140,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -3094,6 +3206,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -3293,6 +3409,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7299139169590414442, guid: 6967cdaa7ed591447b8dcd2946191256, type: 3}
   m_PrefabInstance: {fileID: 94944910}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1194642942
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7275501947385590878}
+    m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: m_Name
+      value: ButtonSpike
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299139169590414442, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: m_RootOrder
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299139169590414442, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299139169590414442, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299139169590414442, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299139169590414442, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299139169590414442, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299139169590414442, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299139169590414442, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299139169590414442, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299139169590414442, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299139169590414442, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e3ddf889d8575454198bb94e96125964, type: 3}
 --- !u!1001 &1194808230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3300,6 +3481,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -3422,6 +3611,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6967cdaa7ed591447b8dcd2946191256, type: 3}
+--- !u!4 &1268737135 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7299139169590414442, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+  m_PrefabInstance: {fileID: 1194642942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1284832227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7299139169590414442, guid: e3ddf889d8575454198bb94e96125964, type: 3}
@@ -3491,6 +3685,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -3687,6 +3885,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -3749,6 +3951,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -4056,6 +4266,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -4118,6 +4332,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -4242,6 +4464,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -4361,6 +4591,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -4438,6 +4672,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -4562,6 +4804,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -4619,6 +4869,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -4733,6 +4991,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -4800,6 +5062,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -4857,6 +5127,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -5053,6 +5327,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -5224,6 +5502,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -5338,6 +5624,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -5497,6 +5787,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -5564,6 +5862,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -5621,6 +5923,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -5678,6 +5984,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -5740,6 +6050,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -5812,6 +6130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: timeBetwDmg
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -5869,6 +6195,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7275501947385590878}
     m_Modifications:
+    - target: {fileID: 2233817019504865992, guid: e3ddf889d8575454198bb94e96125964, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3251448163668147895, guid: e3ddf889d8575454198bb94e96125964, type: 3}
       propertyPath: m_Name
       value: ButtonSpike
@@ -44249,28 +44579,6 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 4206582012657366001}
     m_ColliderPaths:
-    - - X: 160097764
-        Y: 49977987
-      - X: 160097764
-        Y: 60022013
-      - X: 160097705
-        Y: 60022072
-      - X: 149999959
-        Y: 60022072
-      - X: 149999900
-        Y: 60022013
-      - X: 149999900
-        Y: 54973116
-      - X: 149999930
-        Y: 54973068
-      - X: 149999977
-        Y: 54973044
-      - X: 159882781
-        Y: 49977933
-      - X: 159882804
-        Y: 49977928
-      - X: 160097705
-        Y: 49977928
     - - X: 239997452
         Y: 54973103
       - X: 239997452
@@ -44303,26 +44611,6 @@ CompositeCollider2D:
         Y: 54973044
       - X: 250061081
         Y: 54973044
-    - - X: 300097764
-        Y: 49977987
-      - X: 300097764
-        Y: 60022013
-      - X: 300097705
-        Y: 60022072
-      - X: 289999959
-        Y: 60022072
-      - X: 289999900
-        Y: 60022013
-      - X: 289999900
-        Y: 54973116
-      - X: 289999930
-        Y: 54973068
-      - X: 299882781
-        Y: 49977933
-      - X: 299882804
-        Y: 49977928
-      - X: 300097705
-        Y: 49977928
     - - X: 379997468
         Y: 54973103
       - X: 379997468
@@ -44355,26 +44643,70 @@ CompositeCollider2D:
         Y: 54973044
       - X: 390061065
         Y: 54973044
-    - - X: 440097764
-        Y: 49977987
-      - X: 440097764
+    - - X: 159997452
+        Y: 54973103
+      - X: 159997452
         Y: 60022013
-      - X: 440097705
+      - X: 159997511
         Y: 60022072
-      - X: 429999959
+      - X: 139987751
         Y: 60022072
-      - X: 429999900
+      - X: 139987692
         Y: 60022013
-      - X: 429999900
-        Y: 54973116
-      - X: 429999930
-        Y: 54973068
-      - X: 439882781
-        Y: 49977933
-      - X: 439882804
-        Y: 49977928
-      - X: 440097705
-        Y: 49977928
+      - X: 139987692
+        Y: 54973103
+      - X: 139987751
+        Y: 54973044
+      - X: 159997511
+        Y: 54973044
+    - - X: 170061140
+        Y: 54973103
+      - X: 170061140
+        Y: 60022013
+      - X: 170061081
+        Y: 60022072
+      - X: 160017047
+        Y: 60022072
+      - X: 160016988
+        Y: 60022013
+      - X: 160016988
+        Y: 54973103
+      - X: 160017047
+        Y: 54973044
+      - X: 170061081
+        Y: 54973044
+    - - X: 310061124
+        Y: 54973103
+      - X: 310061124
+        Y: 60022013
+      - X: 310061065
+        Y: 60022072
+      - X: 279987767
+        Y: 60022072
+      - X: 279987708
+        Y: 60022013
+      - X: 279987708
+        Y: 54973103
+      - X: 279987767
+        Y: 54973044
+      - X: 310061065
+        Y: 54973044
+    - - X: 440061124
+        Y: 54973103
+      - X: 440061124
+        Y: 60022013
+      - X: 440061065
+        Y: 60022072
+      - X: 419987767
+        Y: 60022072
+      - X: 419987708
+        Y: 60022013
+      - X: 419987708
+        Y: 54973103
+      - X: 419987767
+        Y: 54973044
+      - X: 440061065
+        Y: 54973044
     - - X: 470097764
         Y: 29977987
       - X: 470097764
@@ -44457,11 +44789,14 @@ CompositeCollider2D:
         Y: -30022072
   m_CompositePaths:
     m_Paths:
-    - - {x: 16.00974, y: 4.9977927}
-      - {x: 16.00974, y: 6.0022073}
-      - {x: 14.99999, y: 6.002172}
-      - {x: 15.000013, y: 5.497297}
-      - {x: 15.988287, y: 4.9977927}
+    - - {x: 15.999722, y: 5.4973044}
+      - {x: 15.999722, y: 6.0022073}
+      - {x: 13.99877, y: 6.002172}
+      - {x: 13.998805, y: 5.4973044}
+    - - {x: 17.006079, y: 5.4973044}
+      - {x: 17.006079, y: 6.0022073}
+      - {x: 16.0017, y: 6.002172}
+      - {x: 16.001734, y: 5.4973044}
     - - {x: 23.999722, y: 5.4973044}
       - {x: 23.999722, y: 6.0022073}
       - {x: 19.99877, y: 6.002172}
@@ -44470,11 +44805,10 @@ CompositeCollider2D:
       - {x: 25.006079, y: 6.0022073}
       - {x: 24.0017, y: 6.002172}
       - {x: 24.001734, y: 5.4973044}
-    - - {x: 30.00974, y: 4.9977927}
-      - {x: 30.00974, y: 6.0022073}
-      - {x: 28.99999, y: 6.002172}
-      - {x: 29.000008, y: 5.497299}
-      - {x: 29.988285, y: 4.9977927}
+    - - {x: 31.006077, y: 5.4973044}
+      - {x: 31.006077, y: 6.0022073}
+      - {x: 27.998772, y: 6.002172}
+      - {x: 27.998806, y: 5.4973044}
     - - {x: 37.999725, y: 5.4973044}
       - {x: 37.999725, y: 6.0022073}
       - {x: 33.99877, y: 6.002172}
@@ -44483,11 +44817,10 @@ CompositeCollider2D:
       - {x: 39.006077, y: 6.0022073}
       - {x: 38.0017, y: 6.002172}
       - {x: 38.001736, y: 5.4973044}
-    - - {x: 44.009743, y: 4.9977927}
-      - {x: 44.009743, y: 6.0022073}
-      - {x: 42.999992, y: 6.002172}
-      - {x: 43.000008, y: 5.497299}
-      - {x: 43.988285, y: 4.9977927}
+    - - {x: 44.006077, y: 5.4973044}
+      - {x: 44.006077, y: 6.0022073}
+      - {x: 41.99877, y: 6.002172}
+      - {x: 41.998806, y: 5.4973044}
     - - {x: 47.009743, y: 2.9977927}
       - {x: 47.009743, y: 4.0022073}
       - {x: 45.999992, y: 4.002172}
@@ -45711,6 +46044,7 @@ Transform:
   - {fileID: 1572544196}
   - {fileID: 1866825536}
   - {fileID: 911257066}
+  - {fileID: 1268737135}
   m_Father: {fileID: 5388169699698573744}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -58627,11 +58961,31 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741826
+  - first: {x: 14, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
   - first: {x: 15, y: 5, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+  - first: {x: 16, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -58687,11 +59041,31 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741826
+  - first: {x: 28, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
   - first: {x: 29, y: 5, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+  - first: {x: 30, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -58747,11 +59121,21 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741826
+  - first: {x: 42, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
   - first: {x: 43, y: 5, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -58759,19 +59143,19 @@ Tilemap:
       m_AllTileFlags: 1073741826
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 17
+  - m_RefCount: 22
     m_Data: {fileID: 11400000, guid: 185fc75778b92d94fa37dfdab50d890d, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 2
+  - m_RefCount: 5
     m_Data: {fileID: -146459772094852247, guid: e741818b4f51bfe47b36192637867f12, type: 3}
-  - m_RefCount: 6
+  - m_RefCount: 8
     m_Data: {fileID: 3499215105639045476, guid: e741818b4f51bfe47b36192637867f12, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 5
     m_Data: {fileID: -6094586608764939183, guid: e741818b4f51bfe47b36192637867f12, type: 3}
-  - m_RefCount: 7
+  - m_RefCount: 4
     m_Data: {fileID: 4305274620521020256, guid: e741818b4f51bfe47b36192637867f12, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 17
+  - m_RefCount: 22
     m_Data:
       e00: 1
       e01: 0
@@ -58790,7 +59174,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 17
+  - m_RefCount: 22
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
