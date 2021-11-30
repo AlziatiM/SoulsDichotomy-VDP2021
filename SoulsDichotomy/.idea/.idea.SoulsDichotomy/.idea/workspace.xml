@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37998f5d-d7db-4e9c-a5b0-6eb1848c24ae" name="Changes" comment="" />
+    <list default="true" id="37998f5d-d7db-4e9c-a5b0-6eb1848c24ae" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulsDichotomy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulsDichotomy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DLevel5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DLevel5.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level7.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level7.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,6 +84,7 @@
       <workItem from="1637327636140" duration="1439000" />
       <workItem from="1638182654392" duration="308000" />
       <workItem from="1638183301195" duration="4000" />
+      <workItem from="1638213409610" duration="618000" />
     </task>
     <servers />
   </component>
