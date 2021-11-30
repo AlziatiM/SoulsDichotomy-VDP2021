@@ -124,7 +124,9 @@ public class PassengerMover : BoxColliderCasts
 
             if (passenger.moveBeforePlatform == beforeMovePlatform)
             {
-                passengerDictionary[passenger.transform].Move(passenger.displacement, passenger.standingOnPlatform);
+                Vector2 fix = passenger.displacement;
+                fix.y = fix.y  - 0.01f;
+                passengerDictionary[passenger.transform].Move(fix, passenger.standingOnPlatform);
             }
         }
     }
