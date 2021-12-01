@@ -23,6 +23,7 @@ public abstract class PickUp : MonoBehaviour
     [Header("Timer attributess")]
     [SerializeField] private bool hasTimer;
     [SerializeField] private Timer timer;
+    [SerializeField] private bool canRespawn;
 
     protected GameObject player;
     protected GameObject soul;
@@ -106,9 +107,17 @@ public abstract class PickUp : MonoBehaviour
         }
         else
         {
-            DisableVisibilityAndInteraction();
             RemoveAffect();
-            timer.timeExpire += Destroy;
+            DisableVisibilityAndInteraction();
+            if (canRespawn)
+            {
+                timer.timeExpire += Respawn;
+            }
+            else
+            {
+                timer.timeExpire += Destroy;
+            }
+            
             timer.StartTimer();
         }
     }
@@ -123,6 +132,12 @@ public abstract class PickUp : MonoBehaviour
     public abstract void ApplySoul();
     public abstract void RemovePlayer();
     public abstract void RemoveSoul();
+
+    private void Respawn()
+    {
+        spriteRenderer.enabled = true;
+        boxCollider.enabled = true;
+    }
 
     private void Destroy()
     {

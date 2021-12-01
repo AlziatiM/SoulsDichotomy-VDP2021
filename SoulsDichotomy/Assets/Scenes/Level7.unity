@@ -1345,6 +1345,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 853102105258120430}
     m_Modifications:
     - target: {fileID: 2378552074816045548, guid: 65cbc5a48ecbf8144b3f7bb36c5398b8, type: 3}
+      propertyPath: canRespawn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378552074816045548, guid: 65cbc5a48ecbf8144b3f7bb36c5398b8, type: 3}
       propertyPath: maxJumpHeight
       value: 8
       objectReference: {fileID: 0}
