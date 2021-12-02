@@ -25,6 +25,7 @@ public class Timer : MonoBehaviour
             else
             {
                 timerStarted = false;
+                //print("expire");
                 timeExpire();
             }
         }
@@ -39,6 +40,11 @@ public class Timer : MonoBehaviour
     public float GetTime()
     {
         return time;
+    }
+
+    public void MakeTimerExpire()
+    {
+        timeExpire();
     }
 
 }

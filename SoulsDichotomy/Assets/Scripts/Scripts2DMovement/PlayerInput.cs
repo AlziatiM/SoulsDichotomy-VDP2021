@@ -22,7 +22,8 @@ public class PlayerInput : MonoBehaviour, IHittable
 	private CharacterState currState;
 	private bool isJumping;
 	private bool _moving;
-
+	private bool gameOver;
+	public bool GameOver { set { gameOver = value; } get { return gameOver; } }
 	[Header("Healt Attributes")]
 	public Health playerHealth;
 	[SerializeField] private ParticlesPlayer particles;
@@ -37,6 +38,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 		playerHealth.SetUpHealth();
 		canMove = true;
 		isJumping = false;
+		gameOver = false;
 		playerVelocity = GetComponent<PlayerVelocity>();
 		_transf = this.gameObject.GetComponent<Transform>();
 	}
@@ -56,6 +58,8 @@ public class PlayerInput : MonoBehaviour, IHittable
 
 	void Update()
 	{
+		if (gameOver)
+			return;
 		if (!canMove)
 		{
 			return;
@@ -253,6 +257,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 	    playerHealth.SetUpHealth();
 	    playerVelocity.enabled = true;
 	    canMove = true;
+		GameOver = false;
 		ShowAreaSoul(false);
 	    //todo remove active pickup
     }

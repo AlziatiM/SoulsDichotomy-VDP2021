@@ -1,3 +1,4 @@
+
 using Assets.HeroEditor4D.Common.CharacterScripts;
 using System.Collections;
 using System.Collections.Generic;
@@ -30,6 +31,8 @@ public class SoulController : MonoBehaviour, IHittable
     private bool _moving;
     private bool isInRange;
 
+    private bool gameOver;
+    public bool GameOver { set { gameOver = value; } get { return gameOver; } }
 
     //soul interaction
     private IInteract interactObj;
@@ -46,6 +49,7 @@ public class SoulController : MonoBehaviour, IHittable
         moveFromInput = false;
         _transform = transform;
         isInRange = true;
+        gameOver = false;
     }
 
     public void Start()
@@ -60,6 +64,8 @@ public class SoulController : MonoBehaviour, IHittable
 
     public void Update()
     {
+        if (gameOver)
+            return;
         if (moveFromInput)
         {
             SetDirection();
@@ -299,6 +305,7 @@ public class SoulController : MonoBehaviour, IHittable
         soulHealth.SetUpHealth();
         Character.AnimationManager.SetState(CharacterState.Idle);
         moveFromInput = false;
+        GameOver = false;
         //todo remove active pickup
 
     }

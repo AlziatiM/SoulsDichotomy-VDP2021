@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     private CinemachineVirtualCamera _vc;
     private Transform playerTransf;
     private Transform soulTransf;
+    private bool gameOver;
+    
     public static GameManager instance;
     
     // Start is called before the first frame update
@@ -36,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        gameOver = false;
         StartCoroutine("StartWithDelay");   
     }
 
@@ -59,14 +62,18 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameOver)
+            return;
         if (Input.GetKeyDown(switchCharacterInput))
         {
             changeCharacter();
         }
+        /*
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             MenuManager.instance.Open(SkillMenu.instance);
         }
+        */
     }
 
     void SwitchCamera()
@@ -115,11 +122,15 @@ public class GameManager : MonoBehaviour
     public void SomeoneDie()
     {
         playerTransf.gameObject.GetComponent<PlayerVelocity>().enabled = false;
+        playerTransf.gameObject.GetComponent<PlayerInput>().GameOver = true;
+        soulTransf.gameObject.GetComponent<SoulController>().GameOver = true;
+        gameOver = true;
         GameOverMenu.instance.LevelFailed();
         MenuManager.instance.GameOver();
     }
     public void TryAgainSetup()
     {
+        gameOver = false;
         playerTransf.gameObject.GetComponent<PlayerInput>().ResetPlayer();
         soulTransf.gameObject.GetComponent<SoulController>().ResetSoul();
 

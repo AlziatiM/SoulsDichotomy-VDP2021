@@ -28,6 +28,7 @@ public abstract class PickUp : MonoBehaviour
     protected GameObject player;
     protected GameObject soul;
 
+    private GameObject myIconInstantiate;
     private void OnValidate()
     {
         timer = gameObject.GetComponent<Timer>();
@@ -83,7 +84,7 @@ public abstract class PickUp : MonoBehaviour
             ApplySoul();
         }
         if(hasTimer)
-            UIManager.instance.NewPickUp(iconPickUp, timer.GetTime());
+            myIconInstantiate = UIManager.instance.NewPickUp(iconPickUp, timer.GetTime());
     }
 
     private void RemoveAffect()
@@ -117,9 +118,10 @@ public abstract class PickUp : MonoBehaviour
             {
                 timer.timeExpire += Destroy;
             }
-            
+            LevelManager.changeScene += DetachAndDestory;
             timer.StartTimer();
         }
+        
     }
 
     private void DisableVisibilityAndInteraction()
@@ -141,6 +143,22 @@ public abstract class PickUp : MonoBehaviour
 
     private void Destroy()
     {
-        Destroy(this.gameObject);
+        LevelManager.changeScene -= DetachAndDestory;
+        if(this!=null)
+            Destroy(this.gameObject);
+    }
+
+    private void DetachAndDestory()
+    {
+        Destroy(myIconInstantiate);
+        timer.MakeTimerExpire();
+    }
+
+    protected bool PlayerExist()
+    {
+        return player != null;
+    }
+    protected bool SoulExist(){
+        return soul != null;
     }
 }

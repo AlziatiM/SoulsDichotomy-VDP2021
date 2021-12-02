@@ -32,9 +32,16 @@ public class WallJump : PickUp
     }
     public override void RemovePlayer()
     {
-        player.GetComponent<PlayerVelocity>().WallJump = wallJumpToRestore;
-        player.GetComponent<PlayerVelocity>().WallJumpClimb = wallJumpClimbToRestore;
-        player.GetComponent<PlayerVelocity>().WallLeapOff = wallLeapOffToRestore;
+        if (PlayerExist())
+        {
+            PlayerVelocity pv = player.GetComponent<PlayerVelocity>();
+            if (pv != null)
+            {
+                pv.WallJump = wallJumpToRestore;
+                pv.WallJumpClimb = wallJumpClimbToRestore;
+                pv.WallLeapOff = wallLeapOffToRestore;
+            }
+        }  
     }
     public override void RemoveSoul()
     {

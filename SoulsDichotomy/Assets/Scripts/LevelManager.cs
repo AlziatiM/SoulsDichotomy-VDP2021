@@ -12,6 +12,9 @@ public class LevelManager : MonoBehaviour
     public int CurrentLevel { get { return currLevel; } }
     public static LevelManager instance;
 
+    public delegate void OnChangeScene();
+    public static OnChangeScene changeScene;
+
     public void Awake()
     {
         if (instance == null)
@@ -27,7 +30,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        currLevel = 0;
+        currLevel = 7;
         
         LoadLevel(currLevel);
     }
@@ -69,6 +72,11 @@ public class LevelManager : MonoBehaviour
     /// <param name="index">index of level to load</param>
     private void LoadNewLevel(int index)
     {
+        if (changeScene != null) 
+        {
+            changeScene();
+        }
+            
         SceneManager.LoadScene(levels[index]);
     }
 

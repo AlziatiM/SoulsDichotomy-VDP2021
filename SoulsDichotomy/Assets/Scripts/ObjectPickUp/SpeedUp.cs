@@ -24,7 +24,14 @@ namespace ObjectPickUp
 
         public override void RemovePlayer()
         {
-            player.GetComponent<PlayerVelocity>().MoveSpeed = restoreVelocity;
+            if (PlayerExist())
+            {
+                PlayerVelocity pv = player.GetComponent<PlayerVelocity>();
+                if (pv != null)
+                {
+                    pv.MoveSpeed = restoreVelocity;
+                }
+            }   
         }
 
         public override void RemoveSoul()

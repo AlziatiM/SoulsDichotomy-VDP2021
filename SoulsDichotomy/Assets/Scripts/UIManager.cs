@@ -67,10 +67,11 @@ public class UIManager : MonoBehaviour
 
     //methods for pickUps
 
-    internal void NewPickUp(GameObject go, float time)
+    internal GameObject NewPickUp(GameObject go, float time)
     {
         GameObject obj= Instantiate(go, Vector3.zero, Quaternion.identity, panelPickUp);
         obj.GetComponent<PickUpUIElement>().StartScale(time);
+        return obj;
     }
 
 
