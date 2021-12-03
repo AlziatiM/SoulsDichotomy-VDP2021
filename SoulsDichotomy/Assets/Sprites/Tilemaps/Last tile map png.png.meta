@@ -151,7 +151,7 @@ TextureImporter:
     second: Last tile map png_67
   - first:
       213: 7258184445526284012
-    second: Last tile map png_68
+    second: PannelBig
   - first:
       213: 2008970035325475875
     second: skull1
@@ -169,7 +169,7 @@ TextureImporter:
     second: Last tile map png_78
   - first:
       213: -3532062288651955482
-    second: Last tile map png_80
+    second: PannelSmall
   - first:
       213: 6270047213041316494
     second: fire1
@@ -1267,7 +1267,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Last tile map png_68
+      name: PannelBig
       rect:
         serializedVersion: 2
         x: 0
@@ -1393,7 +1393,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Last tile map png_80
+      name: PannelSmall
       rect:
         serializedVersion: 2
         x: 238
