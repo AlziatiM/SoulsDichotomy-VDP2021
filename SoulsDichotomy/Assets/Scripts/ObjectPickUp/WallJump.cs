@@ -15,7 +15,7 @@ public class WallJump : PickUp
     public override void ApplyPlayer()
     {
         PlayerVelocity pv = player.GetComponent<PlayerVelocity>();
-
+        pv.AllowWallJump = true;
         wallJumpToRestore = pv.WallJump;
         pv.WallJump = wallJump;
         
@@ -37,6 +37,7 @@ public class WallJump : PickUp
             PlayerVelocity pv = player.GetComponent<PlayerVelocity>();
             if (pv != null)
             {
+                pv.AllowWallJump = false;
                 pv.WallJump = wallJumpToRestore;
                 pv.WallJumpClimb = wallJumpClimbToRestore;
                 pv.WallLeapOff = wallLeapOffToRestore;

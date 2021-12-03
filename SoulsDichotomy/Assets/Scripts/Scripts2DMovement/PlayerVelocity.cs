@@ -38,14 +38,21 @@ public class PlayerVelocity : MonoBehaviour
 	private Vector2 directionalInput;
 	private bool wallContact;
 	private int wallDirX;
-
 	private PlayerInput playerInput;
+	private bool allowWallJump = false;
 
 	//add to pickup purposed
 	public Vector2 WallJump
     {
 		get { return wallJump; }
 		set { wallJump = value; }
+	}
+
+	public bool AllowWallJump
+	{
+		get { return allowWallJump;}
+
+		set { allowWallJump = value; }
 	}
 
 	public Vector2 WallJumpClimb
@@ -147,7 +154,7 @@ public class PlayerVelocity : MonoBehaviour
 			if (velocity.y < 0)
 			{
 				// Grab wall if input facing wall
-				if (directionalInput.x == wallDirX)
+				if (directionalInput.x == wallDirX&& allowWallJump)
 				{
 					velocity.y = 0;
 				}
