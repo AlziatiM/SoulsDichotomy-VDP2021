@@ -30,7 +30,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        currLevel = 7;
+        currLevel = 0;
         
         LoadLevel(currLevel);
     }
