@@ -1,11 +1,13 @@
-﻿using System;
+﻿
+using System;
 using System.Collections;
 
 namespace Assets.HeroEditor4D.Common.CommonScripts
 {
 	public static class StandaloneFilePicker
 	{
-		#if UNITY_EDITOR
+		
+#if UNITY_EDITOR
 
 		public static IEnumerator OpenFile(string title, string directory, string extension, Action<bool, string, byte[]> callback)
 		{
@@ -41,8 +43,8 @@ namespace Assets.HeroEditor4D.Common.CommonScripts
 
 			yield break;
 		}
-	
-		#elif UNITY_WSA
+
+#elif UNITY_WSA
 
 		public static IEnumerator OpenFile(string title, string directory, string extension, Action<bool, string, byte[]> callback)
 		{
@@ -133,44 +135,46 @@ namespace Assets.HeroEditor4D.Common.CommonScripts
 			callback(saved, path);
 		}
 
-		#elif UNITY_STANDALONE
+#elif UNITY_STANDALONE
 
 		public static IEnumerator OpenFile(string title, string directory, string extension, Action<bool, string, byte[]> callback)
 		{
-			var extensions = new[] { new SFB.ExtensionFilter("Image Files", extension.Split(',')) };
+			//var extensions = new[] { new SFB.ExtensionFilter("Image Files", extension.Split(',')) };
 
             // Import StandaloneFileBrowser asset for standalone builds!
-			SFB.StandaloneFileBrowser.OpenFilePanelAsync(title, directory, extensions, false, paths =>
-			{
-				if (paths != null && paths.Length == 1)
-				{
-					callback(true, paths[0], System.IO.File.ReadAllBytes(paths[0]));
-				}
-			});
+			//SFB.StandaloneFileBrowser.OpenFilePanelAsync(title, directory, extensions, false, paths =>
+			//{
+			//	if (paths != null && paths.Length == 1)
+			//	{
+			//		callback(true, paths[0], System.IO.File.ReadAllBytes(paths[0]));
+			//	}
+			//});
 
 			yield break;
 		}
-
+		
 		public static IEnumerator SaveFile(string title, string directory, string defaultName, string extension, byte[] bytes, Action<bool, string> callback)
 		{
+			
             // Import StandaloneFileBrowser asset for standalone builds!
-			SFB.StandaloneFileBrowser.SaveFilePanelAsync(title, directory, defaultName, extension, path =>
-			{
-				if (string.IsNullOrEmpty(path))
-				{
-					callback(false, path);
-				}
-				else
-				{
-					System.IO.File.WriteAllBytes(path, bytes);
-					callback(true, path);
-				}
-			});
-
+			//SFB.StandaloneFileBrowser.SaveFilePanelAsync(title, directory, defaultName, extension, path =>
+			//{
+			//	if (string.IsNullOrEmpty(path))
+			//	{
+			//		callback(false, path);
+			//	}
+			//	else
+			//	{
+			//		System.IO.File.WriteAllBytes(path, bytes);
+			//		callback(true, path);
+			//	}
+			//});
+			
 			yield break;
+			
 		}
 
-		#else
+#else
 
 		public static IEnumerator OpenFile(string title, string directory, string extension, Action<bool, string, byte[]> callback)
 		{
@@ -182,6 +186,8 @@ namespace Assets.HeroEditor4D.Common.CommonScripts
 			throw new NotSupportedException();
 		}
 
-		#endif
+#endif
+		
 	}
+		
 }
