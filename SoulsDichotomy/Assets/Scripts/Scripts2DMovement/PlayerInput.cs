@@ -255,7 +255,8 @@ public class PlayerInput : MonoBehaviour, IHittable
     public void ResetPlayer()
     {
 	    playerHealth.SetUpHealth();
-	    playerVelocity.enabled = true;
+		Character.AnimationManager.SetState(CharacterState.Idle);
+		playerVelocity.enabled = true;
 	    canMove = true;
 		GameOver = false;
 		ShowAreaSoul(false);
