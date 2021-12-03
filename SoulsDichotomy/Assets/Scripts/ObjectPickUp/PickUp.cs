@@ -137,8 +137,11 @@ public abstract class PickUp : MonoBehaviour
 
     private void Respawn()
     {
-        spriteRenderer.enabled = true;
-        boxCollider.enabled = true;
+        if (this != null)
+        {
+            spriteRenderer.enabled = true;
+            boxCollider.enabled = true;
+        }
     }
 
     private void Destroy()
