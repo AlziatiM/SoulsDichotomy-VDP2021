@@ -53,6 +53,18 @@ public class StandardActivator : MonoBehaviour, IInteract
         SetUpActivator();
     }
 
+    private void Start()
+    {
+        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+        gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+        foreach (GameObject go in objHasToReac)
+        {
+            IReact reactScript = go.GetComponent<IReact>();
+            reactScripts.Add(reactScript);
+            
+        }
+    }
+
     protected void SetUpActivator()
     {
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
@@ -74,8 +86,10 @@ public class StandardActivator : MonoBehaviour, IInteract
 
     protected void ReactAll()
     {
+        Debug.Log("sono nel debug");
         foreach (IReact r in reactScripts)
         {
+            Debug.Log("Eccomi dentro al for");
             r.React();
         }
     }

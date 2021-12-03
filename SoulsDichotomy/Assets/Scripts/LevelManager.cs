@@ -31,12 +31,14 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         currLevel = 0;
-        
+
         LoadLevel(currLevel);
+        //NextLevel();
     }
 
     public void NextLevel()
     {
+        Debug.Log("next level");
         currLevel++;
         if (levels.Length==currLevel)
         {
@@ -62,7 +64,7 @@ public class LevelManager : MonoBehaviour
     private IEnumerator WaitSkillManager()
     {
         yield return new WaitUntil(() => GameManager.instance != null);
-        yield return new WaitUntil(()=> SkillManager.instance.AmIReady());
+        yield return new WaitUntil(() => SkillManager.instance.AmIReady());
         SkillManager.instance.LoadLevelFromScratch(currLevel);
     }
 

@@ -49,6 +49,11 @@ public abstract class PickUp : MonoBehaviour
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
+    private void Start()
+    {
+        timer = gameObject.GetComponent<Timer>();
+    }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         
