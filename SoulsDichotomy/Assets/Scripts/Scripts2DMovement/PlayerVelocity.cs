@@ -212,7 +212,7 @@ public class PlayerVelocity : MonoBehaviour
 	{
 		if (wallContact)
 		{
-			print("jumpwithcontact");
+			//print("jumpwithcontact");
 
 			// Standard wall jump
 			if (directionalInput.x == 0)

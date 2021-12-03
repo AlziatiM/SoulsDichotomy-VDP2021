@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using Assets.HeroEditor4D.Common.CharacterScripts;
 using Assets.HeroEditor4D.Common.CommonScripts;
-using Assets.HeroEditor4D.FantasyInventory.Scripts.Data;
-using Assets.HeroEditor4D.FantasyInventory.Scripts.Interface.Elements;
 using Assets.HeroEditor4D.Common.SimpleColorPicker.Scripts;
 using HeroEditor4D.Common;
 using HeroEditor4D.Common.Enums;
-using Newtonsoft.Json;
+//using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,7 +20,7 @@ namespace Assets.HeroEditor4D.Common.EditorScripts
     {
         [Header("Public")]
         public Transform Tabs;
-        public ScrollInventory Inventory;
+        //public ScrollInventory Inventory;
         public Text ItemName;
 
         [Header("Other")]
@@ -31,7 +29,7 @@ namespace Assets.HeroEditor4D.Common.EditorScripts
         public ColorPicker ColorPicker;
         public string PrefabFolder;
 
-        public Action<Item> EquipCallback;
+        //public Action<Item> EquipCallback;
 
         public Character4D Character4D => (Character4D) Character;
 
@@ -56,6 +54,7 @@ namespace Assets.HeroEditor4D.Common.EditorScripts
         /// </summary>
         public void OnSelectTab(bool value)
         {
+            /*
             if (!value) return;
 
             Item.GetParams = null;
@@ -250,8 +249,9 @@ namespace Assets.HeroEditor4D.Common.EditorScripts
             var equipped = items.Count > equippedIndex + 1 ? items[equippedIndex + 1] : null;
 
             SetPaintButton(tab.name, equipped);
+            */
         }
-
+        /*
         private ItemParams CreateFakeItemParams(Item item, SpriteGroupEntry sprite, string replaceable = null, string replacement = null)
         {
             var spriteId = sprite?.Id;
@@ -270,7 +270,7 @@ namespace Assets.HeroEditor4D.Common.EditorScripts
 
             PaintButton.interactable = PaintParts.Contains(tab) && !tags.Contains("NoPaint") || tags.Contains("Paint");
         }
-
+        */
         /// <summary>
         /// Remove all equipment.
         /// </summary>

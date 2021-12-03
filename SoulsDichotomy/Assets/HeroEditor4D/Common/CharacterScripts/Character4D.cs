@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Assets.HeroEditor4D.Common.CommonScripts;
-using Assets.HeroEditor4D.FantasyInventory.Scripts.Data;
 using HeroEditor4D.Common;
 using HeroEditor4D.Common.Enums;
 using UnityEngine;
@@ -103,68 +102,5 @@ namespace Assets.HeroEditor4D.Common.CharacterScripts
 			}
 		}
 
-        #region Setup Examples
-
-        public void EquipArmor(Item item)
-        {
-            if (item == null) UnEquip(EquipmentPart.Armor);
-            else Equip(SpriteCollection.Armor.Single(i => i.Id == item.Params.SpriteId), EquipmentPart.Armor);
-        }
-
-        public void EquipHelmet(Item item)
-        {
-            if (item == null) UnEquip(EquipmentPart.Helmet);
-            else Equip(SpriteCollection.Armor.Single(i => i.Id == item.Params.SpriteId.Replace(".Helmet.", ".Armor.")), EquipmentPart.Helmet);
-        }
-
-        public void EquipVest(Item item)
-        {
-            if (item == null) UnEquip(EquipmentPart.Vest);
-            else Equip(SpriteCollection.Armor.Single(i => i.Id == item.Params.SpriteId.Replace(".Vest.", ".Armor.")), EquipmentPart.Vest);
-        }
-
-        public void EquipBracers(Item item)
-        {
-            if (item == null) UnEquip(EquipmentPart.Bracers);
-            else Equip(SpriteCollection.Armor.Single(i => i.Id == item.Params.SpriteId.Replace(".Bracers.", ".Armor.")), EquipmentPart.Bracers);
-        }
-
-        public void EquipLeggings(Item item)
-        {
-            if (item == null) UnEquip(EquipmentPart.Leggings);
-            else Equip(SpriteCollection.Armor.Single(i => i.Id == item.Params.SpriteId.Replace(".Leggings.", ".Armor.")), EquipmentPart.Leggings);
-        }
-
-        public void EquipShield(Item item)
-        {
-            Equip(SpriteCollection.Shield.SingleOrDefault(i => i.Id == item.Id), EquipmentPart.Shield);
-        }
-        
-        public void EquipMeleeWeapon1H(Item item)
-        {
-            Equip(SpriteCollection.MeleeWeapon1H.SingleOrDefault(i => i.Id == item.Id), EquipmentPart.MeleeWeapon1H);
-        }
-
-        public void EquipMeleeWeapon2H(Item item)
-        {
-            Equip(SpriteCollection.MeleeWeapon2H.SingleOrDefault(i => i.Id == item.Id), EquipmentPart.MeleeWeapon2H);
-        }
-
-        public void EquipBow(Item item)
-        {
-            Equip(SpriteCollection.Bow.SingleOrDefault(i => i.Id == item.Id), EquipmentPart.Bow);
-        }
-
-        public void EquipCrossbow(Item item)
-        {
-            Equip(SpriteCollection.Crossbow.SingleOrDefault(i => i.Id == item.Id), EquipmentPart.Crossbow);
-        }
-
-        public void EquipSecondaryFirearm(Item item)
-        {
-            Equip(SpriteCollection.Firearm1H.SingleOrDefault(i => i.Id == item.Id), EquipmentPart.SecondaryFirearm1H);
-        }
-
-        #endregion
     }
 }

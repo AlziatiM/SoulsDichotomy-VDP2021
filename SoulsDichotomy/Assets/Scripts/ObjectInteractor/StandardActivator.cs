@@ -36,11 +36,6 @@ public class StandardActivator : MonoBehaviour, IInteract
                 if (reactScript == null)
                 {
                     objHasToReac = null;
-                    reactScripts.Clear();
-                }
-                else
-                {
-                    reactScripts.Add(reactScript);
                 }
             }
 
@@ -86,10 +81,10 @@ public class StandardActivator : MonoBehaviour, IInteract
 
     protected void ReactAll()
     {
-        Debug.Log("sono nel debug");
+        
         foreach (IReact r in reactScripts)
         {
-            Debug.Log("Eccomi dentro al for");
+           
             r.React();
         }
     }

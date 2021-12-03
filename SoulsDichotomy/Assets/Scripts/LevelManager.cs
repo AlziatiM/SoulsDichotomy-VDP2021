@@ -38,7 +38,7 @@ public class LevelManager : MonoBehaviour
 
     public void NextLevel()
     {
-        Debug.Log("next level");
+
         currLevel++;
         if (levels.Length==currLevel)
         {

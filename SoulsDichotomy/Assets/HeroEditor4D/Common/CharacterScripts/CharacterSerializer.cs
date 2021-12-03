@@ -4,7 +4,7 @@ using System.Linq;
 using HeroEditor4D.Common;
 using HeroEditor4D.Common.Data;
 using HeroEditor4D.Common.Enums;
-using Newtonsoft.Json;
+//using Newtonsoft.Json;
 using UnityEngine;
 
 namespace Assets.HeroEditor4D.Common.CharacterScripts
@@ -13,6 +13,7 @@ namespace Assets.HeroEditor4D.Common.CharacterScripts
     {
         public override string ToJson()
         {
+            /*
             if (SpriteCollection == null) throw new Exception("SpriteCollection is null!");
 
             var description = new Dictionary<string, string>
@@ -48,10 +49,13 @@ namespace Assets.HeroEditor4D.Common.CharacterScripts
             }
 
             return JsonConvert.SerializeObject(description);
+            */
+            return null;
         }
 
         public override void LoadFromJson(string serialized, bool silent)
         {
+            /*
             var description = JsonConvert.DeserializeObject<Dictionary<string, string>>(serialized); 
 
             if (SpriteCollection == null) throw new Exception("SpriteCollection is null!");
@@ -115,6 +119,7 @@ namespace Assets.HeroEditor4D.Common.CharacterScripts
             }
 
             Initialize();
+            */
         }
 
         private IEnumerable<SpriteGroupEntry> GetWeaponCollection(WeaponType weaponType)
