@@ -68,12 +68,12 @@ public class SoulController : MonoBehaviour, IHittable
         {
             Character.SetDirection(Vector2.left);
         }
-        CustomizeInput.changeInput += ChangeCustomizeInput;
+        CustomizeInput.ChangeInput += ChangeCustomizeInput;
     }
 
     public void Update()
     {
-        if (gameOver)
+        if (gameOver || InGameMenu.instance.isPaused)
             return;
         if (moveFromInput)
         {

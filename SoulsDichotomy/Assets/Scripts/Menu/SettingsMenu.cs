@@ -19,8 +19,10 @@ public class SettingsMenu : Menu
         Close();
         customizeinput = GetComponent<CustomizeInput>();
     }
-    private void OnEnable()
+
+    public override void Open()
     {
+        base.Open();
         customizeinput.SetText();
     }
 

@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
         _vc.Follow = playerTransf;
         changeCharacter += SwitchCamera;
         MenuManager.gameOver += DestroyAllBeforLoadMainScene;
-        CustomizeInput.changeInput += ChangeCustomizeInput;
+        CustomizeInput.ChangeInput += ChangeCustomizeInput;
     }
 
     // Update is called once per frame
@@ -65,9 +65,9 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            LevelManager.instance.BackToMainMenu();
+            InGameMenu.instance.TogglePause();
         }
-        if (gameOver)
+        if (gameOver || InGameMenu.instance.isPaused)
             return;
         if (Input.GetKeyDown(switchCharacterInput))
         {
@@ -112,6 +112,7 @@ public class GameManager : MonoBehaviour
         Destroy(SkillManager.instance.gameObject);
         Destroy(SkillMenu.instance.gameObject);
         Destroy(UIManager.instance.gameObject);
+        Destroy(InGameMenu.instance.gameObject);
         //da problemi
         //Destroy(CinemachineCore.Instance.GetActiveBrain(0).ActiveVirtualCamera.VirtualCameraGameObject);
         Destroy(LevelManager.instance.gameObject);

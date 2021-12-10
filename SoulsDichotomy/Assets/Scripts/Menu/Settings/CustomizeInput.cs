@@ -26,7 +26,7 @@ public class CustomizeInput : MonoBehaviour
 
     public GameObject pressAnyKey;
 
-    public KeyCode up;
+    private KeyCode up;
     private KeyCode down;
     private KeyCode right;
     private KeyCode left;
@@ -50,7 +50,6 @@ public class CustomizeInput : MonoBehaviour
         SetDefault();
         editMode = false;
         FillKeyCode();
-        SetText();
     }
     
     private void SetDefault()
@@ -102,30 +101,7 @@ public class CustomizeInput : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(map["upKey"]))
-        {
-            print("up");
-        }
-        if (Input.GetKeyDown(map["downKey"]))
-        {
-            print("down");
-        }
-        if (Input.GetKeyDown(map["leftKey"]))
-        {
-            print("left");
-        }
-        if (Input.GetKeyDown(map["rightKey"]))
-        {
-            print("right");
-        }
-        if (Input.GetKeyDown(map["interactKey"]))
-        {
-            print("interact");
-        }
-        if (Input.GetKeyDown(map["switchKey"]))
-        {
-            print("switch");
-        }
+
 
     }
 
@@ -160,7 +136,6 @@ public class CustomizeInput : MonoBehaviour
     {
         if (PlayerPrefs.HasKey(name))
         {
-            print("in for "+ PlayerPrefs.GetInt(name));
             if((KeyCode)PlayerPrefs.GetInt(name) == KeyCode.None)
             {
                 PlayerPrefs.SetInt(name, (int)map[name]);
@@ -180,7 +155,7 @@ public class CustomizeInput : MonoBehaviour
     {
         if (PlayerPrefs.HasKey(name))
         {
-            print("changed value");
+            
             PlayerPrefs.SetInt(name, (int)newKey);
             map[name] = newKey;
             SetText();

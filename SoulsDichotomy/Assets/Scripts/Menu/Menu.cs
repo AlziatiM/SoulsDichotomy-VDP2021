@@ -20,7 +20,7 @@ public class Menu : MonoBehaviour
     /// <summary>
     /// Activate the panel of the menu
     /// </summary>
-    public void Open()
+    public virtual void Open()
     {
         menu.SetActive(true);
     }

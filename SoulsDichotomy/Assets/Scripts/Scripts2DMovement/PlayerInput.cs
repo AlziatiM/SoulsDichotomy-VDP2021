@@ -61,13 +61,13 @@ public class PlayerInput : MonoBehaviour, IHittable
 		{
 			Character.SetDirection(Vector2.left);
 		}
-		CustomizeInput.changeInput += ChangeCustomizeInput;
+		CustomizeInput.ChangeInput += ChangeCustomizeInput;
 
 	}
 
 	void Update()
 	{
-		if (gameOver)
+		if (gameOver || InGameMenu.instance.isPaused)
 			return;
 		if (!canMove)
 		{

@@ -18,6 +18,7 @@ public class LevelStarter : MonoBehaviour
     public GameObject skillMenu;
     public GameObject gameOverMenu;
     public GameObject UIPanel;
+    public GameObject InGameMenu;
     private void Awake()
     {
         Transform enterLevel = GameObject.FindGameObjectWithTag("EnterLevel").transform;
@@ -26,7 +27,7 @@ public class LevelStarter : MonoBehaviour
         Instantiate(skillManager, Vector3.zero, Quaternion.identity);
         Instantiate(gameOverMenu, Vector3.zero, Quaternion.identity);
         Instantiate(UIPanel, Vector3.zero, Quaternion.identity);
-
+        Instantiate(InGameMenu, Vector3.zero, Quaternion.identity);
         if (GameManager.instance == null)
         {
             Instantiate(skillMenu, Vector3.zero, Quaternion.identity);
