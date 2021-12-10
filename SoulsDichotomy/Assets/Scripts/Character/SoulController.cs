@@ -34,6 +34,14 @@ public class SoulController : MonoBehaviour, IHittable
     private bool gameOver;
     public bool GameOver { set { gameOver = value; } get { return gameOver; } }
 
+    //input soul
+    private KeyCode up;
+    private KeyCode down;
+    private KeyCode right;
+    private KeyCode left;
+
+    private KeyCode interact;
+
     //soul interaction
     private IInteract interactObj;
 
@@ -60,6 +68,7 @@ public class SoulController : MonoBehaviour, IHittable
         {
             Character.SetDirection(Vector2.left);
         }
+        CustomizeInput.changeInput += ChangeCustomizeInput;
     }
 
     public void Update()
@@ -126,11 +135,11 @@ public class SoulController : MonoBehaviour, IHittable
     {
         Vector2 direction;
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(left))
         {
             direction = Vector2.left;
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(right))
         {
             direction = Vector2.right;
         }
@@ -150,22 +159,22 @@ public class SoulController : MonoBehaviour, IHittable
 
         var direction = Vector2.zero;
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(left))
         {
             direction += Vector2.left;
         }
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(right))
         {
             direction += Vector2.right;
         }
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(up))
         {
             direction += Vector2.up;
         }
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(down))
         {
             direction += Vector2.down;
         }
@@ -287,7 +296,7 @@ public class SoulController : MonoBehaviour, IHittable
     
     private void Interaction()
     {
-        if (interactObj!=null && Input.GetKeyDown(KeyCode.E))
+        if (interactObj!=null && Input.GetKeyDown(interact))
         {
             interactObj.Interact();
         }
@@ -297,6 +306,8 @@ public class SoulController : MonoBehaviour, IHittable
     private void OnDestroy()
     {
         GameManager.changeCharacter -= SwitchCharacter;
+        CustomizeInput.changeInput -= ChangeCustomizeInput;
+
     }
 
 
@@ -308,5 +319,14 @@ public class SoulController : MonoBehaviour, IHittable
         GameOver = false;
         //todo remove active pickup
 
+    }
+
+    private void ChangeCustomizeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar)
+    {
+        this.up = up;
+        this.down = down;
+        this.right = right;
+        this.left = left;
+        this.interact = interact;
     }
 }

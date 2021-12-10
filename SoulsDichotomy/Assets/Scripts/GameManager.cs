@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
         _vc.Follow = playerTransf;
         changeCharacter += SwitchCamera;
         MenuManager.gameOver += DestroyAllBeforLoadMainScene;
+        CustomizeInput.changeInput += ChangeCustomizeInput;
     }
 
     // Update is called once per frame
@@ -121,6 +122,8 @@ public class GameManager : MonoBehaviour
     private void OnDestroy()
     {
         MenuManager.gameOver -= DestroyAllBeforLoadMainScene;
+        CustomizeInput.changeInput -= ChangeCustomizeInput;
+
     }
 
     public void SomeoneDie()
@@ -137,6 +140,12 @@ public class GameManager : MonoBehaviour
         gameOver = false;
         playerTransf.gameObject.GetComponent<PlayerInput>().ResetPlayer();
         soulTransf.gameObject.GetComponent<SoulController>().ResetSoul();
-
+        _vc.Follow = playerTransf;
     }
+
+    private void ChangeCustomizeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar)
+    {
+        switchCharacterInput = switchChar;
+    }
+
 }

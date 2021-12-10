@@ -19,6 +19,13 @@ public class PlayerInput : MonoBehaviour, IHittable
 
 	private bool canMove;
 
+	//input player
+	private KeyCode up;
+	private KeyCode down;
+	private KeyCode right;
+	private KeyCode left;
+	private KeyCode interact;
+
 	private CharacterState currState;
 	private bool isJumping;
 	private bool _moving;
@@ -54,6 +61,8 @@ public class PlayerInput : MonoBehaviour, IHittable
 		{
 			Character.SetDirection(Vector2.left);
 		}
+		CustomizeInput.changeInput += ChangeCustomizeInput;
+
 	}
 
 	void Update()
@@ -80,30 +89,30 @@ public class PlayerInput : MonoBehaviour, IHittable
     {
         var direction = Vector2.zero;
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(left))
 		{
 			direction += Vector2.left;
 		}
 
-		if (Input.GetKey(KeyCode.RightArrow))
+		if (Input.GetKey(right))
 		{
 			direction += Vector2.right;
 		}
 		playerVelocity.SetDirectionalInput(direction);
 
-		if (Input.GetKeyDown(KeyCode.UpArrow))
+		if (Input.GetKeyDown(up))
 		{
 			ChangeAnimation(CharacterState.Jump);
 			isJumping = true;
 			playerVelocity.OnJumpInputDown();
 
 		}
-		if (Input.GetKeyUp(KeyCode.UpArrow))
+		if (Input.GetKeyUp(up))
 		{
 			playerVelocity.OnJumpInputUp();
 
 		}
-		if (Input.GetKey(KeyCode.DownArrow))
+		if (Input.GetKey(down))
 		{
 			playerVelocity.OnFallInputDown();
 		}
@@ -136,7 +145,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 
 	private void Interaction()
     {
-        if (interactObj!=null && Input.GetKeyDown(KeyCode.E))
+        if (interactObj!=null && Input.GetKeyDown(interact))
         {
 			interactObj.Interact();
         }
@@ -146,19 +155,19 @@ public class PlayerInput : MonoBehaviour, IHittable
 	{
 		Vector2 direction;
 
-		if (Input.GetKeyDown(KeyCode.LeftArrow))
+		if (Input.GetKeyDown(left))
 		{
 			direction = Vector2.left;
 		}
-		else if (Input.GetKeyDown(KeyCode.RightArrow))
+		else if (Input.GetKeyDown(right))
 		{
 			direction = Vector2.right;
 		}
-		else if (Input.GetKeyUp(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow))
+		else if (Input.GetKeyUp(left) && Input.GetKey(right))
         {
 			direction = Vector2.right;
 		}
-		else if (Input.GetKeyUp(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow))
+		else if (Input.GetKeyUp(right) && Input.GetKey(left))
         {
 			direction = Vector2.left;
 		}
@@ -250,9 +259,11 @@ public class PlayerInput : MonoBehaviour, IHittable
     private void OnDestroy()
     {
 		GameManager.changeCharacter -= SwitchCharacter;
+		CustomizeInput.changeInput -= ChangeCustomizeInput;
+
 	}
 
-    public void ResetPlayer()
+	public void ResetPlayer()
     {
 	    playerHealth.SetUpHealth();
 		Character.AnimationManager.SetState(CharacterState.Idle);
@@ -262,4 +273,13 @@ public class PlayerInput : MonoBehaviour, IHittable
 		ShowAreaSoul(false);
 	    //todo remove active pickup
     }
+	private void ChangeCustomizeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar)
+	{
+		this.up = up;
+		this.down = down;
+		this.right = right;
+		this.left = left;
+		this.interact = interact;
+	}
+
 }
