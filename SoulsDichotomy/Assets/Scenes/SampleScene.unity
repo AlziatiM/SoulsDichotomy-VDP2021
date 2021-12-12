@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &76246667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -254,6 +254,7 @@ MonoBehaviour:
   cyclic: 1
   waitTime: 1
   easeAmount: 0
+  canMove: 0
 --- !u!114 &76246671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +282,72 @@ MonoBehaviour:
   passengerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!1 &345482118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 345482121}
+  - component: {fileID: 345482120}
+  - component: {fileID: 345482119}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &345482119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345482118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &345482120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345482118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &345482121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345482118}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &658678213
 Transform:
   m_ObjectHideFlags: 0
@@ -446,7 +513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &949978211
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -558,7 +625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1023919498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,12 +638,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 021ce579ad2c0724198f81bf8d6527bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iconPickUp: {fileID: 0}
   canPlayerPick: 1
   canSoulPick: 0
   affectPlayer: 0
   affectSoul: 0
   hasTimer: 0
   timer: {fileID: 1023919503}
+  canRespawn: 0
   amountHeal: 20
 --- !u!50 &1023919499
 Rigidbody2D:
@@ -719,7 +788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1125806895
 Transform:
   m_ObjectHideFlags: 0
@@ -767,7 +836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1341946035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -780,8 +849,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9faf80cf23aa1a4ba2c373670dc4131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CanDamagePlayer: 0
-  CanDamageSoul: 0
   damage: 20
   damageOverTime: 1
   timeBetwDmg: 0.8
@@ -926,7 +993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &2021095150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1079,7 +1146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &4736799985242291503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1097,3 +1164,8 @@ MonoBehaviour:
   player: {fileID: 3838318379822696181, guid: d868a02f5e73f2f4795a1d2a9d8b699f, type: 3}
   soul: {fileID: 2219487330374246454, guid: 31ae128421de52a43b45201f947f4a1e, type: 3}
   cameraFollow: {fileID: 2528223474699797550, guid: ce58f10b3f00f514cb9e082f7679e53d, type: 3}
+  eventSystem: {fileID: 0}
+  skillMenu: {fileID: 0}
+  gameOverMenu: {fileID: 0}
+  UIPanel: {fileID: 0}
+  InGameMenu: {fileID: 0}

@@ -41,4 +41,9 @@ public class MainMenu : Menu
     {
         Application.Quit();
     }
+
+    public void OpenLevelSelect()
+    {
+        MenuManager.instance.Open(LevelSelectorMenu.instance);
+    }
 }
