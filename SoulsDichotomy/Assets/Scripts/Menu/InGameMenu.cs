@@ -25,9 +25,17 @@ public class InGameMenu : Menu
     {
         if (pause)
         {
-            pause = false;
-            Time.timeScale = 1;
-            Exit();
+            if (MenuManager.instance.AmIOnTop(this))
+            {
+                pause = false;
+                Time.timeScale = 1;
+                Exit();
+            }
+            else
+            {
+                MenuManager.instance.Back();
+            }
+            
         }
         else
         {
@@ -39,7 +47,7 @@ public class InGameMenu : Menu
 
     public void ChooseLevel()
     {
-
+        MenuManager.instance.Open(LevelSelectorMenu.instance);
     }
 
     public void Setting()
@@ -48,8 +56,7 @@ public class InGameMenu : Menu
     }
 
     public void BackToMainMenu()
-    {
-        
+    {   
         TogglePause();
         LevelManager.instance.BackToMainMenu();
     }

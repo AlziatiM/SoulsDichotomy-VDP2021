@@ -38,7 +38,6 @@ public class LevelManager : MonoBehaviour
 
     public void NextLevel()
     {
-
         currLevel++;
         if (levels.Length==currLevel)
         {

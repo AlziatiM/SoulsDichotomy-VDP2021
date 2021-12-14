@@ -59,4 +59,9 @@ public class MenuManager : MonoBehaviour
         if(stackMenus.Count!=0)
             stackMenus.Peek().Open();
     }
+
+    public bool AmIOnTop(Menu insta)
+    {
+        return stackMenus.Peek() == insta;
+    }
 }

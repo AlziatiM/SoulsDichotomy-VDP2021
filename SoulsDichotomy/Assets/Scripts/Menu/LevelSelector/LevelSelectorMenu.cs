@@ -54,6 +54,7 @@ public class LevelSelectorMenu : Menu
 
     public void LoadLevel(int level)
     {
+        Exit();
         LevelManager.instance.LoadLevel(level);
     }
 }
