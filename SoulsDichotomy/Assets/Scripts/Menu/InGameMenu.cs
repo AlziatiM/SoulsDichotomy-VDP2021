@@ -45,6 +45,12 @@ public class InGameMenu : Menu
         }
     }
 
+    public void Resume()
+    {
+        pause = false;
+        Time.timeScale = 1;
+    }
+
     public void ChooseLevel()
     {
         MenuManager.instance.Open(LevelSelectorMenu.instance);

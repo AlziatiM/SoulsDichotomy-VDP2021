@@ -55,7 +55,9 @@ public class LevelSelectorMenu : Menu
     public void LoadLevel(int level)
     {
         Exit();
-        //TODO: close all menu
+        MenuManager.instance.CloseAllMenus();
+        if (InGameMenu.instance != null)
+            InGameMenu.instance.Resume();
         LevelManager.instance.LoadLevel(level);
     }
 }

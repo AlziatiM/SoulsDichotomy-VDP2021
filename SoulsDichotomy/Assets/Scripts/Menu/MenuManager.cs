@@ -54,10 +54,23 @@ public class MenuManager : MonoBehaviour
 
     public void Back()
     {
-        stackMenus.Peek().Close();
-        stackMenus.Pop();
+        CloseLastMenu();
         if(stackMenus.Count!=0)
             stackMenus.Peek().Open();
+    }
+
+    private void CloseLastMenu()
+    {
+        stackMenus.Peek().Close();
+        stackMenus.Pop();
+    }
+
+    public void CloseAllMenus()
+    {
+        while (stackMenus.Count != 0)
+        {
+            CloseLastMenu();
+        }
     }
 
     public bool AmIOnTop(Menu insta)

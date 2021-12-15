@@ -53,3 +53,4 @@ MonoBehaviour:
   gameOverMenu: {fileID: 8101553102666416332, guid: 83133166fb1e6814f92b7ff0793d2191, type: 3}
   UIPanel: {fileID: 5680616450891147290, guid: 5508df6282a9be14f8af325439fb0ea4, type: 3}
   InGameMenu: {fileID: 5904953957323603611, guid: 0896a4484f9e55a41b01b5f3e7426d1b, type: 3}
+  settingMenu: {fileID: 8426561897251919590, guid: f02b8c8a733a1714baf5786a8146ca29, type: 3}
