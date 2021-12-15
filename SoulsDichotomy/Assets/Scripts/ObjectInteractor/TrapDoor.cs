@@ -1,73 +1,30 @@
 ﻿using System;
-using Assets.HeroEditor4D.Common.CommonScripts;
+using System.Collections;
+
 using TMPro.Examples;
 using UnityEngine;
 
-namespace ObjectInteractor
+[RequireComponent(typeof(Timer))]
+public class TrapDoor: Door
 {
-    public class TrapDoor : MonoBehaviour
+    [Header("Timer hav the time to re-open it")]
+    private Timer timer;
+    public override void Awake()
     {
-        [SerializeField] private bool hasTimer;
-        private Timer timer;
-        
-        private SpriteRenderer spriteRenderer;
-        private BoxCollider2D boxCollider;
-        
-        private void Start()
-        {
-            timer = gameObject.GetComponent<Timer>();
-            boxCollider = gameObject.GetComponent<BoxCollider2D>();
-            spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        }
-        
-        
-        private void OnValidate()
-        {
-            timer = gameObject.GetComponent<Timer>();
-            if ( hasTimer && timer.GetTime() <= 0)
-            {
-                Debug.LogWarning("You are using a timer on " + gameObject.name + " but has an invalid time to count!");
-            }
-            
-        }
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if ( collision.CompareTag("Player"))
-            {
-                    disappearTrapDoor();
-                    reappearTrapDoor();
-            }
-        }
-
-        private void disappearTrapDoor()
-        {
-            spriteRenderer.enabled = false;
-            boxCollider.enabled = false;
-
-        }
-        
-        private void reappearTrapDoor()
-        
-        {
-            if (!hasTimer)
-            {
-                Destroy(this.gameObject);
-            }
-            else
-            {
-                
-                timer.timeExpire += Respawn;
-                timer.StartTimer();
-            }
-        }
-
-        private void Respawn()
-        {
-            if (this != null)
-            {
-                spriteRenderer.enabled = true;
-                boxCollider.enabled = true;
-            }
-        }
+        timer = gameObject.GetComponent<Timer>();
+        base.Awake();
     }
+
+    public override void React()
+    {
+        base.React();
+    }
+
+    protected override void DoAfterOpen()
+    {
+        base.DoAfterOpen();
+        timer.timeExpire += React;
+        timer.StartTimer();
+    }
+
 }

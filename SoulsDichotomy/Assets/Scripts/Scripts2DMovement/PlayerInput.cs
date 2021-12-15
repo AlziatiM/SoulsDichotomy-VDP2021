@@ -213,7 +213,11 @@ public class PlayerInput : MonoBehaviour, IHittable
             if (interact.CanPlayerInteract())
             {
 				interactObj = interact;
-
+                if (interact.CanActivateOnTriggerEnter())
+                {
+					interactObj.Interact();
+					interactObj = null;
+                }
 			}
 				
         }

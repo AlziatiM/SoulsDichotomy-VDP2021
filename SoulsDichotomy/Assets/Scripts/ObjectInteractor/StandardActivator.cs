@@ -14,6 +14,7 @@ public class StandardActivator : MonoBehaviour, IInteract
     [Header("Who can interact with:")]
     [SerializeField] protected bool canPlayerInteract;
     [SerializeField] protected bool canSoulInteract;
+    [SerializeField] protected bool activateOnTriggerEnter;
 
 
     [Header("ActionToDo")]
@@ -96,11 +97,11 @@ public class StandardActivator : MonoBehaviour, IInteract
     {
         if(amIActive)
         {
-            spriteRenderer.sprite = nonActiveSprite;
+            spriteRenderer.sprite = nonActiveSprite==null? spriteRenderer.sprite: nonActiveSprite;
         }
         else
         {
-            spriteRenderer.sprite = activeSprite;
+            spriteRenderer.sprite = activeSprite==null? spriteRenderer.sprite: activeSprite;
         }
         ReactAll();
     }
@@ -118,5 +119,10 @@ public class StandardActivator : MonoBehaviour, IInteract
     public bool CanSoulInteract()
     {
         return canSoulInteract;
+    }
+
+    public bool CanActivateOnTriggerEnter()
+    {
+        return activateOnTriggerEnter;
     }
 }

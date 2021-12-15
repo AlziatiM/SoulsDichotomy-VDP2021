@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: -1183781379813486735}
   - component: {fileID: 1224791013638544295}
   - component: {fileID: 5377931977990559943}
-  - component: {fileID: -8259893262583318307}
-  - component: {fileID: 1916190162720243984}
+  - component: {fileID: 4224846939266943324}
+  - component: {fileID: 260075339}
+  - component: {fileID: 260075345}
   m_Layer: 10
   m_Name: TrapDoor
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -329989567
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0ba9bc4ac8fb9a243a67d42457b91191, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d7e2b568270edf34cbd61e9aa832e3cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,14 +104,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.18, y: 2.19}
+    oldSize: {x: 2, y: 1}
     newSize: {x: 2.18, y: 2.19}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.18, y: 2.19}
+  m_Size: {x: 2, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &5377931977990559943
 Rigidbody2D:
@@ -133,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-8259893262583318307
+--- !u!114 &4224846939266943324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,11 +143,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 7102885508662253014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7de9397506c945848baac1034bf29aee, type: 3}
+  m_Script: {fileID: 11500000, guid: d8bfd70cffd675b4f89c06ddd29969fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 5
---- !u!114 &1916190162720243984
+  nonActiveSprite: {fileID: 0}
+  activeSprite: {fileID: 0}
+  canPlayerInteract: 1
+  canSoulInteract: 0
+  activateOnTriggerEnter: 1
+  objHasToReac:
+  - {fileID: 7102885508662253014}
+  amIActive: 1
+--- !u!114 &260075339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,4 +166,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e89d545387426d9e18ee8014443d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasTimer: 1
+  aminationSprite:
+  - {fileID: 21300000, guid: d7e2b568270edf34cbd61e9aa832e3cc, type: 3}
+  - {fileID: 21300000, guid: eb26cbf6ec5697e4cbc5a8c2dcdc59ad, type: 3}
+  - {fileID: 21300000, guid: d16e267a4a68aa144a7b2ac29b27fb1d, type: 3}
+  timeAnimation: 0.2
+  isClosed: 1
+  timeBeforReact: 1
+--- !u!114 &260075345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7102885508662253014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de9397506c945848baac1034bf29aee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 3

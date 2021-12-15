@@ -5,14 +5,17 @@ using UnityEngine;
 public class Door : MonoBehaviour, IReact
 {
     [Header("Sprites - from close to open")]
+
     [SerializeField] private Sprite[] aminationSprite;
-   
+    [SerializeField] private float timeAnimation = 0.5f;
 
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
     [Header("Initial State")]
     public bool isClosed=true;
-    private void Awake()
+    public float timeBeforReact = 0;
+
+    public virtual void Awake()
     {
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
         boxCollider = this.gameObject.GetComponent<BoxCollider2D>();
@@ -34,9 +37,16 @@ public class Door : MonoBehaviour, IReact
         }
     }
 
-    public void React()
+    public virtual void React()
     {
         StopAllCoroutines();
+        StartCoroutine("ReactAfterTime");
+
+    }
+
+    private IEnumerator ReactAfterTime()
+    {
+        yield return new WaitForSeconds(timeBeforReact);
         if (isClosed)
         {
             StartCoroutine("OpenDoor");
@@ -46,8 +56,8 @@ public class Door : MonoBehaviour, IReact
             StartCoroutine("CloseDoor");
         }
         isClosed = !isClosed;
-
     }
+
 
     private IEnumerator OpenDoor()
     {
@@ -55,8 +65,13 @@ public class Door : MonoBehaviour, IReact
         for (int i=1; i< aminationSprite.Length; i++)
         {
             spriteRenderer.sprite = aminationSprite[i];
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(timeAnimation);
         }
+        DoAfterOpen();
+    }
+
+    protected virtual void DoAfterOpen()
+    {
 
     }
 
@@ -66,7 +81,7 @@ public class Door : MonoBehaviour, IReact
         for (int i = aminationSprite.Length-2; i >=0; i--)
         {
             spriteRenderer.sprite = aminationSprite[i];
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(timeAnimation);
         }
     }
 }

@@ -162,5 +162,6 @@ MonoBehaviour:
   activeSprite: {fileID: -5033884579438549468, guid: 7670adfbf93919543a72450c6d528405, type: 3}
   canPlayerInteract: 1
   canSoulInteract: 1
+  activateOnTriggerEnter: 0
   objHasToReac: []
   amIActive: 0
