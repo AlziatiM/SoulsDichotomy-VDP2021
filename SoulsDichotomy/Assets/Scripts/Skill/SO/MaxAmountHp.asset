@@ -16,7 +16,7 @@ MonoBehaviour:
   description: give more hp to player
   imageActive: {fileID: 21300000, guid: c8ab869e841cd4d4ab7f39568a2675d2, type: 3}
   imageNotActive: {fileID: 21300000, guid: 6b53d246984a8e644b09505b188f325e, type: 3}
-  isUnlock: 1
+  isUnlock: 0
   levelUnlock: 2
   affectPlayer: 1
   affectSoul: 0

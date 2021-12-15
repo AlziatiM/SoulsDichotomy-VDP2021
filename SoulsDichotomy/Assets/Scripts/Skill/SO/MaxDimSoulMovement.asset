@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa24197afa347b444b8cae9bec30aa62, type: 3}
   m_Name: MaxDimSoulMovement
   m_EditorClassIdentifier: 
-  nameS: Space ghost
+  nameS: AreaMovement
   description: The soul gain more area to move in
   imageActive: {fileID: 21300000, guid: c0899d08e2cdbcc41bcdacf0ed1f657c, type: 3}
   imageNotActive: {fileID: 21300000, guid: 6b53d246984a8e644b09505b188f325e, type: 3}
-  isUnlock: 1
+  isUnlock: 0
   levelUnlock: 3
   affectPlayer: 1
   affectSoul: 0

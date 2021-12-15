@@ -26,7 +26,7 @@ public class SoulController : MonoBehaviour, IHittable
     [Header("Movement")]
     public Character4D Character;
     public bool InitDirection;
-    public int MovementSpeed;
+    public int movementSpeed;
     private bool moveFromInput;
     private bool _moving;
     private bool isInRange;
@@ -155,7 +155,7 @@ public class SoulController : MonoBehaviour, IHittable
 
     private void MoveFromInput()
     {
-        if (MovementSpeed == 0) return;
+        if (movementSpeed == 0) return;
 
         var direction = Vector2.zero;
 
@@ -195,7 +195,7 @@ public class SoulController : MonoBehaviour, IHittable
         else
         {
             Character.AnimationManager.SetState(CharacterState.Run);
-            Character.transform.position += (Vector3)direction.normalized * MovementSpeed * Time.deltaTime;
+            Character.transform.position += (Vector3)direction.normalized * movementSpeed * Time.deltaTime;
             _moving = true;
         }
     }
