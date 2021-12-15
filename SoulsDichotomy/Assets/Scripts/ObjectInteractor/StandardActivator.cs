@@ -85,7 +85,6 @@ public class StandardActivator : MonoBehaviour, IInteract
         
         foreach (IReact r in reactScripts)
         {
-           
             r.React();
         }
     }
