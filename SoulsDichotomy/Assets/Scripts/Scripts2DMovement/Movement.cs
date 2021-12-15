@@ -25,9 +25,12 @@ public class Movement : BoxColliderCasts
 	private bool ascendSlope = false;
 	private bool descendSlope = false;
 
+	private PlayerInput playerInput;
 	public override void Start()
 	{
 		base.Start();
+		playerInput = this.gameObject.GetComponent<PlayerInput>();
+
 	}
 
 	/// <summary>
@@ -155,7 +158,12 @@ public class Movement : BoxColliderCasts
             // Note additional distance from movement in x dir needed to adjust rayOrigin correctly
             rayOrigin += Vector2.right * (verticalRaySpacing * i + displacement.x);
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, collisionMask);
+            RaycastHit2D damageHit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, damageMask);
 
+            if (damageHit)
+            {
+	            playerInput.Hit(300);
+            }
             if (hit)
             {
                 // Shows green ray if hit detected

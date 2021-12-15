@@ -9,6 +9,7 @@ public class BoxColliderCasts : MonoBehaviour
 {
 
 	public LayerMask collisionMask;
+	public LayerMask damageMask;
 
 	public float skinWidth = .015f;
 	public float distanceBetweenRays = .25f;
