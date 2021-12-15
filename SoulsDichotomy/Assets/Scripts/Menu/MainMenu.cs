@@ -5,8 +5,6 @@ using UnityEngine;
 public class MainMenu : Menu
 {
 
-    [SerializeField] private GameObject levelManager;
-
     public static MainMenu instance;
     public void Awake()
     {
@@ -24,7 +22,8 @@ public class MainMenu : Menu
     public void Play()
     {
         MenuManager.instance.Back();
-        Instantiate(levelManager, Vector3.zero, Quaternion.identity);
+        LevelManager.instance.LoadLevel(0);
+        //Instantiate(levelManager, Vector3.zero, Quaternion.identity);
     }
 
     public void OpenSettings()

@@ -30,11 +30,13 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        /*
         currLevel = 0;
-
         LoadLevel(currLevel);
+        */
         //NextLevel();
     }
+
 
     public void NextLevel()
     {
