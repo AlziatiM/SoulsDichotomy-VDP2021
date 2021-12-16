@@ -39,7 +39,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         gameOver = false;
-        StartCoroutine("StartWithDelay");   
+        StartCoroutine("StartWithDelay");
+        AudioManager.instance.PlayMusic("Main");
     }
 
     private IEnumerator StartWithDelay()
@@ -69,6 +70,10 @@ public class GameManager : MonoBehaviour
         }
         if (gameOver || InGameMenu.instance.isPaused)
             return;
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            MenuManager.instance.Open(SkillMenu.instance);
+        }
         if (Input.GetKeyDown(switchCharacterInput))
         {
             changeCharacter();

@@ -2,31 +2,47 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class SingleSkill : MonoBehaviour
 {
-    internal Sprite activeSprite;
-    private string nameSkill;
-    private string description;
+    [SerializeField] private Image icon;
+    [SerializeField] private TextMeshProUGUI title;
+    [SerializeField] private TextMeshProUGUI description;
+    [SerializeField] private Skill mySkill;
 
-    public void Show()
+    private void Start()
     {
-        SkillMenu.instance.SetTitleSkill(nameSkill);
-        SkillMenu.instance.SetDescriptionSkill(description);
+        title.text = "???";
+        description.text = "???";
+        icon.sprite = mySkill.imageNotActive;
+        SetUp();
     }
 
-    public void SetName(string value)
+    public string GetName()
     {
-        nameSkill = value;
+        return mySkill.nameS;
     }
 
-    public void SetDescription(string value)
+    private void OnEnable()
     {
-        description = value;
+        SetUp();
     }
 
-    internal void SetActiveSprite(Sprite imageActive)
+    private void SetUp()
     {
-        activeSprite = imageActive;
+        if (mySkill.IsUnlock())
+        {
+            Unlock();
+        }
     }
+
+    public void Unlock()
+    {
+        title.text = mySkill.nameS;
+        description.text = mySkill.description;
+        icon.sprite = mySkill.imageActive;
+    }
+
 }

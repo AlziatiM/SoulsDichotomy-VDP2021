@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.UI;
 
 public class CustomizeInput : MonoBehaviour
 {
     public delegate void OnChangeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar);
+
     public static OnChangeInput changeInput;
 
     //non credo serva ma per ora lo lascio qua che ci ho sudato il sangue
@@ -35,7 +38,8 @@ public class CustomizeInput : MonoBehaviour
 
     private string selected;
     private bool editMode;
-  
+
+
     public static Dictionary<String, KeyCode> map;
     // Start is called before the first frame update
     void Start()
@@ -91,7 +95,13 @@ public class CustomizeInput : MonoBehaviour
             {
                 foreach (KeyCode keyCode in Enum.GetValues(typeof(KeyCode)))
                 {
-                    if (Input.GetKey(keyCode) && keyCode!=KeyCode.Escape)
+                    if(Input.GetKey(KeyCode.Escape) || Input.GetKey(KeyCode.Mouse0))
+                    {
+                        editMode = false;
+                        ToggleTextPressAnyKey();
+                        break;
+                    }
+                    if (Input.GetKey(keyCode) && keyCode!=KeyCode.Escape && keyCode!=KeyCode.Mouse0)
                     {
                         ChangeKey(keyCode, selected);
                         editMode = false;

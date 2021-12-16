@@ -7006,7 +7006,7 @@ MonoBehaviour:
   radiusNotToChase: 3
   Character: {fileID: 2259454853821088036}
   InitDirection: 1
-  movementSpeed: 0
+  movementSpeed: 4
 --- !u!114 &2259454853821088036
 MonoBehaviour:
   m_ObjectHideFlags: 0

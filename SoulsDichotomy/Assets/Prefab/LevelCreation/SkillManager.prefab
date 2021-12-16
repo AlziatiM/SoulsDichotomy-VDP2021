@@ -45,4 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   soul: {fileID: 0}
-  skillTree: []
+  skillTree:
+  - {fileID: 11400000, guid: cf074a10d0d812245b4c1e3718e5fd33, type: 2}
+  - {fileID: 11400000, guid: 24aadfabdfa28b1448659f2fc92f3e0b, type: 2}

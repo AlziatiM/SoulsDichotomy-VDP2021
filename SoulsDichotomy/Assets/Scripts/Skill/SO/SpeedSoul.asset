@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameS: SpeedUpSoul
   description: The soul can finally go faster!
-  imageActive: {fileID: 0}
-  imageNotActive: {fileID: 0}
+  imageActive: {fileID: 21300000, guid: 8ea34ca9cc17a064983a70ec8b9896d9, type: 3}
+  imageNotActive: {fileID: 21300000, guid: 3ed90a0dd2f043e45893be80be965f98, type: 3}
   isUnlock: 0
-  levelUnlock: 0
+  levelUnlock: 10
   affectPlayer: 0
   affectSoul: 1
   newMoveSpeed: 8

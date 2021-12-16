@@ -21,6 +21,10 @@ public class SkillManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        foreach(Skill s in skillTree)
+        {
+            s.SetIsUnlock(false);
+        }
     }
 
     public void NextLevelToLoad(int levelToLoad)
@@ -60,6 +64,7 @@ public class SkillManager : MonoBehaviour
     {
         s.AttachSkill(player, soul);
         s.SetIsUnlock(true);
+        
         SkillMenu.instance.UnlockSkill(s.name);
     }
 
