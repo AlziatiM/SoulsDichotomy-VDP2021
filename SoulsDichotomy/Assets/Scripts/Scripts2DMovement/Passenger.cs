@@ -11,11 +11,10 @@ public class Passenger : MonoBehaviour
 	public void Move(Vector2 displacement, bool standingOnPlatform)
 	{
 		PassengerMover passengerMover = gameObject.GetComponent<PassengerMover>();
-
+		
 		if (passengerMover)
         {
 			passengerMover.CalculatePassengerMovement(displacement);
-
 			passengerMover.MovePassengers(true);
 			MoveTarget(displacement);
 			passengerMover.MovePassengers(false);

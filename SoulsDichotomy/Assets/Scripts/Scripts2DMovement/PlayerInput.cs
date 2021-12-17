@@ -30,6 +30,8 @@ public class PlayerInput : MonoBehaviour, IHittable
 	private bool isJumping;
 	private bool _moving;
 	private bool gameOver;
+
+	public bool IsJumping { get { return isJumping; } }
 	public bool GameOver { set { gameOver = value; } get { return gameOver; } }
 	[Header("Healt Attributes")]
 	public Health playerHealth;
@@ -67,6 +69,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 
 	void Update()
 	{
+		print("isJumping:" + isJumping);
 		if (gameOver || InGameMenu.instance.isPaused)
 			return;
 		if (!canMove)
@@ -103,8 +106,9 @@ public class PlayerInput : MonoBehaviour, IHittable
 		if (Input.GetKeyDown(up))
 		{
 			ChangeAnimation(CharacterState.Jump);
-			isJumping = true;
+			print("jump");
 			playerVelocity.OnJumpInputDown();
+			isJumping = true;
 
 		}
 		if (Input.GetKeyUp(up))
@@ -184,10 +188,10 @@ public class PlayerInput : MonoBehaviour, IHittable
 	public void BackOnTheFloor()
     {
 		isJumping = false;
+		print("Back on floor");
 		if (!_moving)
 		{
 			ChangeAnimation(CharacterState.Idle);
-
 		}
 	}
 

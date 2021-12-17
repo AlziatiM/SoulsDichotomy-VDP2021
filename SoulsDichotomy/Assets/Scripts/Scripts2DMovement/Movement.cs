@@ -25,19 +25,29 @@ public class Movement : BoxColliderCasts
 	private bool ascendSlope = false;
 	private bool descendSlope = false;
 
+	private bool precValueBelow;
+
 	private PlayerInput playerInput;
 	public override void Start()
 	{
 		base.Start();
 		playerInput = this.gameObject.GetComponent<PlayerInput>();
+		precValueBelow = false;
 
 	}
 
-	/// <summary>
-	/// Checks for collisions then applies correct transform translation to move object
-	/// </summary>
-	public void Move(Vector2 displacement, Vector2 input)
+    private void Update()
+    {
+		print("below: "+collisionDirection.below);
+    }
+
+
+    /// <summary>
+    /// Checks for collisions then applies correct transform translation to move object
+    /// </summary>
+    public void Move(Vector2 displacement, Vector2 input)
 	{
+		print("Displacement: " + displacement);
 		ResetDetection();
 
 		objectInput = input;
@@ -73,7 +83,7 @@ public class Movement : BoxColliderCasts
 	{
 		UpdateRaycastOrigins();
 		UpdateBoxCastOrigins();
-		collisionDirection.Reset();
+		collisionDirection.Reset(playerInput.IsJumping);
 		collisionAngle.Reset();
 		ascendSlope = false;
 		descendSlope = false;
@@ -150,7 +160,7 @@ public class Movement : BoxColliderCasts
 	{
 		float directionY = Mathf.Sign(displacement.y);
 		float rayLength = Mathf.Abs(displacement.y) + skinWidth;
-
+		print("direction y:" + directionY);
         for (int i = 0; i < verticalRayCount; i++)
         {
             // Send out rays to check for collisions for given layer in y dir, starting based on whether travelling up/down
@@ -198,15 +208,18 @@ public class Movement : BoxColliderCasts
                 {
                     displacement.x = displacement.y / Mathf.Tan(collisionAngle.slopeAngle * Mathf.Deg2Rad) * Mathf.Sign(displacement.x);
                 }
-
-                collisionDirection.below = directionY == -1;
-                collisionDirection.above = directionY == 1;
+				
+				collisionDirection.below = directionY == -1;
+				collisionDirection.above = directionY == 1;
             }
             else
             {
                 // Draw remaining rays being checked
                 Debug.DrawRay(rayOrigin, Vector2.up * directionY, Color.red);
+				if(displacement.y<0)
+					collisionDirection.below = false;
             }
+            
         }
 
     }
@@ -313,9 +326,10 @@ public class Movement : BoxColliderCasts
 	{
 		public bool above, below;
 		public bool left, right;
-		public void Reset()
+		public void Reset(bool playerInputIsJump)
 		{
-			above = below = false;
+			above = false;
+			below = !playerInputIsJump;
 			left = right = false;
 		}
 

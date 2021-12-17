@@ -127,6 +127,7 @@ public class PassengerMover : BoxColliderCasts
                 Vector2 fix = passenger.displacement;
                 fix.y = fix.y  - 0.01f;
                 passengerDictionary[passenger.transform].Move(fix, passenger.standingOnPlatform);
+                //passengerDictionary[passenger.transform].Move(passenger.displacement, passenger.standingOnPlatform);
             }
         }
     }

@@ -124,8 +124,10 @@ public class PlayerVelocity : MonoBehaviour
 			}
 			else
 			{
+				
 				velocity.y = 0;
-				playerInput.BackOnTheFloor();
+				if (playerInput.IsJumping)
+					playerInput.BackOnTheFloor();
 			}
 		}
 	}
@@ -212,7 +214,7 @@ public class PlayerVelocity : MonoBehaviour
 	{
 		if (wallContact)
 		{
-			//print("jumpwithcontact");
+			print("jumpwithcontactWall");
 
 			// Standard wall jump
 			if (directionalInput.x == 0)
@@ -235,7 +237,7 @@ public class PlayerVelocity : MonoBehaviour
 		}
 		if (playerMovement.collisionDirection.below)
 		{
-
+			print("jumpwithcontactBelow");
 			if (playerMovement.slidingDownMaxSlope)
 			{
 				// Jumping away from max slope dir
