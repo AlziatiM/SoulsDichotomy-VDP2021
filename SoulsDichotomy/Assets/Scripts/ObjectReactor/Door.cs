@@ -5,7 +5,6 @@ using UnityEngine;
 public class Door : MonoBehaviour, IReact
 {
     [Header("Sprites - from close to open")]
-
     [SerializeField] private Sprite[] aminationSprite;
     [SerializeField] private float timeAnimation = 0.5f;
 
