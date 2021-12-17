@@ -165,4 +165,5 @@ MonoBehaviour:
   affectSoul: 0
   hasTimer: 0
   timer: {fileID: 8844173727772827775}
-  amountHeal: 10
+  canRespawn: 0
+  amountHeal: 100
