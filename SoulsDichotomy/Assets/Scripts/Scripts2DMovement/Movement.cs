@@ -25,21 +25,13 @@ public class Movement : BoxColliderCasts
 	private bool ascendSlope = false;
 	private bool descendSlope = false;
 
-	private bool precValueBelow;
 
 	private PlayerInput playerInput;
 	public override void Start()
 	{
 		base.Start();
 		playerInput = this.gameObject.GetComponent<PlayerInput>();
-		precValueBelow = false;
-
 	}
-
-    private void Update()
-    {
-		print("below: "+collisionDirection.below);
-    }
 
 
     /// <summary>
@@ -47,7 +39,6 @@ public class Movement : BoxColliderCasts
     /// </summary>
     public void Move(Vector2 displacement, Vector2 input)
 	{
-		print("Displacement: " + displacement);
 		ResetDetection();
 
 		objectInput = input;
@@ -83,7 +74,7 @@ public class Movement : BoxColliderCasts
 	{
 		UpdateRaycastOrigins();
 		UpdateBoxCastOrigins();
-		collisionDirection.Reset(playerInput.IsJumping);
+		collisionDirection.Reset(/*playerInput.IsJumping*/);
 		collisionAngle.Reset();
 		ascendSlope = false;
 		descendSlope = false;
@@ -160,7 +151,6 @@ public class Movement : BoxColliderCasts
 	{
 		float directionY = Mathf.Sign(displacement.y);
 		float rayLength = Mathf.Abs(displacement.y) + skinWidth;
-		print("direction y:" + directionY);
         for (int i = 0; i < verticalRayCount; i++)
         {
             // Send out rays to check for collisions for given layer in y dir, starting based on whether travelling up/down
@@ -216,8 +206,8 @@ public class Movement : BoxColliderCasts
             {
                 // Draw remaining rays being checked
                 Debug.DrawRay(rayOrigin, Vector2.up * directionY, Color.red);
-				if(displacement.y<0)
-					collisionDirection.below = false;
+				//if(displacement.y<0)
+				//	collisionDirection.below = false;
             }
             
         }
@@ -326,10 +316,11 @@ public class Movement : BoxColliderCasts
 	{
 		public bool above, below;
 		public bool left, right;
-		public void Reset(bool playerInputIsJump)
+		public void Reset(/*bool playerInputIsJump*/)
 		{
 			above = false;
-			below = !playerInputIsJump;
+			below = false;
+			//below = !playerInputIsJump;
 			left = right = false;
 		}
 

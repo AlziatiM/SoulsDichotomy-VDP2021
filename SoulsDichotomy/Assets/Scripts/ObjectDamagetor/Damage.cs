@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Damage : MonoBehaviour
@@ -10,6 +11,8 @@ public class Damage : MonoBehaviour
     public int damage;
     public bool damageOverTime;
     public float timeBetwDmg = 0.5f;
+
+    public UnityEvent OnDamageApply;
 
     private void OnValidate()
     {
@@ -41,13 +44,15 @@ public class Damage : MonoBehaviour
     public void ApplyDamage(IHittable hit)
     {
         if (damageOverTime)
-            {
-                IEnumerator myFunc = ApplyHit(hit);
-                StartCoroutine(myFunc);
-            }
+        {
+            IEnumerator myFunc = ApplyHit(hit);
+            StartCoroutine(myFunc);
+        }
         else
         {
+            OnDamageApply.Invoke();
             hit.Hit(damage);
+            
         }
     }
     public void OnTriggerExit2D(Collider2D collision)
@@ -64,6 +69,7 @@ public class Damage : MonoBehaviour
         while (true)
         {
             hit.Hit(damage);
+            OnDamageApply.Invoke();
             yield return new WaitForSeconds(timeBetwDmg);
         }
     }

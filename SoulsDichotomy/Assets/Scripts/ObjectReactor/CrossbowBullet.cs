@@ -24,4 +24,10 @@ public class CrossbowBullet : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+    
+    public void AfterApplyDamage()
+    {
+        Destroy(this.gameObject);
+    }
+
 }

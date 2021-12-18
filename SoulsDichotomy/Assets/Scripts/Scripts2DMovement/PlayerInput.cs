@@ -69,7 +69,6 @@ public class PlayerInput : MonoBehaviour, IHittable
 
 	void Update()
 	{
-		print("isJumping:" + isJumping);
 		if (gameOver || InGameMenu.instance.isPaused)
 			return;
 		if (!canMove)
@@ -106,9 +105,10 @@ public class PlayerInput : MonoBehaviour, IHittable
 		if (Input.GetKeyDown(up))
 		{
 			ChangeAnimation(CharacterState.Jump);
+			isJumping = true;
 			print("jump");
 			playerVelocity.OnJumpInputDown();
-			isJumping = true;
+			
 
 		}
 		if (Input.GetKeyUp(up))
@@ -188,7 +188,6 @@ public class PlayerInput : MonoBehaviour, IHittable
 	public void BackOnTheFloor()
     {
 		isJumping = false;
-		print("Back on floor");
 		if (!_moving)
 		{
 			ChangeAnimation(CharacterState.Idle);
@@ -273,8 +272,8 @@ public class PlayerInput : MonoBehaviour, IHittable
 
 	public void ResetPlayer()
     {
-	    playerHealth.SetUpHealth();
 		Character.AnimationManager.SetState(CharacterState.Idle);
+		playerHealth.SetUpHealth();
 		playerVelocity.enabled = true;
 	    canMove = true;
 		GameOver = false;

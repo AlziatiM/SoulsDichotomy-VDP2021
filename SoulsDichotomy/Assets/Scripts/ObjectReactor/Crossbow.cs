@@ -19,6 +19,14 @@ public class Crossbow : MonoBehaviour, IReact
         }
     }
 
+    private void Start()
+    {
+        if (amIActive)
+        {
+            StartCoroutine("StartShot");
+        }
+    }
+
     public void React()
     {
         amIActive = !amIActive;
