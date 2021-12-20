@@ -8,6 +8,7 @@ public class CrossbowBullet : MonoBehaviour
     [SerializeField] private int moveSpeed;
     private Rigidbody2D _rigidbody;
     private Transform _transform;
+    public LayerMask layerIDestory;
     void Start()
     {
         _rigidbody = gameObject.GetComponent<Rigidbody2D>();
@@ -18,6 +19,13 @@ public class CrossbowBullet : MonoBehaviour
     void Update()
     {
         _rigidbody.velocity = _transform.right * -moveSpeed;
+        RaycastHit2D hit = Physics2D.Raycast(_transform.position, -_transform.right,0.35f, layerIDestory);
+        Debug.DrawRay(_transform.position, -_transform.right , Color.red);
+        
+        if (hit)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnBecameInvisible()
