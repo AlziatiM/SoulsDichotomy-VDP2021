@@ -32,14 +32,12 @@ public class LevelButtonSelector : MonoBehaviour
 
     private void SetUp()
     {
-        //Level1 has 1 if is already be completed 0 otherwise, so you can re-choose it
-        //Level0 must have 1 from the beginning
+        //Levelx has 1 if is already be completed 0 otherwise, so you can re-choose it
+        //Level1 must have 1 from the beginning
         if (PlayerPrefs.HasKey("Level" + level))
         {
             if (PlayerPrefs.GetInt("Level" + level) == 1)
             {
-                
-
                 imageUI.sprite = unlocked;
                 button.interactable = true;
             }
@@ -51,7 +49,7 @@ public class LevelButtonSelector : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("Level" + level, level==0?1:0);
+            PlayerPrefs.SetInt("Level" + level, level==1?1:0);
             SetUp();
         }
         textMeshPro.text = level.ToString();

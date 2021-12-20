@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField]private string[] levels;
+
     [SerializeField]private string mainMenu;
     private int currLevel;
     public int CurrentLevel { get { return currLevel; } }
@@ -99,6 +101,22 @@ public class LevelManager : MonoBehaviour
     {
         LoadNewLevel(currLevel);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    internal void SetCurrentAsDone()
+    {
+        int level = currLevel + 1;
+        if (PlayerPrefs.HasKey("Level" + level))
+        {
+            if (PlayerPrefs.GetInt("Level" + level) != 1)
+            {
+                PlayerPrefs.SetInt("Level" + level, 1);
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Level" + level, 1);
+        }
     }
 
 }

@@ -9,6 +9,10 @@ public class LevelSelectorMenu : Menu
     public GameObject[] panelsLevel;
     private int currPanelOpen;
 
+    [SerializeField] private GameObject buttonPrec;
+    [SerializeField] private GameObject buttonNext;
+
+
     public void Awake()
     {
         if (instance == null)
@@ -27,14 +31,33 @@ public class LevelSelectorMenu : Menu
         base.Open();
 
         currPanelOpen = 0;
+        
         ActivatePanelLevel(currPanelOpen);
     }
 
-
+    private void ManageButton(int page)
+    {
+        if (page == 0)
+        {
+            buttonPrec.SetActive(false);
+            buttonNext.SetActive(true);
+        }
+        else if (page == panelsLevel.Length - 1)
+        {
+            buttonNext.SetActive(false);
+            buttonPrec.SetActive(true);
+        }
+        else
+        {
+            buttonNext.SetActive(true);
+            buttonPrec.SetActive(true);
+        }
+    }
 
     private void ActivatePanelLevel(int index)
     {
-        for(int i=0; i< panelsLevel.Length; i++)
+        ManageButton(index);
+        for (int i=0; i< panelsLevel.Length; i++)
         {
             panelsLevel[i].SetActive(i==index);
         }
@@ -60,4 +83,6 @@ public class LevelSelectorMenu : Menu
             InGameMenu.instance.Resume();
         LevelManager.instance.LoadLevel(level);
     }
+
+
 }

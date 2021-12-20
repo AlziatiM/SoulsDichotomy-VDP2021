@@ -106,10 +106,8 @@ public class PlayerInput : MonoBehaviour, IHittable
 		{
 			ChangeAnimation(CharacterState.Jump);
 			isJumping = true;
-			print("jump");
+			//print("jump");
 			playerVelocity.OnJumpInputDown();
-			
-
 		}
 		if (Input.GetKeyUp(up))
 		{
