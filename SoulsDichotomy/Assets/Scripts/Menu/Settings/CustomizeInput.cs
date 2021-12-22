@@ -28,6 +28,8 @@ public class CustomizeInput : MonoBehaviour
     public TextMeshProUGUI switchText;
 
     public GameObject pressAnyKey;
+    private TextMeshProUGUI pressAnyKeyMesh;
+    private string pressAnyKeyText;
 
     private KeyCode up;
     private KeyCode down;
@@ -54,14 +56,16 @@ public class CustomizeInput : MonoBehaviour
         SetDefault();
         editMode = false;
         FillKeyCode();
+        pressAnyKeyMesh = pressAnyKey.GetComponent<TextMeshProUGUI>();
+        pressAnyKeyText = pressAnyKeyMesh.text;
     }
     
     private void SetDefault()
     {
         map["upKey"] = KeyCode.UpArrow;
         map["downKey"] = KeyCode.DownArrow;
-        map["rightKey"] = KeyCode.LeftArrow;
-        map["leftKey"] = KeyCode.RightArrow;
+        map["rightKey"] = KeyCode.RightArrow;
+        map["leftKey"] = KeyCode.LeftArrow;
         map["interactKey"] = KeyCode.E;
         map["switchKey"] = KeyCode.Space;
     }
@@ -103,9 +107,12 @@ public class CustomizeInput : MonoBehaviour
                     }
                     if (Input.GetKey(keyCode) && keyCode!=KeyCode.Escape && keyCode!=KeyCode.Mouse0)
                     {
-                        ChangeKey(keyCode, selected);
-                        editMode = false;
-                        break;
+                        if(ChangeKey(keyCode, selected))
+                        {
+                            editMode = false;
+                            break;
+                        }
+                        
                     }
                 }
             }
@@ -161,11 +168,15 @@ public class CustomizeInput : MonoBehaviour
         }
     }
 
-    private void ChangeKey(KeyCode newKey, string name)
+    private bool ChangeKey(KeyCode newKey, string name)
     {
         if (PlayerPrefs.HasKey(name))
         {
-            
+            if (map.ContainsValue(newKey))
+            {
+                StartCoroutine("ShowError");
+                return false;
+            }
             PlayerPrefs.SetInt(name, (int)newKey);
             map[name] = newKey;
             SetText();
@@ -174,18 +185,19 @@ public class CustomizeInput : MonoBehaviour
             {
                 changeInput(map["upKey"], map["downKey"], map["rightKey"], map["leftKey"], map["interactKey"], map["switchKey"]);
             }
+            return true;
         }
+        return false;
     }
 
     private void ToggleTextPressAnyKey()
     {
         pressAnyKey.SetActive(!pressAnyKey.activeInHierarchy);
     }
-    
-    public KeyCode GetSwitchkey()
+    private IEnumerator ShowError()
     {
-        return map["switchKey"];
+        pressAnyKeyMesh.text = "Key already in use, please select a valid one!";
+        yield return new WaitForSeconds(2);
+        pressAnyKeyMesh.text = pressAnyKeyText;
     }
-
-
 }

@@ -34,8 +34,7 @@ public class InGameMenu : Menu
             else
             {
                 MenuManager.instance.Back();
-            }
-            
+            } 
         }
         else
         {
