@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4277045211968280638}
   - component: {fileID: 3902285333696870418}
   m_Layer: 5
-  m_Name: WallJumpIcon
+  m_Name: WallJumpIcon 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

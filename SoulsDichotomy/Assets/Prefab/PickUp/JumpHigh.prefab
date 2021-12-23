@@ -48,7 +48,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007725537, y: -0.034765214}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -59,7 +59,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.30469638, y: 0.6677994}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &698936553727111450
 Rigidbody2D:
@@ -122,7 +122,7 @@ SpriteRenderer:
   m_SortingLayerID: -329989567
   m_SortingLayer: 1
   m_SortingOrder: 7
-  m_Sprite: {fileID: 21300000, guid: 13422886b24dd7a4aa707a17c414183c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 97f13c6880098e14db6a61babe949dd9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -165,5 +165,6 @@ MonoBehaviour:
   affectSoul: 0
   hasTimer: 1
   timer: {fileID: 4655507953304485939}
+  canRespawn: 0
   maxJumpHeight: 6
   minJumpHeight: 4

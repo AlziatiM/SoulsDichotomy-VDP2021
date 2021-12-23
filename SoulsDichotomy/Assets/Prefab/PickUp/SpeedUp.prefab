@@ -51,8 +51,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.2}
-    oldSize: {x: 1.0756303, y: 1.0756303}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1.0756303, y: 1.0756303}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -122,7 +122,7 @@ SpriteRenderer:
   m_SortingLayerID: -329989567
   m_SortingLayer: 1
   m_SortingOrder: 7
-  m_Sprite: {fileID: 21300000, guid: c8ab869e841cd4d4ab7f39568a2675d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7eb8c073c610f484f8e995c2981c373b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -158,10 +158,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b39f727b238d4a946ae00e68f6a69587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iconPickUp: {fileID: 3654067745276760399, guid: 3b22d2839732e3c40a00290289cc166d, type: 3}
   canPlayerPick: 1
   canSoulPick: 1
   affectPlayer: 1
   affectSoul: 0
   hasTimer: 1
   timer: {fileID: 9154006208056630141}
+  canRespawn: 0
   newVelocity: 12
