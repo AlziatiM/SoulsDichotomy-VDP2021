@@ -414,11 +414,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7603205824959179340, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.504142
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7603205824959179340, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5112531
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7603205824959179340, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1337,6 +1337,63 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!1001 &1759491298611797991
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 518289388623814112, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 518289388623814112, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 518289388623814112, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 518289388623814112, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 518289388623814112, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 518289388623814112, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 518289388623814112, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 518289388623814112, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 518289388623814112, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 518289388623814112, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 518289388623814112, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334706796024078506, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
+      propertyPath: m_Name
+      value: CrossbowFire
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
 --- !u!1839735485 &1845620942325713513
 Tilemap:
   m_ObjectHideFlags: 0
