@@ -16,23 +16,34 @@ public class ButtonActivator : StandardActivator
         timer = this.gameObject.GetComponent<Timer>();
         time=timer.GetTime();
         time = time / (imagesTimer.Length - 1);
-        timer.timeExpire += Interact;
+        if(time!=0)
+            timer.timeExpire += Interact;
         timerSpriteRender = timerObj.GetComponent<SpriteRenderer>();
         timerObj.SetActive(false);
     }
-
+    public override void Start()
+    {
+        base.Start();
+    }
     public override void Switch()
     {
         if(amIActive)
         {
+
             spriteRenderer.sprite = nonActiveSprite;
+            BoxCollider2DEnable = true;
         }
         else
         {
+
             spriteRenderer.sprite = activeSprite;
-            if(time!=0)
+            if (time != 0)
+            {
                 StartCoroutine("TimerUI");
-            timer.StartTimer();
+                BoxCollider2DEnable = false;
+                timer.StartTimer();
+            }
+            
         }
         ReactAll();
     }

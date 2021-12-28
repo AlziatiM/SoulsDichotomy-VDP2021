@@ -25,6 +25,9 @@ public class StandardActivator : MonoBehaviour, IInteract
     [Header("StartInfo")]
     [SerializeField] protected bool amIActive;
 
+    private BoxCollider2D boxCollider;
+    public bool BoxCollider2DEnable { set { boxCollider.enabled = value; } get {return boxCollider.enabled; } }
+
     private void OnValidate()
     {
         gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -47,23 +50,24 @@ public class StandardActivator : MonoBehaviour, IInteract
     private void Awake()
     {
         SetUpActivator();
+        
     }
 
-    private void Start()
+    public virtual void Start()
     {
-        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+        boxCollider.isTrigger = true;
         gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
         foreach (GameObject go in objHasToReac)
         {
             IReact reactScript = go.GetComponent<IReact>();
             reactScripts.Add(reactScript);
-            
         }
     }
 
     protected void SetUpActivator()
     {
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+        boxCollider = this.gameObject.GetComponent<BoxCollider2D>();
         if (amIActive)
         {
             spriteRenderer.sprite = activeSprite;

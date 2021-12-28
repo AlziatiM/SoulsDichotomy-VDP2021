@@ -723,7 +723,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5339646225692001582, guid: ce37d666c82034941a698db4104e1442, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5339646225692001587, guid: ce37d666c82034941a698db4104e1442, type: 3}
       propertyPath: objHasToReac.Array.size
@@ -3749,11 +3749,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5339646225692001582, guid: ce37d666c82034941a698db4104e1442, type: 3}
       propertyPath: time
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5339646225692001582, guid: ce37d666c82034941a698db4104e1442, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5339646225692001587, guid: ce37d666c82034941a698db4104e1442, type: 3}
       propertyPath: objHasToReac.Array.size
