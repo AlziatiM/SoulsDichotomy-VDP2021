@@ -19,7 +19,7 @@ public class CrossbowBullet : MonoBehaviour
     void Update()
     {
         _rigidbody.velocity = _transform.right * -moveSpeed;
-        RaycastHit2D hit = Physics2D.Raycast(_transform.position, -_transform.right,0.35f, layerIDestory);
+        RaycastHit2D hit = Physics2D.Raycast(_transform.position, -_transform.right,0.55f, layerIDestory);
         Debug.DrawRay(_transform.position, -_transform.right , Color.red);
         
         if (hit)
