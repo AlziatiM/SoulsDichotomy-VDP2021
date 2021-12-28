@@ -30,7 +30,8 @@ public class ButtonActivator : StandardActivator
         else
         {
             spriteRenderer.sprite = activeSprite;
-            StartCoroutine("TimerUI");
+            if(time!=0)
+                StartCoroutine("TimerUI");
             timer.StartTimer();
         }
         ReactAll();
