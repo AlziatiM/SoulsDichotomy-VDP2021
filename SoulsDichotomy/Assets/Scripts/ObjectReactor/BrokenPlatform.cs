@@ -41,7 +41,17 @@ public class BrokenPlatform : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            StartCoroutine("StartFall");
+
+            Vector2 collisionPoint = collision.ClosestPoint(_transform.position);
+            Vector3 playerCenter = collision.bounds.center;
+            
+            bool isBelowPlayer = collisionPoint.y < playerCenter.y;
+
+            if (isBelowPlayer)
+            {
+                StartCoroutine("StartFall");
+
+            }
         }
     }
 
