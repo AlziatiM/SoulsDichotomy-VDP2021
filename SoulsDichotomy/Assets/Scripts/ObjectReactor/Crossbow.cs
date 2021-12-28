@@ -46,6 +46,7 @@ public class Crossbow : MonoBehaviour, IReact
         else
         {
             StopAllCoroutines();
+            spriteRenderer.sprite = sprites[0];
         }
     }
 
