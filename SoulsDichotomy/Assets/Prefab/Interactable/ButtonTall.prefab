@@ -158,7 +158,7 @@ SpriteRenderer:
   m_SortingLayerID: -329989567
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1763989116612304091, guid: 7670adfbf93919543a72450c6d528405, type: 3}
+  m_Sprite: {fileID: -2671880383022096744, guid: f5a364676bcd62e4f9199103acb35796, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -241,8 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 741aeda96de46f24f94030b47d3f9ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nonActiveSprite: {fileID: 1763989116612304091, guid: 7670adfbf93919543a72450c6d528405, type: 3}
-  activeSprite: {fileID: 1120241560109220500, guid: 7670adfbf93919543a72450c6d528405, type: 3}
+  nonActiveSprite: {fileID: -2671880383022096744, guid: f5a364676bcd62e4f9199103acb35796, type: 3}
+  activeSprite: {fileID: 4631825429220268734, guid: f5a364676bcd62e4f9199103acb35796, type: 3}
   canPlayerInteract: 1
   canSoulInteract: 1
   activateOnTriggerEnter: 0
