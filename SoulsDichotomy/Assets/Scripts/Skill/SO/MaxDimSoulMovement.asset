@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameS: AreaMovement
   description: The soul gain more area to move in
-  imageActive: {fileID: 21300000, guid: a3bb8f13bb49dff4480342201fcb3318, type: 3}
+  imageActive: {fileID: 21300000, guid: 393915fc2e52e7545847c289af4f5fe0, type: 3}
   imageNotActive: {fileID: 21300000, guid: 3ed90a0dd2f043e45893be80be965f98, type: 3}
   isUnlock: 0
   levelUnlock: 3

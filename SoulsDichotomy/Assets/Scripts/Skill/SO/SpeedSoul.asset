@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameS: SpeedUpSoul
   description: The soul can finally go faster!
-  imageActive: {fileID: 21300000, guid: 8ea34ca9cc17a064983a70ec8b9896d9, type: 3}
+  imageActive: {fileID: 21300000, guid: 664f2ce76def45c4088893068bef99a2, type: 3}
   imageNotActive: {fileID: 21300000, guid: 3ed90a0dd2f043e45893be80be965f98, type: 3}
   isUnlock: 0
   levelUnlock: 10
