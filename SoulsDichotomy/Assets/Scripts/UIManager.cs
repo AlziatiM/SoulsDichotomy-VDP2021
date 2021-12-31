@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class UIManager : MonoBehaviour
     [Header("PickUps")]
     [SerializeField] private Transform panelPickUp;
     // Start is called before the first frame update
+
+    [Header("Level")]
+    [SerializeField] private TextMeshProUGUI level;
+
     void Start()
     {
         GameManager.changeCharacter += SwitchIcon;
@@ -74,6 +79,10 @@ public class UIManager : MonoBehaviour
         return obj;
     }
 
+    internal void SetLevelText(int levelValue)
+    {
+        level.text = "Level " + ++levelValue;
+    }
 
     private void OnDestroy()
     {

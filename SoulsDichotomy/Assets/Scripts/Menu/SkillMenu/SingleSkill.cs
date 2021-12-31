@@ -14,8 +14,8 @@ public class SingleSkill : MonoBehaviour
 
     private void Start()
     {
-        title.text = "???";
-        description.text = "???";
+        title.text = "Locked";
+        description.text = "Unkown";
         icon.sprite = mySkill.imageNotActive;
         SetUp();
     }

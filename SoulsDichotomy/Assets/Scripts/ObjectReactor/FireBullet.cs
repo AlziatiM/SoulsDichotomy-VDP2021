@@ -12,12 +12,14 @@ public class FireBullet : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private Transform _transform;
     private SpriteRenderer _spriteRender;
+    private BoxCollider2D _boxCollider;
     public LayerMask layerIDestory;
     private bool canMove;
 
     void Start()
     {
         _rigidbody = gameObject.GetComponent<Rigidbody2D>();
+        _boxCollider = gameObject.GetComponent<BoxCollider2D>();
         _transform = gameObject.GetComponent<Transform>();
         _spriteRender = gameObject.GetComponent<SpriteRenderer>();
         _spriteRender.sprite = startSprite[0];
@@ -58,6 +60,7 @@ public class FireBullet : MonoBehaviour
 
     private IEnumerator DestroyBullet()
     {
+        _boxCollider.enabled = false;
         canMove = false;
         for (int i = 0; i < despawnSprite.Length; i++)
         {

@@ -52,7 +52,10 @@ public class LevelManager : MonoBehaviour
         else 
         {
             LoadNewLevel(currLevel);
-            SkillManager.instance.NextLevelToLoad(currLevel + 1);
+            if (currLevel == 0)
+                StartCoroutine("WaitFirstLevel");
+            else
+                SkillManager.instance.NextLevelToLoad(currLevel + 1);
         }
     }
 
@@ -61,7 +64,13 @@ public class LevelManager : MonoBehaviour
         currLevel = index;
         LoadNewLevel(index);
         StartCoroutine("WaitSkillManager");
-        
+    }
+
+    private IEnumerator WaitFirstLevel()
+    {
+        yield return new WaitUntil(() => GameManager.instance != null);
+        yield return new WaitUntil(() => SkillManager.instance.AmIReady());
+        SkillManager.instance.NextLevelToLoad(1);
     }
 
     private IEnumerator WaitSkillManager()
@@ -81,10 +90,15 @@ public class LevelManager : MonoBehaviour
         {
             changeScene();
         }
-            
         SceneManager.LoadScene(levels[index]);
+        StartCoroutine("WaitUI");
     }
 
+    private IEnumerator WaitUI()
+    {
+        yield return new WaitUntil(() => UIManager.instance != null);
+        UIManager.instance.SetLevelText(currLevel);
+    }
 
     public void BackToMainMenu()
     {
@@ -105,7 +119,7 @@ public class LevelManager : MonoBehaviour
 
     internal void SetCurrentAsDone()
     {
-        int level = currLevel + 1;
+        int level = currLevel + 2;
         if (PlayerPrefs.HasKey("Level" + level))
         {
             if (PlayerPrefs.GetInt("Level" + level) != 1)
