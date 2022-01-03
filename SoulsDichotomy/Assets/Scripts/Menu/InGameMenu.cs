@@ -66,4 +66,9 @@ public class InGameMenu : Menu
         LevelManager.instance.BackToMainMenu();
     }
 
+    public void PowerUp()
+    {
+        MenuManager.instance.Open(SkillMenu.instance);
+    }
+
 }

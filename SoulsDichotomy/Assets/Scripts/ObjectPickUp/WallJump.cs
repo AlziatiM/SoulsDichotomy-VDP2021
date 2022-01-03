@@ -25,6 +25,8 @@ public class WallJump : PickUp
         wallLeapOffToRestore = pv.WallLeapOff;
         pv.WallLeapOff = wallLeapOff;
 
+        pv.WallSlideSpeedMax = 5;
+
     }
     public override void ApplySoul()
     {
@@ -41,6 +43,7 @@ public class WallJump : PickUp
                 pv.WallJump = wallJumpToRestore;
                 pv.WallJumpClimb = wallJumpClimbToRestore;
                 pv.WallLeapOff = wallLeapOffToRestore;
+                pv.WallSlideSpeedMax = 50;
             }
         }  
     }

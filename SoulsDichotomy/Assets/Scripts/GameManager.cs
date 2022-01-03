@@ -70,20 +70,10 @@ public class GameManager : MonoBehaviour
         }
         if (gameOver || InGameMenu.instance.isPaused)
             return;
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            MenuManager.instance.Open(SkillMenu.instance);
-        }
         if (Input.GetKeyDown(switchCharacterInput))
         {
             changeCharacter();
         }
-        /*
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            MenuManager.instance.Open(SkillMenu.instance);
-        }
-        */
     }
 
     void SwitchCamera()
@@ -141,11 +131,12 @@ public class GameManager : MonoBehaviour
         GameOverMenu.instance.LevelFailed();
         MenuManager.instance.GameOver();
     }
+
     public void TryAgainSetup()
     {
-        gameOver = false;
         playerTransf.gameObject.GetComponent<PlayerInput>().ResetPlayer();
         soulTransf.gameObject.GetComponent<SoulController>().ResetSoul();
+        gameOver = false;
         _vc.Follow = playerTransf;
     }
 

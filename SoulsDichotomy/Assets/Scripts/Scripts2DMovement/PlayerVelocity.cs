@@ -85,6 +85,11 @@ public class PlayerVelocity : MonoBehaviour
 		set { minJumpHeight = value; }
 	}
 
+	public float WallSlideSpeedMax
+    {
+        get { return WallSlideSpeedMax; }
+        set { wallSlideSpeedMax = value; }
+    }
 
 	public void updateJumpHeight()
 	{

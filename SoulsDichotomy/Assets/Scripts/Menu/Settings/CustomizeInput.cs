@@ -48,10 +48,8 @@ public class CustomizeInput : MonoBehaviour
     private KeyCode downSoul;
     private KeyCode upSoul;
 
-
     private string selected;
     private bool editMode;
-
 
     public static Dictionary<String, KeyCode> map;
     // Start is called before the first frame update
