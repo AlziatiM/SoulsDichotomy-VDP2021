@@ -321,12 +321,12 @@ public class SoulController : MonoBehaviour, IHittable
 
     }
 
-    private void ChangeCustomizeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar)
+    private void ChangeCustomizeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar, KeyCode upS, KeyCode downS, KeyCode rightS, KeyCode leftS)
     {
-        this.up = up;
-        this.down = down;
-        this.right = right;
-        this.left = left;
+        this.up = upS;
+        this.down = downS;
+        this.right = rightS;
+        this.left = leftS;
         this.interact = interact;
     }
 }

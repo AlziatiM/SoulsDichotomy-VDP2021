@@ -278,7 +278,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 		ShowAreaSoul(false);
 	    //todo remove active pickup
     }
-	private void ChangeCustomizeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar)
+	private void ChangeCustomizeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar, KeyCode upS, KeyCode downS, KeyCode leftS, KeyCode rightS)
 	{
 		this.up = up;
 		this.down = down;

@@ -6,6 +6,9 @@ public class SettingsMenu : Menu
 {
     public static SettingsMenu instance;
     CustomizeInput customizeinput;
+
+    [SerializeField] private GameObject[] panels;
+
     public void Awake()
     {
         if (instance == null)
@@ -23,7 +26,19 @@ public class SettingsMenu : Menu
     public override void Open()
     {
         base.Open();
-        customizeinput.SetText();
+        ActivePanleIndex(0);
+    }
+
+    public void ActivePanleIndex(int index)
+    {
+        for(int i=0; i< panels.Length; i++)
+        {
+            panels[i].SetActive(i == index);
+        }
+        if (index == 1)
+        {
+            customizeinput.SetText();
+        }
     }
 
     public CustomizeInput GetCustomInput()

@@ -149,7 +149,7 @@ public class GameManager : MonoBehaviour
         _vc.Follow = playerTransf;
     }
 
-    private void ChangeCustomizeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar)
+    private void ChangeCustomizeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar, KeyCode upS, KeyCode downS, KeyCode rightS, KeyCode leftS)
     {
         switchCharacterInput = switchChar;
     }

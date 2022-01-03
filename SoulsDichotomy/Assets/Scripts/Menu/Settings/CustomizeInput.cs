@@ -8,14 +8,14 @@ using UnityEngine.UI;
 
 public class CustomizeInput : MonoBehaviour
 {
-    public delegate void OnChangeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar);
+    public delegate void OnChangeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar, KeyCode upSoul, KeyCode downSoul, KeyCode rightSoul, KeyCode leftSoul);
 
     public static OnChangeInput changeInput;
 
     //non credo serva ma per ora lo lascio qua che ci ho sudato il sangue
     public static OnChangeInput ChangeInput { 
         set { changeInput += value;
-            changeInput(map["upKey"], map["downKey"], map["rightKey"], map["leftKey"], map["interactKey"], map["switchKey"]);
+            changeInput(map["upKey"], map["downKey"], map["rightKey"], map["leftKey"], map["interactKey"], map["switchKey"], map["upSoul"], map["downSoul"], map["rightSoul"], map["leftSoul"]);
         }
         get { return changeInput; }
     }
@@ -24,8 +24,14 @@ public class CustomizeInput : MonoBehaviour
     public TextMeshProUGUI downText;
     public TextMeshProUGUI leftText;
     public TextMeshProUGUI rightText;
+
     public TextMeshProUGUI interactText;
     public TextMeshProUGUI switchText;
+
+    public TextMeshProUGUI upTextSoul;
+    public TextMeshProUGUI downTextSoul;
+    public TextMeshProUGUI leftTextSoul;
+    public TextMeshProUGUI rightTextSoul;
 
     public GameObject pressAnyKey;
     private TextMeshProUGUI pressAnyKeyMesh;
@@ -37,6 +43,11 @@ public class CustomizeInput : MonoBehaviour
     private KeyCode left;
     private KeyCode interact;
     private KeyCode switchChar;
+    private KeyCode leftSoul;
+    private KeyCode rightSoul;
+    private KeyCode downSoul;
+    private KeyCode upSoul;
+
 
     private string selected;
     private bool editMode;
@@ -53,6 +64,10 @@ public class CustomizeInput : MonoBehaviour
         map.Add("leftKey", left);
         map.Add("interactKey", interact);
         map.Add("switchKey", switchChar);
+        map.Add("rightSoul", rightSoul);
+        map.Add("leftSoul", leftSoul);
+        map.Add("downSoul", downSoul);
+        map.Add("upSoul", upSoul);
         SetDefault();
         editMode = false;
         FillKeyCode();
@@ -66,8 +81,14 @@ public class CustomizeInput : MonoBehaviour
         map["downKey"] = KeyCode.DownArrow;
         map["rightKey"] = KeyCode.RightArrow;
         map["leftKey"] = KeyCode.LeftArrow;
+        
         map["interactKey"] = KeyCode.E;
         map["switchKey"] = KeyCode.Space;
+
+        map["leftSoul"]= KeyCode.LeftArrow;
+        map["upSoul"] = KeyCode.UpArrow;
+        map["downSoul"] = KeyCode.DownArrow;
+        map["rightSoul"] = KeyCode.RightArrow;
     }
 
     private void FillKeyCode()
@@ -76,8 +97,14 @@ public class CustomizeInput : MonoBehaviour
         IfExistFillOrInit(ref down, "downKey");
         IfExistFillOrInit(ref right, "rightKey");
         IfExistFillOrInit(ref left, "leftKey");
+
         IfExistFillOrInit(ref interact, "interactKey");
         IfExistFillOrInit(ref switchChar, "switchKey");
+
+        IfExistFillOrInit(ref upSoul, "upSoul");
+        IfExistFillOrInit(ref downSoul, "downSoul");
+        IfExistFillOrInit(ref rightSoul, "rightSoul");
+        IfExistFillOrInit(ref leftSoul, "leftSoul");
     }
 
     public void SetText()
@@ -86,8 +113,14 @@ public class CustomizeInput : MonoBehaviour
         downText.text = map["downKey"].ToString();
         rightText.text = map["rightKey"].ToString();
         leftText.text = map["leftKey"].ToString();
+
         interactText.text = map["interactKey"].ToString();
         switchText.text = map["switchKey"].ToString();
+
+        upTextSoul.text = map["upSoul"].ToString();
+        downTextSoul.text = map["downSoul"].ToString();
+        rightTextSoul.text = map["rightSoul"].ToString();
+        leftTextSoul.text = map["leftSoul"].ToString();
     }
 
     // Update is called once per frame
@@ -146,6 +179,18 @@ public class CustomizeInput : MonoBehaviour
             case "switch":
                 selected = "switchKey";
                 break;
+            case "upSoul":
+                selected = "upSoul";
+                break;
+            case "downSoul":
+                selected = "downSoul";
+                break;
+            case "leftSoul":
+                selected = "leftSoul";
+                break;
+            case "rightSoul":
+                selected = "rightSoul";
+                break;
         }
     }
 
@@ -168,11 +213,48 @@ public class CustomizeInput : MonoBehaviour
         }
     }
 
+    private bool IsValid(KeyCode k)
+    {
+        if (map.ContainsValue(k))
+        {
+            if (selected == "upSoul" && map["upKey"]==k)
+            {
+                return true;
+            }else if (selected == "upKey" && map["upSoul"] == k)
+            {
+                return true;
+            }else if (selected == "downKey" && map["downSoul"] == k)
+            {
+                return true;
+            }else if (selected == "downSoul" && map["downKey"] == k)
+            {
+                return true;
+            }else if (selected == "leftKey" && map["leftSoul"] == k)
+            {
+                return true;
+            }else if (selected == "leftSoul" && map["leftKey"] == k)
+            {
+                return true;
+            }else if (selected == "rightKey" && map["rightSoul"] == k)
+            {
+                return true;
+            }else if (selected == "rightSoul" && map["rightKey"] == k)
+            {
+                return true;
+            }
+            return false;
+        }
+        else
+        {
+            return true;
+        }  
+    }
+
     private bool ChangeKey(KeyCode newKey, string name)
     {
         if (PlayerPrefs.HasKey(name))
         {
-            if (map.ContainsValue(newKey))
+            if (!IsValid(newKey))
             {
                 StartCoroutine("ShowError");
                 return false;
@@ -183,7 +265,7 @@ public class CustomizeInput : MonoBehaviour
             ToggleTextPressAnyKey();
             if (changeInput != null)
             {
-                changeInput(map["upKey"], map["downKey"], map["rightKey"], map["leftKey"], map["interactKey"], map["switchKey"]);
+                changeInput(map["upKey"], map["downKey"], map["rightKey"], map["leftKey"], map["interactKey"], map["switchKey"], map["upSoul"], map["downSoul"], map["rightSoul"], map["leftSoul"]);
             }
             return true;
         }
