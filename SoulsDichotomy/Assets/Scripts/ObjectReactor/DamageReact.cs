@@ -61,7 +61,7 @@ public class DamageReact : MonoBehaviour, IReact
         }
     }
 
-    private IEnumerator CloseDamege()
+    private IEnumerator CloseDamage()
     {
         boxCollider.enabled = false;
         myDamage.enabled = false;

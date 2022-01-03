@@ -216,8 +216,21 @@ public class PlayerInput : MonoBehaviour, IHittable
 				interactObj = interact;
                 if (interact.CanActivateOnTriggerEnter())
                 {
-					interactObj.Interact();
-					interactObj = null;
+	                bool canInteract = true;
+	                if (collision.CompareTag("InteractablePlatform"))
+	                {
+		                Vector2 collisionPoint = collision.ClosestPoint(transform.position);
+		                Vector3 platformCenter = collision.bounds.center;
+            
+		                 canInteract = collisionPoint.y > platformCenter.y;
+	                }
+
+	                if (canInteract)
+	                {
+		                interactObj.Interact();
+		                interactObj = null;
+	                }
+					
                 }
 			}
 				
