@@ -9,6 +9,7 @@ TagManager:
   - Through
   - EnterLevel
   - Lava
+  - InteractablePlatform
   layers:
   - Default
   - TransparentFX
