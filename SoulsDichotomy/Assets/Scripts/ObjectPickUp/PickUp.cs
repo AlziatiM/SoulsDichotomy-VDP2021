@@ -11,6 +11,10 @@ public abstract class PickUp : MonoBehaviour
     private BoxCollider2D boxCollider;
     [Header("Prefab to instantiate when picked")]
     [SerializeField] GameObject iconPickUp;
+    [SerializeField] PickUpSetUpSO option;
+
+    [Header("Reference to particolar effect")]
+    [SerializeField] private ParticleSystem ps;
 
     [Header("Who can pick up?")]
     [SerializeField] private bool canPlayerPick;
@@ -47,11 +51,31 @@ public abstract class PickUp : MonoBehaviour
         timer = gameObject.GetComponent<Timer>();
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        SetUpColorParticolarSystem();
     }
 
     private void Start()
     {
         timer = gameObject.GetComponent<Timer>();
+    }
+
+    private void SetUpColorParticolarSystem()
+    {
+        if(canPlayerPick && !canSoulPick)
+        {
+            ps.startColor = option.onlyPlayerCanPick;
+            //player
+        }
+        else if(!canPlayerPick && canSoulPick)
+        {
+            ps.startColor = option.onlySoulCanPick;
+            //soul
+        }
+        else
+        {
+            ps.startColor = option.bothCanPick;
+            //both
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

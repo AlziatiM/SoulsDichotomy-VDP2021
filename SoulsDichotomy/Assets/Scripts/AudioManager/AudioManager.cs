@@ -40,6 +40,7 @@ public class AudioManager : MonoBehaviour
 
 	public float SfxVolume => !PlayerPrefs.HasKey("SFX Volume") ? 1f : PlayerPrefs.GetFloat("SFX Volume");
 
+
 	private void Awake()
 	{
         if (instance == null)
@@ -124,6 +125,8 @@ public class AudioManager : MonoBehaviour
 	// Play a music track with Cross fading
 	public void PlayMusic(string trackName)
 	{
+		if (trackName == currentTrack)
+			return;
 		if (trackName != "")
 			currentTrack = trackName;
 		AudioClip to = null;

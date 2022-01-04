@@ -52,9 +52,7 @@ public class LevelManager : MonoBehaviour
         else 
         {
             LoadNewLevel(currLevel);
-            if (currLevel == 0)
-                StartCoroutine("WaitFirstLevel");
-            else
+            if (currLevel != 0)
                 SkillManager.instance.NextLevelToLoad(currLevel + 1);
         }
     }
@@ -66,22 +64,15 @@ public class LevelManager : MonoBehaviour
         StartCoroutine("WaitSkillManager");
     }
 
-    private IEnumerator WaitFirstLevel()
-    {
-        yield return new WaitUntil(() => GameManager.instance != null);
-        yield return new WaitUntil(() => SkillManager.instance.AmIReady());
-        SkillManager.instance.NextLevelToLoad(1);
-    }
-
     private IEnumerator WaitSkillManager()
     {
         yield return new WaitUntil(() => GameManager.instance != null);
         yield return new WaitUntil(() => SkillManager.instance.AmIReady());
-        SkillManager.instance.LoadLevelFromScratch(currLevel);
+        SkillManager.instance.LoadLevelFromScratch(currLevel+1);
     }
 
     /// <summary>
-    /// only load the scene from the scenemanager
+    /// Only load the scene from the scenemanager
     /// </summary>
     /// <param name="index">index of level to load</param>
     private void LoadNewLevel(int index)

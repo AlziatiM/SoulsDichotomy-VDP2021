@@ -17,7 +17,7 @@ MonoBehaviour:
   imageActive: {fileID: 21300000, guid: 393915fc2e52e7545847c289af4f5fe0, type: 3}
   imageNotActive: {fileID: -2852731145210388948, guid: 3cf94fb7a3d60f34eac3b7edc9c709f9, type: 3}
   isUnlock: 0
-  levelUnlock: 1
+  levelUnlock: 2
   affectPlayer: 1
   affectSoul: 0
   newScale: {x: 10, y: 8, z: 1}

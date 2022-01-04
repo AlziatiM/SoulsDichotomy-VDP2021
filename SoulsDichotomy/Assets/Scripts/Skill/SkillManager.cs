@@ -23,11 +23,17 @@ public class SkillManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        /*
         foreach(Skill s in skillTree)
         {
             s.SetIsUnlock(false);
+            print("ESEGUITO AWAKE");
         }
+        */
     }
+
+
+
 
     public void NextLevelToLoad(int levelToLoad)
     {
@@ -38,17 +44,26 @@ public class SkillManager : MonoBehaviour
                 UnlockSkill(s);
             }
         }
+        
     }
 
     public void LoadLevelFromScratch(int levelToLoad)
     {
+        
         foreach (Skill s in skillTree)
         {
             if (s.GetLeveUnlock() <= levelToLoad)
             {
-                UnlockSkill(s);
+                if(!s.IsUnlock())
+                    UnlockSkill(s);
+            }
+            else
+            {
+                if(s.IsUnlock())
+                    LockSkill(s);
             }
         }
+        
     }
 
     public void SetUpCharacters(PlayerInput pi, SoulController sc)
@@ -62,6 +77,13 @@ public class SkillManager : MonoBehaviour
         return skillTree;
     }
 
+    private void LockSkill(Skill s)
+    {
+        s.SetIsUnlock(false);
+        s.DetachSkill(player, soul);
+        SkillMenu.instance.LockSkill(s.nameS);
+    }
+
     private void UnlockSkill(Skill s)
     {
         s.AttachSkill(player, soul);
@@ -73,7 +95,7 @@ public class SkillManager : MonoBehaviour
     private IEnumerator WaitSkillMenu()
     {
         yield return new WaitUntil(()=>SkillMenu.instance != null);
-        SkillMenu.instance.UnlockSkill(skillToUnlock.name);
+        SkillMenu.instance.UnlockSkill(skillToUnlock.nameS);
         skillToUnlock = null;
     }
 

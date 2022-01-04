@@ -273,6 +273,12 @@ public class PlayerInput : MonoBehaviour, IHittable
     {
 		panelSoulMovement.transform.localScale = newScale;
     }
+	
+	public Vector3 GetScaleSoulPanel()
+    {
+		return panelSoulMovement.transform.localScale;
+
+	}
 
     private void OnDestroy()
     {

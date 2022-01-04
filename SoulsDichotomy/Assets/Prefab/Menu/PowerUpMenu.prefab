@@ -2539,7 +2539,6 @@ MonoBehaviour:
   skills:
   - {fileID: 1001748784549694966}
   - {fileID: 5213721686711290806}
-  - {fileID: 0}
 --- !u!1 &6406254378183247216
 GameObject:
   m_ObjectHideFlags: 0

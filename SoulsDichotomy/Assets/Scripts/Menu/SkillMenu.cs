@@ -36,4 +36,16 @@ public class SkillMenu : Menu
         }
     }
 
+    internal void LockSkill(string name)
+    {
+        for (int i = 0; i < skills.Length; i++)
+        {
+            if (skills[i].GetName().Equals(name))
+            {
+                skills[i].Lock();
+                return;
+            }
+        }
+    }
+
 }

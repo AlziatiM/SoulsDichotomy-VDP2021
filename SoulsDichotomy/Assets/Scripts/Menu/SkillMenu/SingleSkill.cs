@@ -11,13 +11,12 @@ public class SingleSkill : MonoBehaviour
     [SerializeField] private TextMeshProUGUI title;
     [SerializeField] private TextMeshProUGUI description;
     [SerializeField] private Skill mySkill;
-
+    private bool unlocked;
+    private bool alreadySet;
     private void Start()
     {
-        title.text = "Locked";
-        description.text = "Unkown";
-        icon.sprite = mySkill.imageNotActive;
-        SetUp();
+        if (!alreadySet)
+            Lock();
     }
 
     public string GetName()
@@ -27,19 +26,34 @@ public class SingleSkill : MonoBehaviour
 
     private void OnEnable()
     {
-        SetUp();
+        //SetUp();
     }
 
     private void SetUp()
     {
-        if (mySkill.IsUnlock())
+        if (unlocked)
         {
             Unlock();
         }
+        else
+        {
+            Lock();
+        }
+    }
+
+    public void Lock()
+    {
+        alreadySet = true;
+        unlocked = false;
+        title.text = "Locked";
+        description.text = "Unknown";
+        icon.sprite = mySkill.imageNotActive;
     }
 
     public void Unlock()
     {
+        unlocked = true;
+        alreadySet = true;
         title.text = mySkill.nameS;
         description.text = mySkill.description;
         icon.sprite = mySkill.imageActive;

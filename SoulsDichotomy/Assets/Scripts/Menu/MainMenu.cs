@@ -19,6 +19,12 @@ public class MainMenu : Menu
         Close();
     }
 
+    private void OnEnable()
+    {
+        AudioManager.instance.PlayMusic("Menu");
+        print("music from onenanle main menu");
+    }
+
     public void Play()
     {
         MenuManager.instance.Back();

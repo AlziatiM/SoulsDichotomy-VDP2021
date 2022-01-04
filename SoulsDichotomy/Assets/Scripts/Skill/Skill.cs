@@ -19,6 +19,11 @@ public class Skill : ScriptableObject
 
     }
 
+    public virtual void DetachSkill(PlayerInput player, SoulController soul)
+    {
+
+    }
+
     public bool IsUnlock()
     {
         return isUnlock;
