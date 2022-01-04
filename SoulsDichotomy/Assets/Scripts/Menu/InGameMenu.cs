@@ -27,6 +27,7 @@ public class InGameMenu : Menu
         {
             if (MenuManager.instance.AmIOnTop(this))
             {
+                AudioManager.instance.PlayMusic("Main");
                 pause = false;
                 Time.timeScale = 1;
                 Exit();
@@ -38,6 +39,7 @@ public class InGameMenu : Menu
         }
         else
         {
+            AudioManager.instance.PlayMusic("Menu");
             pause = true;
             Time.timeScale = 0;
             MenuManager.instance.Open(this);
@@ -63,6 +65,7 @@ public class InGameMenu : Menu
     public void BackToMainMenu()
     {   
         TogglePause();
+        AudioManager.instance.PlayMusic("Menu");
         LevelManager.instance.BackToMainMenu();
     }
 

@@ -10,6 +10,8 @@ public class SkillManager : MonoBehaviour
     [SerializeField] private Skill[] skillTree;
 
     public static SkillManager instance;
+
+    private Skill skillToUnlock;
     void Awake()
     {
         if (instance == null)
@@ -64,8 +66,15 @@ public class SkillManager : MonoBehaviour
     {
         s.AttachSkill(player, soul);
         s.SetIsUnlock(true);
-        
-        SkillMenu.instance.UnlockSkill(s.name);
+        skillToUnlock = s;
+        StartCoroutine("WaitSkillMenu");
+    }
+
+    private IEnumerator WaitSkillMenu()
+    {
+        yield return new WaitUntil(()=>SkillMenu.instance != null);
+        SkillMenu.instance.UnlockSkill(skillToUnlock.name);
+        skillToUnlock = null;
     }
 
     internal bool AmIReady()

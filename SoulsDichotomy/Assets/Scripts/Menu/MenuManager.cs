@@ -28,6 +28,13 @@ public class MenuManager : MonoBehaviour
     void Start()
     {
         Open(MainMenu.instance);
+        StartCoroutine("StartMusic");
+    }
+
+    private IEnumerator StartMusic()
+    {
+        yield return new WaitUntil(() => AudioManager.instance != null);
+        AudioManager.instance.PlayMusic("Menu");
     }
 
     public void LoadMainScene()
