@@ -609,6 +609,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 560423897467411282}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_fontSize
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 52
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9079436108910377139}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_fontSize
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 48
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2258586203772673007
 GameObject:
   m_ObjectHideFlags: 0
@@ -3790,6 +3814,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9079436108910377139}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_fontSize
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 52
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 560423897467411282}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_fontSize
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 48
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7438246739671256653
 GameObject:
   m_ObjectHideFlags: 0
@@ -4979,7 +5027,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.016113281, y: -179}
+  m_AnchoredPosition: {x: 0.016113281, y: -192}
   m_SizeDelta: {x: 0, y: 190.5697}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8426561896866850742
@@ -5012,8 +5060,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b2f4c7a309f011441895f79f7b10a42e, type: 2}
+  m_sharedMaterial: {fileID: 504037279158503884, guid: b2f4c7a309f011441895f79f7b10a42e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6715,7 +6763,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 788563619561567563, guid: de879846a44c88e4584ff627f4755f38, type: 3}
       propertyPath: m_fontSize
-      value: 48
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 788563619561567563, guid: de879846a44c88e4584ff627f4755f38, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 788563619561567563, guid: de879846a44c88e4584ff627f4755f38, type: 3}
       propertyPath: m_fontColor.b
@@ -6731,7 +6783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 788563619561567563, guid: de879846a44c88e4584ff627f4755f38, type: 3}
       propertyPath: m_fontSizeBase
-      value: 48
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 788563619561567563, guid: de879846a44c88e4584ff627f4755f38, type: 3}
       propertyPath: m_sharedMaterial
