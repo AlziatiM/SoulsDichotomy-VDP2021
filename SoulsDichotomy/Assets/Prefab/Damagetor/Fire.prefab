@@ -73,7 +73,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.25, y: 0.5}
-    oldSize: {x: 2, y: 1.0000976}
+    oldSize: {x: 2, y: 1}
     newSize: {x: 1, y: 1.0000976}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -122,7 +122,7 @@ SpriteRenderer:
   m_SortingLayerID: -329989567
   m_SortingLayer: 1
   m_SortingOrder: 6
-  m_Sprite: {fileID: 6270047213041316494, guid: e741818b4f51bfe47b36192637867f12, type: 3}
+  m_Sprite: {fileID: -8666649358503723274, guid: 0219e7c8e987bdf4285a382a8f2bef3a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -148,6 +148,9 @@ MonoBehaviour:
   damage: 5
   damageOverTime: 1
   timeBetwDmg: 0.5
+  OnDamageApply:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2775496016803785089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +163,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c17362f5fa27c45878c12eb6e7b5b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aminationSprite: []
+  openSprites:
+  - {fileID: 4104029462207464820, guid: 0219e7c8e987bdf4285a382a8f2bef3a, type: 3}
+  - {fileID: -386323686403885174, guid: 0219e7c8e987bdf4285a382a8f2bef3a, type: 3}
+  - {fileID: -4426002042199702159, guid: 0219e7c8e987bdf4285a382a8f2bef3a, type: 3}
+  idleSprites:
+  - {fileID: -8666649358503723274, guid: 0219e7c8e987bdf4285a382a8f2bef3a, type: 3}
+  - {fileID: 1700125885202088108, guid: 0219e7c8e987bdf4285a382a8f2bef3a, type: 3}
+  closeSprites:
+  - {fileID: 148791127288091696, guid: 0219e7c8e987bdf4285a382a8f2bef3a, type: 3}
+  - {fileID: -4788895874544383400, guid: 0219e7c8e987bdf4285a382a8f2bef3a, type: 3}
+  - {fileID: -3159325069817876060, guid: 0219e7c8e987bdf4285a382a8f2bef3a, type: 3}
   timeAnimation: 0.5
   amIActive: 0

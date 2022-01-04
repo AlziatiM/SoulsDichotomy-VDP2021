@@ -6,7 +6,9 @@ using UnityEngine;
 public class DamageReact : MonoBehaviour, IReact
 {
     [Header("From turn off to turn on")]
-    [SerializeField] private Sprite[] aminationSprite;
+    [SerializeField] private Sprite[] openSprites;
+    [SerializeField] private Sprite[] idleSprites;
+    [SerializeField] private Sprite[] closeSprites;
     [SerializeField] private float timeAnimation = 0.5f;
     [Header("Initial State")]
     [SerializeField] private bool amIActive;
@@ -25,13 +27,14 @@ public class DamageReact : MonoBehaviour, IReact
     {
         if (amIActive)
         {
-            spriteRenderer.sprite = aminationSprite[aminationSprite.Length - 1];
+            spriteRenderer.sprite = idleSprites[0];
+            StartCoroutine("IdleDamage");
             boxCollider.enabled = true;
             myDamage.enabled = true;
         }
         else
         {
-            spriteRenderer.sprite = aminationSprite[0];
+            spriteRenderer.sprite = openSprites[0];
             boxCollider.enabled = false;
             myDamage.enabled = false;
         }
@@ -41,6 +44,7 @@ public class DamageReact : MonoBehaviour, IReact
     {
         if (amIActive)
         {
+            StopAllCoroutines();
             StartCoroutine("CloseDamage");
         }
         else
@@ -54,10 +58,23 @@ public class DamageReact : MonoBehaviour, IReact
     {
         boxCollider.enabled = true;
         myDamage.enabled = true;
-        for (int i = 1; i < aminationSprite.Length; i++)
+        for (int i = 1; i < openSprites.Length; i++)
         {
-            spriteRenderer.sprite = aminationSprite[i];
+            spriteRenderer.sprite = openSprites[i];
             yield return new WaitForSeconds(timeAnimation);
+        }
+        StartCoroutine("IdleDamage");
+    }
+
+    private IEnumerator IdleDamage()
+    {
+        while (true)
+        {
+            for(int i=0; i<idleSprites.Length; i++)
+            {
+                spriteRenderer.sprite = idleSprites[i];
+                yield return new WaitForSeconds(timeAnimation);
+            }
         }
     }
 
@@ -65,9 +82,9 @@ public class DamageReact : MonoBehaviour, IReact
     {
         boxCollider.enabled = false;
         myDamage.enabled = false;
-        for (int i = aminationSprite.Length - 2; i >= 0; i--)
+        for (int i = 0; i < closeSprites.Length; i++)
         {
-            spriteRenderer.sprite = aminationSprite[i];
+            spriteRenderer.sprite = closeSprites[i];
             yield return new WaitForSeconds(timeAnimation);
         }
     }
