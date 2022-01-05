@@ -271,7 +271,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 260075339, guid: 61d2bbccc0bab55499873f85ac397417, type: 3}
       propertyPath: timeBeforReact
-      value: 0.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6150944023021834385, guid: 61d2bbccc0bab55499873f85ac397417, type: 3}
       propertyPath: m_RootOrder
