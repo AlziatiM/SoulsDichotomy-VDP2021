@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37998f5d-d7db-4e9c-a5b0-6eb1848c24ae" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="37998f5d-d7db-4e9c-a5b0-6eb1848c24ae" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,6 +80,7 @@
       <workItem from="1638213409610" duration="1312000" />
       <workItem from="1638523178115" duration="4872000" />
       <workItem from="1641145555634" duration="6000" />
+      <workItem from="1641402963564" duration="4000" />
     </task>
     <servers />
   </component>
