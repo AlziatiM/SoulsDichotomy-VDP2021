@@ -674,6 +674,12 @@ MonoBehaviour:
   - name: Button
     clips:
     - {fileID: 8300000, guid: f93121e9581c31e41a312f2619f74211, type: 3}
+  - name: Death
+    clips:
+    - {fileID: 8300000, guid: 00484af203328ab4eb1b8982e123f9e9, type: 3}
+  - name: EndLevel
+    clips:
+    - {fileID: 8300000, guid: 74e9f1bf355498b4a8bbe0ad91c55a04, type: 3}
 --- !u!4 &670198905
 Transform:
   m_ObjectHideFlags: 0
