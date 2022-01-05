@@ -151,9 +151,9 @@ public class GameManager : MonoBehaviour
         soulController.ResetSoul();
         gameOver = false;
         _vc.Follow = playerTransf;
+        
         LoadCanvas.instance.Close();
     }
-
 
     private void ChangeCustomizeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar, KeyCode upS, KeyCode downS, KeyCode rightS, KeyCode leftS)
     {

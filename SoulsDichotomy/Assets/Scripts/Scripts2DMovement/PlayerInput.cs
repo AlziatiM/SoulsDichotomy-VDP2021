@@ -294,6 +294,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 	public void ResetPlayer()
     {
 		Character.AnimationManager.SetState(CharacterState.Idle);
+		currState = CharacterState.Idle;
 		playerHealth.SetUpHealth();
 		playerVelocity.enabled = true;
 	    canMove = true;

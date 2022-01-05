@@ -24,11 +24,11 @@ public class SkillMenu : Menu
         Close();
     }
 
-    internal void UnlockSkill(string name)
+    internal void UnlockSkill(string namePassed)
     {
         for (int i=0; i < skills.Length; i++)
         {
-            if (skills[i].GetName().Equals(name))
+            if (skills[i].GetName().Equals(namePassed))
             {
                 skills[i].Unlock();
                 return;

@@ -11,7 +11,6 @@ public class SkillManager : MonoBehaviour
 
     public static SkillManager instance;
 
-    private Skill skillToUnlock;
     void Awake()
     {
         if (instance == null)
@@ -23,13 +22,7 @@ public class SkillManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        /*
-        foreach(Skill s in skillTree)
-        {
-            s.SetIsUnlock(false);
-            print("ESEGUITO AWAKE");
-        }
-        */
+
     }
 
 
@@ -54,8 +47,10 @@ public class SkillManager : MonoBehaviour
         {
             if (s.GetLeveUnlock() <= levelToLoad)
             {
-                if(!s.IsUnlock())
+                if (!s.IsUnlock())
+                {
                     UnlockSkill(s);
+                }   
             }
             else
             {
@@ -86,18 +81,12 @@ public class SkillManager : MonoBehaviour
 
     private void UnlockSkill(Skill s)
     {
-        s.AttachSkill(player, soul);
         s.SetIsUnlock(true);
-        skillToUnlock = s;
-        StartCoroutine("WaitSkillMenu");
+        s.AttachSkill(player, soul);
+        SkillMenu.instance.UnlockSkill(s.nameS);
     }
 
-    private IEnumerator WaitSkillMenu()
-    {
-        yield return new WaitUntil(()=>SkillMenu.instance != null);
-        SkillMenu.instance.UnlockSkill(skillToUnlock.nameS);
-        skillToUnlock = null;
-    }
+
 
     internal bool AmIReady()
     {
