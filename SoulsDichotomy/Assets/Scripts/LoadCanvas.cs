@@ -9,6 +9,11 @@ public class LoadCanvas : MonoBehaviour
     private bool amIOpen;
     private int amoutOpen;
 
+    [SerializeField] private float secondsMinOpen;
+    private bool canClose;
+    private int numberOfIterationNeeded;
+    private int number;
+    private bool shoulICount;
     public static LoadCanvas instance;
 
     private void Awake()
@@ -25,16 +30,42 @@ public class LoadCanvas : MonoBehaviour
         amIOpen = false;
         amoutOpen = 0;
         panel.SetActive(false);
+        canClose = false;
+        shoulICount = false;
+        numberOfIterationNeeded = (int)Mathf.Ceil(secondsMinOpen * (1 / Time.fixedDeltaTime));
     }
-    // Start is called before the first frame update
+
+    //50 call per secondo
+    public void FixedUpdate()
+    {
+        if (shoulICount)
+        {
+            number++;
+            if (number == numberOfIterationNeeded)
+            {
+                shoulICount = false;
+                SetCanClose();
+            }
+        }
+    }
+
+
+    private void SetCanClose()
+    {
+        canClose = true;
+        CloseAll();
+    }
 
     internal void Open()
     {
-        /*
+        /* da riattivare
         ++amoutOpen;
         if (!amIOpen)
         {
-            Time.timeScale = 0;
+            shoulICount = true;
+            number = 0;
+
+            //Time.timeScale = 0;
             amIOpen = true;
             panel.SetActive(true);
         }
@@ -43,16 +74,23 @@ public class LoadCanvas : MonoBehaviour
 
     internal void Close()
     {
-        /*
+        /* da riattivare
         --amoutOpen;
-        if (amoutOpen == 0)
+        CloseAll();
+        */
+    }
+
+    private void CloseAll()
+    {
+        if (amoutOpen == 0 && canClose)
         {
             amIOpen = false;
             MenuManager.instance.CloseAllMenus();
-            Time.timeScale = 1;
+            //Time.timeScale = 1;
             panel.SetActive(false);
+
+            canClose = false;
         }
-        */
     }
 
 }

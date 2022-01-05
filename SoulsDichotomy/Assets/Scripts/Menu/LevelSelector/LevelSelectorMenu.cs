@@ -65,13 +65,13 @@ public class LevelSelectorMenu : Menu
 
     public void NextPanel()
     {
-        currPanelOpen = Mathf.Min(currPanelOpen + 1, panelsLevel.Length-1);
+        currPanelOpen = currPanelOpen + 1;
         ActivatePanelLevel(currPanelOpen);
     }
 
     public void PrevPanel()
     {
-        currPanelOpen = Mathf.Max(currPanelOpen - 1, 0);
+        currPanelOpen = currPanelOpen - 1;
         ActivatePanelLevel(currPanelOpen);
     }
 

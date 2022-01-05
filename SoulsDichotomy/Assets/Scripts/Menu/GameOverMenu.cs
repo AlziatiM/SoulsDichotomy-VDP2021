@@ -38,13 +38,14 @@ public class GameOverMenu : Menu
     public void TryAgain()
     {
         MenuManager.instance.Back();//chiudo menu
-        
+
         GameManager.instance.TryAgainSetup();//settuppo i menu
-        
+
         UIManager.instance.SetUpSlider();//settuppo gli slider
 
-        LevelManager.instance.TryAgainLevel();//ricarico la scena
+        LevelManager.instance.TryAgainLevel();//ricarico la scenaLevelManager.instance.TryAgainLevel();//ricarico la scena
     }
+
 
     public void MainMenu()
     {
