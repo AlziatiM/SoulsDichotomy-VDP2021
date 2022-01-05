@@ -298,6 +298,8 @@ public class SoulController : MonoBehaviour, IHittable
     {
         if (interactObj!=null && Input.GetKeyDown(interact))
         {
+            AudioManager.instance.PlaySound("Lever");
+
             interactObj.Interact();
         }
     }

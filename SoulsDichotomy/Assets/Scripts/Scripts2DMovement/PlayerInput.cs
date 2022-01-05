@@ -120,7 +120,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 		}
 		if (Input.GetKey(down))
 		{
-			playerVelocity.OnFallInputDown();
+			//playerVelocity.OnFallInputDown();
 		}
 
 		if (isJumping)
@@ -153,6 +153,7 @@ public class PlayerInput : MonoBehaviour, IHittable
     {
         if (interactObj!=null && Input.GetKeyDown(interact))
         {
+	        AudioManager.instance.PlaySound("Lever");
 			interactObj.Interact();
         }
     }
@@ -266,6 +267,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 
 	public void DeathExtra()
 	{
+		AudioManager.instance.PlaySound("Death");
 		//Character.AnimationManager.Die();
 		Character.AnimationManager.SetState(CharacterState.Death);
 		currState = CharacterState.Death;
