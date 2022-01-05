@@ -7,8 +7,8 @@ public class GameOverMenu : Menu
 {
     public static GameOverMenu instance;
     [SerializeField] private TextMeshProUGUI titleMenu;
-
-
+    [SerializeField] private TextMeshProUGUI description;
+    public string[] sentenceLost;
     public void Awake()
     {
         if (instance == null)
@@ -24,21 +24,26 @@ public class GameOverMenu : Menu
 
     internal void EndGame()
     {
-        titleMenu.text = "You reach the end!\nTy 4 playing!";
+        titleMenu.text = "GAME OVER!";
+        description.text = "You reach the end of the dungeon, only few did it befor you! Feel pround of what you just did.";
     }
 
     internal void LevelFailed()
     {
         titleMenu.text = "You failed the level!";
+        description.text = sentenceLost[Random.Range(0, sentenceLost.Length)];
+        description.text += "\n\n+" + ScoreManager.instance.GetDieValue() + " s";
     }
 
     public void TryAgain()
     {
-        MenuManager.instance.Back();
-        UIManager.instance.SetUpSlider();
-        GameManager.instance.TryAgainSetup();
+        MenuManager.instance.Back();//chiudo menu
+        
+        GameManager.instance.TryAgainSetup();//settuppo i menu
+        
+        UIManager.instance.SetUpSlider();//settuppo gli slider
 
-        LevelManager.instance.TryAgainLevel();
+        LevelManager.instance.TryAgainLevel();//ricarico la scena
     }
 
     public void MainMenu()

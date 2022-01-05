@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1296256195636230426}
   - component: {fileID: 4351190311795027516}
   m_Layer: 5
-  m_Name: GameOver (1)
+  m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.01413, y: 159}
-  m_SizeDelta: {x: 811.306, y: 459.017}
+  m_AnchoredPosition: {x: 0.01413, y: 127.50708}
+  m_SizeDelta: {x: 811.306, y: 396.0311}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1296256195636230426
 CanvasRenderer:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Oh nooo. You have lost. Wanna try again??
+  m_text: Oh nooo. You have lost. Wanna try again?? \n\n+50 s
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -553,6 +553,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 8101553101184863190}
   titleMenu: {fileID: 8101553102413606171}
+  description: {fileID: 4351190311795027516}
+  sentenceLost:
+  - Oh nooo. You have lost. Wanna try again??
+  - Don't you wanna save your brother?
+  - Looks like you hate yourself!
+  - Ehm, your aim is to reach the door at the ed of the level, did you know it?
 --- !u!1001 &8101553101191780014
 PrefabInstance:
   m_ObjectHideFlags: 0

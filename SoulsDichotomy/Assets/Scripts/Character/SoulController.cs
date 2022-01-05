@@ -44,7 +44,7 @@ public class SoulController : MonoBehaviour, IHittable
 
     //soul interaction
     private IInteract interactObj;
-
+    public IInteract InteractObj { set { interactObj = value; } }
     
     //references
     private Transform _transform;
@@ -317,6 +317,7 @@ public class SoulController : MonoBehaviour, IHittable
         Character.AnimationManager.SetState(CharacterState.Idle);
         moveFromInput = false;
         GameOver = false;
+        interactObj = null;
         //todo remove active pickup
 
     }

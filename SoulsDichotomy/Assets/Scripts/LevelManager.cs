@@ -66,9 +66,13 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator WaitSkillManager()
     {
+        LoadCanvas.instance.Open();
         yield return new WaitUntil(() => GameManager.instance != null);
         yield return new WaitUntil(() => SkillManager.instance.AmIReady());
-        SkillManager.instance.LoadLevelFromScratch(currLevel+1);
+        yield return new WaitUntil(() => ScoreManager.instance != null);
+        SkillManager.instance.LoadLevelFromScratch(currLevel + 1);
+        ScoreManager.instance.LoadScoreForLevel(currLevel + 1);
+        LoadCanvas.instance.Close();
     }
 
     /// <summary>
@@ -83,6 +87,7 @@ public class LevelManager : MonoBehaviour
         }
         SceneManager.LoadScene(levels[index]);
         StartCoroutine("WaitUI");
+        ScoreManager.instance.StartLevel();
     }
 
     private IEnumerator WaitUI()
@@ -111,6 +116,7 @@ public class LevelManager : MonoBehaviour
     internal void SetCurrentAsDone()
     {
         int level = currLevel + 2;
+        ScoreManager.instance.SaveScoreForLevel(currLevel + 1);
         if (PlayerPrefs.HasKey("Level" + level))
         {
             if (PlayerPrefs.GetInt("Level" + level) != 1)

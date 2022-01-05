@@ -4551,49 +4551,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6743605199437739605}
     m_Modifications:
-    - target: {fileID: 2451621316918799357, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
-      propertyPath: level
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7901548441616793107, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
-      propertyPath: m_fontSize
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 7901548441616793107, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 7901548441616793107, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7901548441616793107, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 7901548441616793107, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 7901548441616793107, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7901548441616793107, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 7901548441616793107, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7901548441901114963, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
       propertyPath: m_Name
       value: LevelButtonSelector
-      objectReference: {fileID: 0}
-    - target: {fileID: 7901548441901114963, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7901548441901114964, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
       propertyPath: m_Pivot.x
@@ -4680,33 +4640,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7901548441901114965, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7901548441901114965, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7901548441901114965, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4811954572647558104}
-    - target: {fileID: 7901548441901114965, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7901548441901114965, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 7901548441901114965, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LevelSelectorMenu, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7901548441901114965, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b5685aafe5d09c48911d00b0ad888fb, type: 3}
 --- !u!224 &1383802939822829166 stripped

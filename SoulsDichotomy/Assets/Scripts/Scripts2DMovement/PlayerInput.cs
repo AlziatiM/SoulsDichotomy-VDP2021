@@ -41,6 +41,9 @@ public class PlayerInput : MonoBehaviour, IHittable
 	private Transform _transf;
 
 	private IInteract interactObj;
+
+	public IInteract InteractObj { set { interactObj = value; } }
+
 	private void Awake()
 	{
 		ShowAreaSoul(false);
@@ -69,6 +72,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 
 	void Update()
 	{
+		
 		if (gameOver || InGameMenu.instance.isPaused)
 			return;
 		if (!canMove)
@@ -222,7 +226,7 @@ public class PlayerInput : MonoBehaviour, IHittable
 		                Vector2 collisionPoint = collision.ClosestPoint(transform.position);
 		                Vector3 platformCenter = collision.bounds.center;
             
-		                 canInteract = collisionPoint.y > platformCenter.y;
+		                canInteract = collisionPoint.y > platformCenter.y;
 	                }
 
 	                if (canInteract)
@@ -277,14 +281,12 @@ public class PlayerInput : MonoBehaviour, IHittable
 	public Vector3 GetScaleSoulPanel()
     {
 		return panelSoulMovement.transform.localScale;
-
 	}
 
     private void OnDestroy()
     {
 		GameManager.changeCharacter -= SwitchCharacter;
 		CustomizeInput.changeInput -= ChangeCustomizeInput;
-
 	}
 
 	public void ResetPlayer()
@@ -295,8 +297,10 @@ public class PlayerInput : MonoBehaviour, IHittable
 	    canMove = true;
 		GameOver = false;
 		ShowAreaSoul(false);
+		interactObj = null;
 	    //todo remove active pickup
     }
+
 	private void ChangeCustomizeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar, KeyCode upS, KeyCode downS, KeyCode leftS, KeyCode rightS)
 	{
 		this.up = up;

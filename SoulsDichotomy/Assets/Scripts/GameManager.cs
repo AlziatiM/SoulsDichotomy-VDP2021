@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     private CinemachineVirtualCamera _vc;
     private Transform playerTransf;
     private Transform soulTransf;
+    private PlayerInput playerInput;
+    private SoulController soulController;
     private bool gameOver;
     
     public static GameManager instance;
@@ -45,11 +47,14 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator StartWithDelay()
     {
+        LoadCanvas.instance.Open();
         yield return new WaitUntil(() => GameObject.FindWithTag("Player") != null);
         yield return new WaitUntil(() => GameObject.FindWithTag("Soul") != null);
         GameObject player = GameObject.FindWithTag("Player");
         GameObject soul = GameObject.FindWithTag("Soul");
-        SkillManager.instance.SetUpCharacters(player.GetComponent<PlayerInput>(), soul.GetComponent<SoulController>());
+        playerInput = player.GetComponent<PlayerInput>();
+        soulController = soul.GetComponent<SoulController>();
+        SkillManager.instance.SetUpCharacters(playerInput, soulController);
         DontDestroyOnLoad(player);
         DontDestroyOnLoad(soul);
         playerTransf = player.GetComponent<Transform>();
@@ -59,16 +64,19 @@ public class GameManager : MonoBehaviour
         changeCharacter += SwitchCamera;
         MenuManager.gameOver += DestroyAllBeforLoadMainScene;
         CustomizeInput.ChangeInput += ChangeCustomizeInput;
+        LoadCanvas.instance.Close();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (gameOver)
+            return;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             InGameMenu.instance.TogglePause();
         }
-        if (gameOver || InGameMenu.instance.isPaused)
+        if (InGameMenu.instance.isPaused)
             return;
         if (Input.GetKeyDown(switchCharacterInput))
         {
@@ -98,6 +106,8 @@ public class GameManager : MonoBehaviour
     {
         playerTransf.position = newPos;
         soulTransf.position = newPos;
+        playerInput.InteractObj = null;
+        soulController.InteractObj = null;
     }
 
     private void DestroyAllBeforLoadMainScene()
@@ -125,19 +135,31 @@ public class GameManager : MonoBehaviour
     public void SomeoneDie()
     {
         playerTransf.gameObject.GetComponent<PlayerVelocity>().enabled = false;
-        playerTransf.gameObject.GetComponent<PlayerInput>().GameOver = true;
-        soulTransf.gameObject.GetComponent<SoulController>().GameOver = true;
+        playerInput.GameOver = true;
+        soulController.GameOver = true;
         gameOver = true;
+        ScoreManager.instance.StopScore();
+        ScoreManager.instance.DiePenality();
         GameOverMenu.instance.LevelFailed();
         MenuManager.instance.GameOver();
     }
 
     public void TryAgainSetup()
     {
-        playerTransf.gameObject.GetComponent<PlayerInput>().ResetPlayer();
-        soulTransf.gameObject.GetComponent<SoulController>().ResetSoul();
+        LoadCanvas.instance.Open();
+        playerInput.ResetPlayer();
+        soulController.ResetSoul();
         gameOver = false;
         _vc.Follow = playerTransf;
+        print("prima couroutine");
+        StartCoroutine(CloseLoadCanvas());//c'e' un problema e non funziona
+    }
+
+    private IEnumerator CloseLoadCanvas()
+    {
+        yield return new WaitForSeconds(0.5f);
+        print("courotine finita");
+        LoadCanvas.instance.Close();
     }
 
     private void ChangeCustomizeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar, KeyCode upS, KeyCode downS, KeyCode rightS, KeyCode leftS)

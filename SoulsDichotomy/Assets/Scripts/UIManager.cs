@@ -22,6 +22,10 @@ public class UIManager : MonoBehaviour
     [Header("Level")]
     [SerializeField] private TextMeshProUGUI level;
 
+    [Header("Score")]
+    [SerializeField] private TextMeshProUGUI scoreText;
+
+
     void Start()
     {
         GameManager.changeCharacter += SwitchIcon;
@@ -82,6 +86,11 @@ public class UIManager : MonoBehaviour
     internal void SetLevelText(int levelValue)
     {
         level.text = "Level " + ++levelValue;
+    }
+
+    internal void SetScoreText(int score)
+    {
+        scoreText.text = score.ToString();
     }
 
     private void OnDestroy()
