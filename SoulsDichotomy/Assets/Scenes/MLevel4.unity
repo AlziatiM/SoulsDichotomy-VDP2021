@@ -1908,7 +1908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5289233776792260625, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
       propertyPath: timeBetweenBullets
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6334706796024078506, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
       propertyPath: m_Name
@@ -2779,7 +2779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4578528421012071826, guid: ec2720c547e64444680c36501014e8bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.5
+      value: 42.5
       objectReference: {fileID: 0}
     - target: {fileID: 4578528421012071826, guid: ec2720c547e64444680c36501014e8bb, type: 3}
       propertyPath: m_LocalPosition.y
