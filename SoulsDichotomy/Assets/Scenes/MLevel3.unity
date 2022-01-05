@@ -667,7 +667,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2869483461619148733, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
       propertyPath: timeBetweenBullets
-      value: 1
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4133231735357642502, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
       propertyPath: m_Name
@@ -1190,7 +1190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5289233776792260625, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
       propertyPath: timeBetweenBullets
-      value: 1
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6334706796024078506, guid: 9b2d5b749ab8799478cbbca210532508, type: 3}
       propertyPath: m_Name
@@ -1514,7 +1514,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2869483461619148733, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
       propertyPath: timeBetweenBullets
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4133231735357642502, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
       propertyPath: m_Name
