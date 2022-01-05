@@ -30,6 +30,7 @@ public class LoadCanvas : MonoBehaviour
 
     internal void Open()
     {
+        /*
         ++amoutOpen;
         if (!amIOpen)
         {
@@ -37,10 +38,12 @@ public class LoadCanvas : MonoBehaviour
             amIOpen = true;
             panel.SetActive(true);
         }
+        */
     }
 
     internal void Close()
     {
+        /*
         --amoutOpen;
         if (amoutOpen == 0)
         {
@@ -49,7 +52,7 @@ public class LoadCanvas : MonoBehaviour
             Time.timeScale = 1;
             panel.SetActive(false);
         }
-        
+        */
     }
 
 }
