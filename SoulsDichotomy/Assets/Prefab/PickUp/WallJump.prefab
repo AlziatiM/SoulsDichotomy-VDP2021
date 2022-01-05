@@ -171,7 +171,7 @@ MonoBehaviour:
   canRespawn: 0
   wallJump: {x: 15, y: 15}
   wallJumpClimb: {x: 5, y: 15}
-  wallLeapOff: {x: 15, y: 5}
+  wallLeapOff: {x: 15, y: 15}
 --- !u!1 &7608770204123948555
 GameObject:
   m_ObjectHideFlags: 0
