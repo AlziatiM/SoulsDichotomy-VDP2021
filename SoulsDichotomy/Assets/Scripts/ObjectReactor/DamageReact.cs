@@ -87,6 +87,7 @@ public class DamageReact : MonoBehaviour, IReact
             spriteRenderer.sprite = closeSprites[i];
             yield return new WaitForSeconds(timeAnimation);
         }
+        spriteRenderer.sprite = openSprites[0];
     }
 
 }
