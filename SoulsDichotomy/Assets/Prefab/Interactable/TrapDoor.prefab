@@ -151,6 +151,7 @@ MonoBehaviour:
   canPlayerInteract: 1
   canSoulInteract: 0
   activateOnTriggerEnter: 1
+  sfxEffect: TrapDoor
   objHasToReac:
   - {fileID: 7102885508662253014}
   amIActive: 1

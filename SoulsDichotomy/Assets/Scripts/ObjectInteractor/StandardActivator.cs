@@ -15,7 +15,7 @@ public class StandardActivator : MonoBehaviour, IInteract
     [SerializeField] protected bool canPlayerInteract;
     [SerializeField] protected bool canSoulInteract;
     [SerializeField] protected bool activateOnTriggerEnter;
-
+    [SerializeField] protected string sfxEffect;
 
     [Header("ActionToDo")]
     [SerializeField]

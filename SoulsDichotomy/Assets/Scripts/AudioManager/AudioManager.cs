@@ -202,7 +202,7 @@ public class AudioManager : MonoBehaviour
 	}
 
 	// A single sound effect
-	public void PlaySound(string clip)
+	public void PlaySound(string clip, float percentage = 1.0f)
 	{
 		Sound sound = GetSoundByName(clip);
 
@@ -211,9 +211,10 @@ public class AudioManager : MonoBehaviour
 			if (sound.clips.Count == 0)
 				return;
 			mixBuffer.Add(clip);
-			sfx.PlayOneShot(sound.clips[0]); // Randomly Play Sound Each Time Through The Array Of clip, modificato mettendo 0 prima c'era un random che non andava
+			sfx.PlayOneShot(sound.clips[0], percentage); // Randomly Play Sound Each Time Through The Array Of clip, modificato mettendo 0 prima c'era un random che non andava
 		}
 	}
+
 
 	// Changing Sfx Vol Using Slider
 	public void SfxSlider()
@@ -248,4 +249,6 @@ public class AudioManager : MonoBehaviour
 		public string name;
 		public List<AudioClip> clips = new List<AudioClip>();
 	}
+
+
 }

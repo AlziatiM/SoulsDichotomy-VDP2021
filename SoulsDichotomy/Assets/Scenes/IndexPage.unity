@@ -680,6 +680,12 @@ MonoBehaviour:
   - name: EndLevel
     clips:
     - {fileID: 8300000, guid: 74e9f1bf355498b4a8bbe0ad91c55a04, type: 3}
+  - name: Pickup
+    clips:
+    - {fileID: 8300000, guid: 715307fe4b9522447a71ba3127064663, type: 3}
+  - name: SoulDamage
+    clips:
+    - {fileID: 8300000, guid: 4890e3cd9e6145844bfb1e7c5cf88d78, type: 3}
 --- !u!4 &670198905
 Transform:
   m_ObjectHideFlags: 0

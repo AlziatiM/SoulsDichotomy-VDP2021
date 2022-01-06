@@ -10,6 +10,7 @@ public class ButtonActivator : StandardActivator
     [SerializeField] private GameObject timerObj;
     private SpriteRenderer timerSpriteRender;
     private float time;
+    
     public void Awake()
     {
         base.SetUpActivator();
@@ -27,15 +28,16 @@ public class ButtonActivator : StandardActivator
     }
     public override void Switch()
     {
+        
         if(amIActive)
         {
-
+            
             spriteRenderer.sprite = nonActiveSprite;
             BoxCollider2DEnable = true;
         }
         else
         {
-
+            AudioManager.instance.PlaySound(sfxEffect);
             spriteRenderer.sprite = activeSprite;
             if (time != 0)
             {

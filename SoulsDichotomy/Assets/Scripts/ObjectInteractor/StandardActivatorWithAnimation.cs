@@ -7,8 +7,12 @@ public class StandardActivatorWithAnimation : StandardActivator
     [Header("From open to close")]
     [SerializeField] private Sprite[] animationFrame;
     [SerializeField] private float timeFrame;
+
+    
     public override void Switch()
     {
+        AudioManager.instance.PlaySound(sfxEffect);
+
         if (amIActive)
         {
             StartCoroutine("OpenAnim");
