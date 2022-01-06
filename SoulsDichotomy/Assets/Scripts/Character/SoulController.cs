@@ -282,6 +282,8 @@ public class SoulController : MonoBehaviour, IHittable
 
     public void DeathExtra()
     {
+        AudioManager.instance.PlaySound("Death");
+
         Character.AnimationManager.Die();
         GameManager.instance.SomeoneDie();
 
