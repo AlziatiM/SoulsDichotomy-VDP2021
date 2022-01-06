@@ -17,7 +17,7 @@ MonoBehaviour:
   imageActive: {fileID: 21300000, guid: 664f2ce76def45c4088893068bef99a2, type: 3}
   imageNotActive: {fileID: -2852731145210388948, guid: 3cf94fb7a3d60f34eac3b7edc9c709f9, type: 3}
   isUnlock: 0
-  levelUnlock: 13
+  levelUnlock: 14
   affectPlayer: 0
   affectSoul: 1
-  newMoveSpeed: 9
+  newMoveSpeed: 7

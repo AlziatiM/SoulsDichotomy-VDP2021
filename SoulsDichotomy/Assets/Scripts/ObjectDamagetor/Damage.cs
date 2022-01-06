@@ -29,10 +29,12 @@ public class Damage : MonoBehaviour
         IHittable hit = collision.GetComponent<IHittable>();
         if (hit != null)
         {
-            AudioManager.instance.PlaySound("PlayerDamage");
 
             if (CanDamagePlayer == true && collision.CompareTag("Player"))
+                
             {
+                AudioManager.instance.PlaySound("PlayerDamage");
+
                 ApplyDamage(hit);
             }
 

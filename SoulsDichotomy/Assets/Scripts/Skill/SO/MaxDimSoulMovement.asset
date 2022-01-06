@@ -11,13 +11,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa24197afa347b444b8cae9bec30aa62, type: 3}
   m_Name: MaxDimSoulMovement
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   nameS: AreaMovement
   description: The soul gain more area to move in
   imageActive: {fileID: 21300000, guid: 393915fc2e52e7545847c289af4f5fe0, type: 3}
   imageNotActive: {fileID: -2852731145210388948, guid: 3cf94fb7a3d60f34eac3b7edc9c709f9, type: 3}
   isUnlock: 0
-  levelUnlock: 21
+  levelUnlock: 22
   affectPlayer: 1
   affectSoul: 0
-  newScale: {x: 10, y: 8, z: 1}
+  newScale: {x: 12, y: 9, z: 1}
