@@ -157,6 +157,7 @@ public abstract class PickUp : MonoBehaviour
     {
         spriteRenderer.enabled = false;
         boxCollider.enabled = false;
+        ps.gameObject.SetActive(false);
     }
 
     public abstract void ApplyPlayer();
@@ -170,6 +171,7 @@ public abstract class PickUp : MonoBehaviour
         {
             spriteRenderer.enabled = true;
             boxCollider.enabled = true;
+            ps.gameObject.SetActive(true);
         }
     }
 

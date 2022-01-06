@@ -155,7 +155,7 @@ public class GameManager : MonoBehaviour
         LoadCanvas.instance.Close();
     }
 
-    private void ChangeCustomizeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar, KeyCode upS, KeyCode downS, KeyCode rightS, KeyCode leftS)
+    private void ChangeCustomizeInput(KeyCode up, /*KeyCode down,*/ KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar, KeyCode upS, KeyCode downS, KeyCode rightS, KeyCode leftS)
     {
         switchCharacterInput = switchChar;
     }

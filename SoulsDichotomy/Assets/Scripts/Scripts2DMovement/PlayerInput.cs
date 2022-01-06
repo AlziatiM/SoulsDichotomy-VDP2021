@@ -304,10 +304,10 @@ public class PlayerInput : MonoBehaviour, IHittable
 	    //todo remove active pickup
     }
 
-	private void ChangeCustomizeInput(KeyCode up, KeyCode down, KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar, KeyCode upS, KeyCode downS, KeyCode leftS, KeyCode rightS)
+	private void ChangeCustomizeInput(KeyCode up, /*KeyCode down,*/ KeyCode right, KeyCode left, KeyCode interact, KeyCode switchChar, KeyCode upS, KeyCode downS, KeyCode leftS, KeyCode rightS)
 	{
 		this.up = up;
-		this.down = down;
+		//this.down = down;
 		this.right = right;
 		this.left = left;
 		this.interact = interact;
