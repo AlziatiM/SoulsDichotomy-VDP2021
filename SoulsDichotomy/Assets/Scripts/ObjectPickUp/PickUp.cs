@@ -104,7 +104,7 @@ public abstract class PickUp : MonoBehaviour
 
     private void DispatchAffect()
     {
-        AudioManager.instance.PlaySound("PickUp");
+        AudioManager.instance.PlaySound("Pickup");
 
         if (affectPlayer)
         {
