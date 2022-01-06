@@ -33,6 +33,14 @@ public class LevelButtonSelector : MonoBehaviour
 
     private void SetUp()
     {
+        //TODO: remove
+        imageUI.sprite = unlocked;
+        button.interactable = true;
+        textMeshPro.text = level.ToString();
+        textScore.text = "-99999";
+        return;
+        //end todo remove
+
         //Levelx has 1 if is already be completed 0 otherwise, so you can re-choose it
         //Level1 must have 1 from the beginning
         if (PlayerPrefs.HasKey("Level" + level))

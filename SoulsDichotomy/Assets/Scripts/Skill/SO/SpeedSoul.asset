@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd3f6875cf4827d41beb59886966c061, type: 3}
   m_Name: SpeedSoul
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   nameS: SpeedUpSoul
   description: The soul can finally go faster!
   imageActive: {fileID: 21300000, guid: 664f2ce76def45c4088893068bef99a2, type: 3}

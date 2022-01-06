@@ -6802,7 +6802,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5287767188761524199, guid: d2d71fe02848a10458dbf12a67e39c70, type: 3}
       propertyPath: time
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5287767188761524218, guid: d2d71fe02848a10458dbf12a67e39c70, type: 3}
       propertyPath: objHasToReac.Array.size
