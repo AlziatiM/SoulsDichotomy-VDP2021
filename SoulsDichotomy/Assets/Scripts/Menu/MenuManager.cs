@@ -47,6 +47,7 @@ public class MenuManager : MonoBehaviour
 
     public void Open(Menu menu)
     {
+        AudioManager.instance.PlayMusic("Menu");
         if (stackMenus.Count != 0) 
         {
             stackMenus.Peek().Close();

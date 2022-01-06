@@ -163,7 +163,7 @@ public class AudioManager : MonoBehaviour
 		if (!music.isPlaying)
 			music.Play();
 
-		while (delayInCrossfading < 1f)
+		while (delayInCrossfading < 0.3f)
 		{
 			music.volume = delayInCrossfading * MusicVolume;
 			delayInCrossfading += Time.unscaledDeltaTime;
@@ -172,7 +172,7 @@ public class AudioManager : MonoBehaviour
 		music.volume = MusicVolume;
 	}
 
-	public void StopSound()
+    public void StopSound()
 	{
 		sfx.Stop();
 	}
@@ -221,6 +221,7 @@ public class AudioManager : MonoBehaviour
 	{
 		float vol = sfxVolSlider.value;
 		sfx.volume = vol;
+
 		// Sets And Save The Value When User Use Slider
 		PlayerPrefs.SetFloat("SFX Volume", vol);
 		PlayerPrefs.Save();

@@ -277,7 +277,6 @@ public class SoulController : MonoBehaviour, IHittable
         particles.DamageEffect(_transform);
         Character.AnimationManager.Hit();
         UIManager.instance.SliderSoul(soulHealth.Percentage());
-
     }
 
     public void DeathExtra()
@@ -302,8 +301,6 @@ public class SoulController : MonoBehaviour, IHittable
     {
         if (interactObj!=null && Input.GetKeyDown(interact))
         {
-            AudioManager.instance.PlaySound("Lever");
-
             interactObj.Interact();
         }
     }

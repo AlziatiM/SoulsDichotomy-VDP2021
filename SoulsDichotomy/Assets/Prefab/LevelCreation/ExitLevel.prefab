@@ -162,7 +162,7 @@ MonoBehaviour:
   canPlayerInteract: 1
   canSoulInteract: 0
   activateOnTriggerEnter: 0
-  sfxEffect: 
+  sfxEffect: EndLevel
   objHasToReac:
   - {fileID: 790277277670029084}
   amIActive: 0

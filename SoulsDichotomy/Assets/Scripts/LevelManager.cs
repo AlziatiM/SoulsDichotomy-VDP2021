@@ -81,6 +81,7 @@ public class LevelManager : MonoBehaviour
     /// <param name="index">index of level to load</param>
     private void LoadNewLevel(int index)
     {
+        AudioManager.instance.PlayMusic("Main");
         if (changeScene != null) 
         {
             changeScene();

@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
     {
         gameOver = false;
         StartCoroutine("StartWithDelay");
-        AudioManager.instance.PlayMusic("Main");
     }
 
     private IEnumerator StartWithDelay()
