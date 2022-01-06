@@ -682,10 +682,13 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 653e801b03b41d64c9f0747792517826, type: 3}
   - name: Pickup
     clips:
-    - {fileID: 8300000, guid: 715307fe4b9522447a71ba3127064663, type: 3}
+    - {fileID: 8300000, guid: f9fb4cb0a7839c74caf5ba76f8a7fe97, type: 3}
   - name: SoulDamage
     clips:
     - {fileID: 8300000, guid: 4890e3cd9e6145844bfb1e7c5cf88d78, type: 3}
+  - name: PlayerDamage
+    clips:
+    - {fileID: 8300000, guid: 0b37ec7b0459f0e42abb2bf980aa5aeb, type: 3}
 --- !u!4 &670198905
 Transform:
   m_ObjectHideFlags: 0
