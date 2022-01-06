@@ -272,6 +272,8 @@ public class SoulController : MonoBehaviour, IHittable
 
     public void DamageExtras()
     {
+        AudioManager.instance.PlaySound("SoulDamage", 1.0f - soulHealth.Percentage());
+
         particles.DamageEffect(_transform);
         Character.AnimationManager.Hit();
         UIManager.instance.SliderSoul(soulHealth.Percentage());

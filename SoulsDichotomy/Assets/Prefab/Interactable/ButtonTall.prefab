@@ -246,6 +246,7 @@ MonoBehaviour:
   canPlayerInteract: 1
   canSoulInteract: 1
   activateOnTriggerEnter: 0
+  sfxEffect: Button
   objHasToReac: []
   amIActive: 0
   imagesTimer:
