@@ -229,7 +229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 10
+      value: 7.9925
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_SizeDelta.y
@@ -265,7 +265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -6.1
+      value: -7.1037
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -285,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515566797310, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_text
-      value: "Left and right \narrow key to move"
+      value: use leftKey and rightKey  to move left and right
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515566797310, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_fontSize
@@ -363,7 +363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 3
+      value: 2.9752
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -395,11 +395,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 14.13
+      value: 11.9
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.06
+      value: 2.22
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -419,7 +419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515566797310, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_text
-      value: E to Open
+      value: interactKey to Open
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515566797310, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_fontSize
@@ -24487,7 +24487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515566797310, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_text
-      value: Up arrow key to jump
+      value: upKey to jump
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515566797310, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_fontSize

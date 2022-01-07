@@ -1142,8 +1142,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515566797310, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_text
-      value: PRESS SPACE TO  MAKE THE SOUL  GET BACK TO HIS BROTHER. IT WILL NOT
-        BE DAMAGED IF IT ISN'T CONTROLLED
+      value: PRESS switchKey TO  MAKE THE SOUL  GET BACK TO HIS BROTHER. IT WILL
+        NOT BE DAMAGED IF IT ISN'T CONTROLLED
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515566797310, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_HorizontalAlignment
