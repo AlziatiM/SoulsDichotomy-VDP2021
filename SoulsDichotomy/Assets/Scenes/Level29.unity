@@ -2283,6 +2283,10 @@ PrefabInstance:
       value: MovingPlatform3
       objectReference: {fileID: 0}
     - target: {fileID: 7782738063977236832, guid: 86497e2b068330640badabe1a5e124b7, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782738063977236832, guid: 86497e2b068330640badabe1a5e124b7, type: 3}
       propertyPath: cyclic
       value: 1
       objectReference: {fileID: 0}
