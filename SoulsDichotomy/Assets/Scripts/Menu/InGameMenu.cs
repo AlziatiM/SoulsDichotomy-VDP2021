@@ -30,6 +30,7 @@ public class InGameMenu : Menu
                 pause = false;
                 Time.timeScale = 1;
                 Exit();
+                AudioManager.instance.PlayMusic("Main");
             }
             else
             {

@@ -19,6 +19,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Transform panelPickUp;
     // Start is called before the first frame update
 
+    [Header("SkillUnlock")]
+    [SerializeField] private GameObject textSkillUnlock;
+
     [Header("Level")]
     [SerializeField] private TextMeshProUGUI level;
 
@@ -97,4 +100,20 @@ public class UIManager : MonoBehaviour
     {
         GameManager.changeCharacter -= SwitchIcon;
     }
+
+    public void UnlockSkill()
+    {
+        if (!textSkillUnlock.activeSelf)
+        {
+            textSkillUnlock.SetActive(true);
+            StartCoroutine("DisableTextSkillUnlock");
+        }
+    }
+
+    private IEnumerator DisableTextSkillUnlock()
+    {
+        yield return new WaitForSeconds(4f);
+        textSkillUnlock.SetActive(false);
+    }
+
 }

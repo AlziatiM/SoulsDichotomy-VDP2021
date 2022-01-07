@@ -5960,6 +5960,9 @@ MonoBehaviour:
   panels:
   - {fileID: 8426561897016024812}
   - {fileID: 8426561895956123217}
+  higlitedTopPart:
+  - {fileID: 269978905374893879}
+  - {fileID: 9188566869030321569}
 --- !u!114 &8426561897251919579
 MonoBehaviour:
   m_ObjectHideFlags: 0
