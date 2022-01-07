@@ -2734,7 +2734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 11.3445
+      value: 13.9138
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2770,11 +2770,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.07
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.03
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2790,8 +2790,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515566797310, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_text
-      value: "a new skill for the soul  was  just unlocked! \nChek the power up section
-        in the pause menu for more details"
+      value: 'you''ve unlocked a new skill for the soul!
+
+        check on the pause
+        menu in the power ups section for more details.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004623515566797310, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
