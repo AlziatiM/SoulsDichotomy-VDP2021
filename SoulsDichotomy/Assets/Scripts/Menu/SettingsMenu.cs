@@ -8,6 +8,8 @@ public class SettingsMenu : Menu
     CustomizeInput customizeinput;
 
     [SerializeField] private GameObject[] panels;
+    [SerializeField] private GameObject[] higlitedTopPart;
+
 
     public void Awake()
     {
@@ -27,6 +29,8 @@ public class SettingsMenu : Menu
     {
         base.Open();
         ActivePanleIndex(0);
+        higlitedTopPart[0].SetActive(true);
+        higlitedTopPart[1].SetActive(false);
     }
 
     public void ActivePanleIndex(int index)

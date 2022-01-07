@@ -81,6 +81,7 @@ public class SkillManager : MonoBehaviour
 
     private void UnlockSkill(Skill s)
     {
+        UIManager.instance.UnlockSkill();
         s.SetIsUnlock(true);
         s.AttachSkill(player, soul);
         SkillMenu.instance.UnlockSkill(s.nameS);

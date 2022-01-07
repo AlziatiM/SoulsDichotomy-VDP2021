@@ -121,6 +121,14 @@ public class CustomizeInput : MonoBehaviour
         leftTextSoul.text = map["leftSoul"].ToString();
     }
 
+    public string GetNameOf(string s)
+    {
+        if (map.ContainsKey(s))
+            return map[s].ToString();
+        else
+            return null;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -265,6 +273,15 @@ public class CustomizeInput : MonoBehaviour
             {
                 changeInput(map["upKey"],/* map["downKey"],*/ map["rightKey"], map["leftKey"], map["interactKey"], map["switchKey"], map["upSoul"], map["downSoul"], map["rightSoul"], map["leftSoul"]);
             }
+
+            //questo non va, da capire perche
+            InstructionsCanvas[] myinstructions = FindObjectsOfType<InstructionsCanvas>();
+            print(myinstructions.Length + "new key: " + map[name].ToString());
+            foreach(InstructionsCanvas ic in myinstructions)
+            {
+                ic.SetUp();
+            }
+                
             return true;
         }
         return false;
