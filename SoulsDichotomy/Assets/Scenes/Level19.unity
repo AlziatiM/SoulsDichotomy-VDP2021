@@ -513,6 +513,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 6052306405628811529}
     m_Modifications:
     - target: {fileID: 2869483461619148733, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
+      propertyPath: amIActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2869483461619148733, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
       propertyPath: timeBeforReact
       value: 1
       objectReference: {fileID: 0}
@@ -1124,6 +1128,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6052306405628811529}
     m_Modifications:
+    - target: {fileID: 2869483461619148733, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
+      propertyPath: amIActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2869483461619148733, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
       propertyPath: timeBeforReact
       value: 1
@@ -6802,7 +6810,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5287767188761524199, guid: d2d71fe02848a10458dbf12a67e39c70, type: 3}
       propertyPath: time
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5287767188761524218, guid: d2d71fe02848a10458dbf12a67e39c70, type: 3}
       propertyPath: objHasToReac.Array.size
@@ -8942,6 +8950,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6052306405628811529}
     m_Modifications:
+    - target: {fileID: 2869483461619148733, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
+      propertyPath: amIActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2869483461619148733, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
       propertyPath: timeBeforReact
       value: 2
