@@ -513,6 +513,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 6052306405628811529}
     m_Modifications:
     - target: {fileID: 2869483461619148733, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
+      propertyPath: amIActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2869483461619148733, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
       propertyPath: timeBeforReact
       value: 1
       objectReference: {fileID: 0}
@@ -1125,6 +1129,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 6052306405628811529}
     m_Modifications:
     - target: {fileID: 2869483461619148733, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
+      propertyPath: amIActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2869483461619148733, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
       propertyPath: timeBeforReact
       value: 1
       objectReference: {fileID: 0}
@@ -1185,11 +1193,6 @@ PrefabInstance:
 --- !u!4 &516762176 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7603205824959179340, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
-  m_PrefabInstance: {fileID: 516762175}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &516762177 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4133231735357642502, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
   m_PrefabInstance: {fileID: 516762175}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &520707541
@@ -6707,7 +6710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5369961559766158189, guid: ff96c6d98a16958498e5ce79d8ed3cd7, type: 3}
       propertyPath: objHasToReac.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5369961559766158189, guid: ff96c6d98a16958498e5ce79d8ed3cd7, type: 3}
       propertyPath: objHasToReac.Array.data[0]
@@ -6716,11 +6719,11 @@ PrefabInstance:
     - target: {fileID: 5369961559766158189, guid: ff96c6d98a16958498e5ce79d8ed3cd7, type: 3}
       propertyPath: objHasToReac.Array.data[1]
       value: 
-      objectReference: {fileID: 2097796571}
+      objectReference: {fileID: 200066471}
     - target: {fileID: 5369961559766158189, guid: ff96c6d98a16958498e5ce79d8ed3cd7, type: 3}
       propertyPath: objHasToReac.Array.data[2]
       value: 
-      objectReference: {fileID: 516762177}
+      objectReference: {fileID: 200066471}
     - target: {fileID: 5369961559766158189, guid: ff96c6d98a16958498e5ce79d8ed3cd7, type: 3}
       propertyPath: objHasToReac.Array.data[3]
       value: 
@@ -6802,7 +6805,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5287767188761524199, guid: d2d71fe02848a10458dbf12a67e39c70, type: 3}
       propertyPath: time
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5287767188761524218, guid: d2d71fe02848a10458dbf12a67e39c70, type: 3}
       propertyPath: objHasToReac.Array.size
@@ -8943,6 +8946,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 6052306405628811529}
     m_Modifications:
     - target: {fileID: 2869483461619148733, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
+      propertyPath: amIActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2869483461619148733, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
       propertyPath: timeBeforReact
       value: 2
       objectReference: {fileID: 0}
@@ -9003,11 +9010,6 @@ PrefabInstance:
 --- !u!4 &2097796570 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7603205824959179340, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
-  m_PrefabInstance: {fileID: 2097796569}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2097796571 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4133231735357642502, guid: 27636a2574eca9d498d7e1cb31909dff, type: 3}
   m_PrefabInstance: {fileID: 2097796569}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2116783608 stripped
