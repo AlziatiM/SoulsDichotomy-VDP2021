@@ -1426,6 +1426,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InstructionsCanvas (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4004623515518258498, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2771,6 +2775,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 957522548825230351}
     m_Modifications:
+    - target: {fileID: 608915508887489776, guid: d4898c9d388fd8f46ae0397f66bac329, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.94509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 608915508887489776, guid: d4898c9d388fd8f46ae0397f66bac329, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 608915508887489776, guid: d4898c9d388fd8f46ae0397f66bac329, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2087276649614583997, guid: d4898c9d388fd8f46ae0397f66bac329, type: 3}
       propertyPath: m_RootOrder
       value: 1
