@@ -276,7 +276,6 @@ public class CustomizeInput : MonoBehaviour
 
             //questo non va, da capire perche
             InstructionsCanvas[] myinstructions = FindObjectsOfType<InstructionsCanvas>();
-            print(myinstructions.Length + "new key: " + map[name].ToString());
             foreach(InstructionsCanvas ic in myinstructions)
             {
                 ic.SetUp();
