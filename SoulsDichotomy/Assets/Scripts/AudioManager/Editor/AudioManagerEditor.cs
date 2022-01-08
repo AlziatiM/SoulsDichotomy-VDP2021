@@ -8,7 +8,7 @@ public class AudioManagerEditor : Editor
 {
     private AudioManager instance;
     private AudioManager.Sound soundInstance;
-
+#if UNITY_EDITOR
     public override void OnInspectorGUI()
     {
         instance = (AudioManager)target;
@@ -165,4 +165,5 @@ public class AudioManagerEditor : Editor
         EditorGUILayout.EndHorizontal();
         EditorGUILayout.EndVertical();
     }
+#endif
 }
