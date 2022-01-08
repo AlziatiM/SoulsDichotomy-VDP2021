@@ -22,7 +22,6 @@ public class SkillManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
     }
 
 
@@ -47,10 +46,9 @@ public class SkillManager : MonoBehaviour
         {
             if (s.GetLeveUnlock() <= levelToLoad)
             {
-                if (!s.IsUnlock())
-                {
-                    UnlockSkill(s);
-                }   
+                
+                UnlockSkill(s);
+                   
             }
             else
             {

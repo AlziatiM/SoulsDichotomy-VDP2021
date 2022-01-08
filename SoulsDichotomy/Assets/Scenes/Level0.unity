@@ -285,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515566797310, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_text
-      value: use leftKey and rightKey  to move left and right
+      value: use leftKey and rightKey to move left and right
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515566797310, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_fontSize
@@ -395,11 +395,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 11.9
+      value: 12.33
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.22
+      value: 2.13
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515518258524, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -24487,7 +24487,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515566797310, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_text
-      value: upKey to jump
+      value: 'upKey to jump
+
+        more you keep it pressed more you jump higher '
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515566797310, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_fontSize
