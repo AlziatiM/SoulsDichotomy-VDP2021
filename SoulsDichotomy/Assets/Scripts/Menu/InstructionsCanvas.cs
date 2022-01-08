@@ -7,10 +7,11 @@ public class InstructionsCanvas : MonoBehaviour
 {
 
     [SerializeField] private TextMeshProUGUI textInstruction;
-
+    private string originalText;
     // Start is called before the first frame update
     void Start()
     {
+        originalText = textInstruction.text;
         SetUp();   
     }
 
@@ -26,7 +27,7 @@ public class InstructionsCanvas : MonoBehaviour
 
     public void SetUp()
     {
-        string str = textInstruction.text;
+        string str = originalText;
         str = ReplaceIn(str, "upKey");
         str = ReplaceIn(str, "rightKey");
         str = ReplaceIn(str, "leftKey");

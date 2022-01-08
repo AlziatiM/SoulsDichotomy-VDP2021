@@ -410,7 +410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515566797310, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_text
-      value: ' both can  pick up'
+      value: ' both can pick up'
       objectReference: {fileID: 0}
     - target: {fileID: 4004623515566797310, guid: 5cf15e5b647ec57409c1c37633fb8ff3, type: 3}
       propertyPath: m_fontColor.b
