@@ -25,7 +25,7 @@ public class GameOverMenu : Menu
     internal void EndGame()
     {
         titleMenu.text = "GAME OVER!";
-        description.text = "You reach the end of the dungeon, only few did it befor you! Feel pround of what you just did.";
+        description.text = "You reached the end of the dungeon, only few did it before you! Feel proud of what you just did.";
     }
 
     internal void LevelFailed()

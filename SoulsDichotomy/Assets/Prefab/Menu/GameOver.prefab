@@ -558,7 +558,15 @@ MonoBehaviour:
   - Oh nooo. You have lost. Wanna try again??
   - Don't you wanna save your brother?
   - Looks like you hate yourself!
-  - Ehm, your aim is to reach the door at the ed of the level, did you know it?
+  - Ehm, your aim is to reach the door at the end of the level, did you know it?
+  - I know it's hard, but you need to try harder!
+  - Try again,you can't leave your brother alone!
+  - You wanna reach the end? Try harder!!
+  - 'Why are you doing this? '
+  - You are better than this!!
+  - You can't surrender, your brother need you!!
+  - ...how that was possible?
+  - You really want to reach the end? It doesn't seem so...
 --- !u!1001 &8101553101191780014
 PrefabInstance:
   m_ObjectHideFlags: 0
