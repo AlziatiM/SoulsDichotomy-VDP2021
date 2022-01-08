@@ -32,7 +32,7 @@ public class GameOverMenu : Menu
     {
         titleMenu.text = "You failed the level!";
         description.text = sentenceLost[Random.Range(0, sentenceLost.Length)];
-        description.text += "\n\n+" + ScoreManager.instance.GetDieValue() + " s";
+        description.text += "\n\nMalus applied: +" + ScoreManager.instance.GetDieValue() + " s";
     }
 
     public void TryAgain()
