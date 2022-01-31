@@ -63,8 +63,10 @@ public class InGameMenu : Menu
     }
 
     public void BackToMainMenu()
-    {   
-        TogglePause();
+    {
+        pause = false;
+        Time.timeScale = 1;
+        Exit();
         LevelManager.instance.BackToMainMenu();
     }
 
