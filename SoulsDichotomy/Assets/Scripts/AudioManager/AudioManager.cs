@@ -140,6 +140,11 @@ public class AudioManager : MonoBehaviour
 		StartCoroutine(CrossFade(to));
 	}
 
+	public void StopMusic()
+    {
+		music.Stop();
+    }
+
 	// Cross fading - Smooth Transition When Track Is Switched
 	private IEnumerator CrossFade(AudioClip to)
 	{

@@ -10,6 +10,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField]private string[] levels;
 
     [SerializeField]private string mainMenu;
+
+    [SerializeField] private string introVideoScene;
+
     private int currLevel;
     public int CurrentLevel { get { return currLevel; } }
     public static LevelManager instance;
@@ -73,6 +76,11 @@ public class LevelManager : MonoBehaviour
         SkillManager.instance.LoadLevelFromScratch(currLevel + 1);
         ScoreManager.instance.LoadScoreForLevel(currLevel + 1);
         LoadCanvas.instance.Close();
+    }
+
+    public void LoadIntroVideo()
+    {
+        SceneManager.LoadScene(introVideoScene);
     }
 
     /// <summary>

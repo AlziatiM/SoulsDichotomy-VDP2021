@@ -22,7 +22,7 @@ public class MainMenu : Menu
     public void Play()
     {
         MenuManager.instance.Back();
-        LevelManager.instance.LoadLevel(0);
+        LevelManager.instance.LoadIntroVideo();
         //Instantiate(levelManager, Vector3.zero, Quaternion.identity);
     }
 

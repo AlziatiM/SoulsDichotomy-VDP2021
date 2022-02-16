@@ -75,3 +75,4 @@ MonoBehaviour:
   - Level28
   - Level29
   mainMenu: IndexPage
+  introVideoScene: VideoIntro

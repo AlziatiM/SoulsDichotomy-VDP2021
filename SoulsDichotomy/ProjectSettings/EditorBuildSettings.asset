@@ -98,4 +98,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level29.unity
     guid: 73fda419257850f4e979ea5efbc083dd
+  - enabled: 1
+    path: Assets/Scenes/VideoIntro.unity
+    guid: 4e3c9c54d12adb44d887ba22bc2214a5
   m_configObjects: {}
