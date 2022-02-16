@@ -11,5 +11,5 @@
 
 - ###  Cordioli Matteo ([@MatteoCordioli](https://github.com/MatteoCordioli))<br>matteo.cordioli@mail.polimi.it
 - ###  Alziati Michele ([@AlziatiM](https://github.com/AlziatiM))<br>michele.alziati@mail.polimi.it
-- ###  Faouzi Douni ([@Dounia00](https://github.com/Dounia00))<br>dounia.faouzi@mail.polimi.it
+- ###  Faouzi Dounia ([@Dounia00](https://github.com/Dounia00))<br>dounia.faouzi@mail.polimi.it
 - ###  Ava Aghaali Tari ([@Avatari96](https://github.com/avatari96))<br>ava.aghaali@mail.polimi.it
