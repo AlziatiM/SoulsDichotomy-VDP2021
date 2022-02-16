@@ -1,4 +1,4 @@
-# SoulsDichotomy-VDP2021
+# Soul's Dichotomy - VideogameDesign&Programming2021
  Official repository for the game "Soul's Dichotomy", created for the Videogame design and Programming  course at Politecnico di Milano accademic year 2021/2022.
  
  Soul's Dichotomy is available online hosted by [itch.io](https://polimi-game-collective.itch.io/souls-dichotomy)
