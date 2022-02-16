@@ -1094,6 +1094,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 480662307032304654}
     m_Modifications:
+    - target: {fileID: -5413280548261482060, guid: 65cbc5a48ecbf8144b3f7bb36c5398b8, type: 3}
+      propertyPath: canSoulPick
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5413280548261482060, guid: 65cbc5a48ecbf8144b3f7bb36c5398b8, type: 3}
+      propertyPath: canPlayerPick
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5413280548261482060, guid: 65cbc5a48ecbf8144b3f7bb36c5398b8, type: 3}
+      propertyPath: maxJumpHeight
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2378552074816045548, guid: 65cbc5a48ecbf8144b3f7bb36c5398b8, type: 3}
       propertyPath: hasTimer
       value: 1

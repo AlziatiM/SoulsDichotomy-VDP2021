@@ -4817,7 +4817,7 @@ GameObject:
   - component: {fileID: 698936553727111450}
   - component: {fileID: 3491317952911334001}
   - component: {fileID: 4655507953304485939}
-  - component: {fileID: 2378552074816045548}
+  - component: {fileID: -5413280548261482060}
   m_Layer: 0
   m_Name: JumpHigh
   m_TagString: Untagged
@@ -4951,7 +4951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 5
---- !u!114 &2378552074816045548
+--- !u!114 &-5413280548261482060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4972,6 +4972,6 @@ MonoBehaviour:
   affectSoul: 0
   hasTimer: 1
   timer: {fileID: 4655507953304485939}
-  canRespawn: 0
-  maxJumpHeight: 6
+  canRespawn: 1
+  maxJumpHeight: 8
   minJumpHeight: 4
