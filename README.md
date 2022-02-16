@@ -4,4 +4,4 @@
  Soul's Dichotomy is available online hosted by [itch.io](https://polimi-game-collective.itch.io/souls-dichotomy)
  You can play it from browser or you can dowload and play on your personal pc! We higly suggest to **download it**, so you can keep track of your achievements! Enjoy and feel free to contact us for feedback!
  
- ![Cover](/Art/FromOldProject/header & banner/Header.jpg)
+ ![Cover](/Art/FromOldProject/Header&Banner/Header.jpg)
